@@ -1,0 +1,190 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Player {
+  id               String             @id @unique @default(cuid())
+  name             String             @unique
+  PlayerHasHideout PlayerHasHideout[]
+  PlayerHasTasks   PlayerHasTasks[]
+}
+
+model Trader {
+  id               String             @id @unique @default(cuid())
+  name             String
+  wiki             String?
+  HideoutReqTrader HideoutReqTrader[]
+}
+
+model Map {
+  id        String      @id @unique @default(cuid())
+  name      String
+  wiki      String?
+  TaskOnMap TaskOnMap[]
+}
+
+model Item {
+  id              String            @id @unique @default(cuid())
+  name            String
+  shortName       String
+  width           Int?
+  height          Int?
+  wiki            String?
+  image           String?
+  ItemHasType     ItemHasType[]
+  HideoutReqItem  HideoutReqItem[]
+  TaskReqKey      TaskReqKey[]
+  TaskRewardsItem TaskRewardsItem[]
+  TaskReqItem     TaskReqItem[]
+}
+
+model ItemType {
+  id          String        @id @unique @default(cuid())
+  name        String
+  ItemHasType ItemHasType[]
+}
+
+model ItemHasType {
+  type       ItemType @relation(fields: [itemTypeId], references: [id])
+  item       Item     @relation(fields: [itemId], references: [id])
+  id         String   @id @unique @default(cuid())
+  itemTypeId String
+  itemId     String
+}
+
+model HideoutStation {
+  id                String              @id @unique @default(cuid())
+  name              String
+  level             Int
+  constructionTime  Int
+  HideoutReqItem    HideoutReqItem[]
+  HideoutReqSkill   HideoutReqSkill[]
+  HideoutReqTrader  HideoutReqTrader[]
+  PlayerHasHideout  PlayerHasHideout[]
+}
+
+model Skill {
+  id              String            @id @unique @default(cuid())
+  name            String
+  HideoutReqSkill HideoutReqSkill[]
+}
+
+model HideoutReqItem {
+  item             Item           @relation(fields: [itemId], references: [id])
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  count            Int
+  id               String         @id @unique @default(cuid())
+  itemId           String
+  hideoutStationId String
+}
+
+model HideoutReqSkill {
+  skill            Skill          @relation(fields: [skillId], references: [id])
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  level            Int
+  id               String         @id @unique @default(cuid())
+  skillId          String
+  hideoutStationId String
+}
+
+
+model HideoutReqTrader {
+  id               String         @id @unique @default(cuid())
+  trader           Trader         @relation(fields: [traderId], references: [id])
+  level            Int
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  traderId         String
+  hideoutStationId String
+}
+
+model PlayerHasHideout {
+  id               String         @id @unique @default(cuid())
+  player           Player         @relation(fields: [playerId], references: [id])
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  completed        Boolean        @default(false)
+  playerId         String
+  hideoutStationId String
+}
+
+model Task {
+  id               String             @id @unique @default(cuid())
+  name             String
+  experience       Int
+  wiki             String
+  minPlayerLevel   Int
+  faction          faction            @default(Any)
+  TaskOnMap        TaskOnMap[]
+  TaskReqKey       TaskReqKey[]
+  TaskRewardsItem  TaskRewardsItem[]
+  TaskReqItem      TaskReqItem[]
+  TaskHasObjective TaskHasObjective[]
+  PlayerHasTasks   PlayerHasTasks[]
+}
+
+model TaskOnMap {
+  task   Task   @relation(fields: [taskId], references: [id])
+  map    Map    @relation(fields: [mapId], references: [id])
+  id     String @id @unique @default(cuid())
+  taskId String
+  mapId  String
+}
+
+model TaskReqKey {
+  task   Task   @relation(fields: [taskId], references: [id])
+  key    Item   @relation(fields: [itemId], references: [id])
+  id     String @id @unique @default(cuid())
+  taskId String
+  itemId String
+}
+
+model TaskRewardsItem {
+  task   Task   @relation(fields: [taskId], references: [id])
+  item   Item   @relation(fields: [itemId], references: [id])
+  count  Int
+  id     String @id @unique @default(cuid())
+  taskId String
+  itemId String
+}
+
+model TaskReqItem {
+  id            String  @id @unique @default(cuid())
+  item          Item    @relation(fields: [itemId], references: [id])
+  task          Task    @relation(fields: [taskId], references: [id])
+  count         Int
+  minDurability Int
+  optional      Boolean @default(false)
+  foundInRaid   Boolean
+  itemId        String
+  taskId        String
+}
+
+model TaskHasObjective {
+  id          String   @id @unique @default(cuid())
+  description String
+  optional    Boolean?
+  task        Task     @relation(fields: [taskId], references: [id])
+  taskId      String
+}
+
+model PlayerHasTasks {
+  id        String  @id @unique @default(cuid())
+  player    Player  @relation(fields: [playerId], references: [id])
+  task      Task    @relation(fields: [taskId], references: [id])
+  completed Boolean @default(false)
+  playerId  String
+  taskId    String
+}
+
+enum faction {
+  USEC
+  BEAR
+  Any
+}
