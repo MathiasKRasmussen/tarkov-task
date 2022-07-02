@@ -19,6 +19,10 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
+<div class="flex">
+	<button class="btn btn-primary">Button111111111111111111</button>
+</div>
+
 <div class="content">
 	<h1>About this app</h1>
 
