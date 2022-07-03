@@ -1,10 +1,20 @@
 import type { Map, Trader } from '@prisma/client';
 
-const maps: Map[] = JSON.parse('[{"id":"59fc81d786f774390775787e","name":"Night Factory","wiki":"https://escapefromtarkov.gamepedia.com/Factory"},{"id":"55f2d3fd4bdc2d5f408b4567","name":"Factory","wiki":"https://escapefromtarkov.gamepedia.com/Factory"},{"id":"56f40101d2720b2a4d8b45d6","name":"Customs","wiki":"https://escapefromtarkov.gamepedia.com/Customs"},{"id":"5704e3c2d2720bac5b8b4567","name":"Woods","wiki":"https://escapefromtarkov.gamepedia.com/Woods"},{"id":"5704e554d2720bac5b8b456e","name":"Shoreline","wiki":"https://escapefromtarkov.gamepedia.com/Shoreline"},{"id":"5714dbc024597771384a510d","name":"Interchange","wiki":"https://escapefromtarkov.gamepedia.com/Interchange"},{"id":"5b0fc42d86f7744a585f9105","name":"The Lab","wiki":"https://escapefromtarkov.gamepedia.com/The_Lab"},{"id":"5704e5fad2720bc05b8b4567","name":"Reserve","wiki":"https://escapefromtarkov.gamepedia.com/Reserve"},{"id":"5704e4dad2720bb55b8b4567","name":"Lighthouse","wiki":"https://escapefromtarkov.gamepedia.com/Lighthouse"}]');
-const traders: Trader[] = JSON.parse('[{"id":"54cb50c76803fa8b248b4571","name":"Prapor","wiki":"https://escapefromtarkov.fandom.com/wiki/Prapor"},{"id":"54cb57776803fa99248b456e","name":"Therapist","wiki":"https://escapefromtarkov.fandom.com/wiki/Therapist"},{"id":"579dc571d53a0658a154fbec","name":"Fence","wiki":"https://escapefromtarkov.fandom.com/wiki/Fence"},{"id":"58330581ace78e27b8b10cee","name":"Skier","wiki":"https://escapefromtarkov.fandom.com/wiki/Skier"},{"id":"5935c25fb3acc3127c3d8cd9","name":"Peacekeeper","wiki":"https://escapefromtarkov.fandom.com/wiki/Peacekeeper"},{"id":"5a7c2eca46aef81a7ca2145d","name":"Mechanic","wiki":"https://escapefromtarkov.fandom.com/wiki/Mechanic"},{"id":"5ac3b934156ae10c4430e83c","name":"Ragman","wiki":"https://escapefromtarkov.fandom.com/wiki/Ragman"},{"id":"5c0647fdd443bc2504c2d371","name":"Jaeger","wiki":"https://escapefromtarkov.fandom.com/wiki/Jaeger"}]')
+import itemsData from './json/items.json';
+import tradersData from './json/traders.json';
+import mapsData from './json/maps.json'
+import typesData from './json/types.json'
 
 
-    export function dab (){
-        console.log(maps)
-        console.log(traders)
-    }
+export function createTypesList() {
+    let types: string[] = []
+    typesData.items.forEach((item) => {
+        item.types.forEach((type) => {
+            if(!types.includes(type)){
+                types.push(type)
+                console.log(type)
+            }
+        })
+    })
+    console.log(types)
+}

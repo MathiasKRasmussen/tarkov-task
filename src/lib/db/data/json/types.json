@@ -1,0 +1,8179 @@
+{
+	"items": [
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammo", "ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammo", "ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter", "container"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter", "noFlea"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["glasses", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "rig", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["glasses", "noFlea", "wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly", "noFlea"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["armor", "rig", "wearable"]
+		},
+		{
+			"types": ["armor", "rig", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["ammoBox"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["keys", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["container", "markedOnly"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["armor", "rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["gun", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["barter", "noFlea"]
+		},
+		{
+			"types": ["barter", "noFlea"]
+		},
+		{
+			"types": ["barter", "noFlea"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["glasses", "noFlea", "wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter", "container", "markedOnly"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["ammo", "grenade"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["gun", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["gun", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["glasses", "noFlea", "wearable"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["injectors", "meds", "provisions"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["meds", "provisions"]
+		},
+		{
+			"types": ["provisions"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["headphones", "wearable"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "noFlea", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["armor", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["rig", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["helmet", "noFlea", "wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter", "container"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter", "provisions"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "suppressor"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": ["grenade"]
+		},
+		{
+			"types": ["grenade", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["grenade", "noFlea"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["grenade"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun", "wearable"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["ammo", "noFlea"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["noFlea", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["container", "markedOnly"]
+		},
+		{
+			"types": ["container", "markedOnly"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["backpack", "wearable"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods", "pistolGrip"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["keys"]
+		},
+		{
+			"types": ["backpack", "noFlea", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig"]
+		},
+		{
+			"types": ["helmet", "wearable"]
+		},
+		{
+			"types": ["armor", "noFlea", "rig"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["barter"]
+		},
+		{
+			"types": ["glasses", "wearable"]
+		},
+		{
+			"types": ["wearable"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": ["ammo"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["mods"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun", "noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["gun"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": ["preset"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea"]
+		},
+		{
+			"types": []
+		},
+		{
+			"types": []
+		},
+		{
+			"types": ["noFlea", "preset"]
+		}
+	]
+}
