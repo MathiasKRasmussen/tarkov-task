@@ -60,15 +60,22 @@ model ItemHasType {
   itemId     String
 }
 
+model Hideout {
+  id             String           @id @unique @default(cuid())
+  name           String
+  HideoutStation HideoutStation[]
+}
+
 model HideoutStation {
-  id                String              @id @unique @default(cuid())
-  name              String
-  level             Int
-  constructionTime  Int
-  HideoutReqItem    HideoutReqItem[]
-  HideoutReqSkill   HideoutReqSkill[]
-  HideoutReqTrader  HideoutReqTrader[]
-  PlayerHasHideout  PlayerHasHideout[]
+  id               String             @id @unique @default(cuid())
+  level            Int
+  constructionTime Int
+  Hideout          Hideout            @relation(fields: [hideoutId], references: [id])
+  HideoutReqItem   HideoutReqItem[]
+  HideoutReqSkill  HideoutReqSkill[]
+  HideoutReqTrader HideoutReqTrader[]
+  PlayerHasHideout PlayerHasHideout[]
+  hideoutId        String
 }
 
 model Skill {
@@ -94,7 +101,6 @@ model HideoutReqSkill {
   skillId          String
   hideoutStationId String
 }
-
 
 model HideoutReqTrader {
   id               String         @id @unique @default(cuid())

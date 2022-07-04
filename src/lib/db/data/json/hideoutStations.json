@@ -1,0 +1,2922 @@
+{
+	"hideoutStations": [
+		{
+			"id": "5d388e97081959000a123acf",
+			"name": "Heating",
+			"levels": [
+				{
+					"id": "5d388e97081959000a123acf-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 25000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "57347b8b24597737dd42e192",
+								"name": "Classic matches"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d388e97081959000a123acf-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 50000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5e2af2bc86f7746d3f3c33fc",
+								"name": "Hunting matches"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "590a373286f774287540368b",
+								"name": "Dry fuel"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "56742c284bdc2d98058b456d",
+								"name": "Crickent lighter"
+							}
+						}
+					],
+					"constructionTime": 7200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Endurance",
+							"level": 1
+						}
+					],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d388e97081959000a123acf-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 8,
+							"item": {
+								"id": "5d1c774f86f7746d6620f8db",
+								"name": "Radiator helix"
+							}
+						},
+						{
+							"count": 8,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "5d1b313086f77425227d1678",
+								"name": "Phase control relay"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "619cbf476b8a1b37a54eebf8",
+								"name": "Military corrugated tube"
+							}
+						}
+					],
+					"constructionTime": 28800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5ac3b934156ae10c4430e83c",
+								"name": "Ragman"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d3b396e33c48f02b81cd9f3",
+			"name": "Generator",
+			"levels": [
+				{
+					"id": "5d3b396e33c48f02b81cd9f3-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 100000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "590a3c0a86f774385a33c450",
+								"name": "Spark plug"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d3b396e33c48f02b81cd9f3-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 5,
+							"item": {
+								"id": "5d1b313086f77425227d1678",
+								"name": "Phase control relay"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5d1b2fa286f77425227d1674",
+								"name": "Electric motor"
+							}
+						},
+						{
+							"count": 15,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "619cbfeb6b8a1b37a54eebfa",
+								"name": "Bulbex cable cutter"
+							}
+						}
+					],
+					"constructionTime": 18000,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d3b396e33c48f02b81cd9f3-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 6,
+							"item": {
+								"id": "5d1b313086f77425227d1678",
+								"name": "Phase control relay"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5d1b2fa286f77425227d1674",
+								"name": "Electric motor"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "590a3c0a86f774385a33c450",
+								"name": "Spark plug"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "57347c2e24597744902c94a1",
+								"name": "Power supply unit"
+							}
+						},
+						{
+							"count": 7,
+							"item": {
+								"id": "61bf7b6302b3924be92fa8c3",
+								"name": "Metal spare parts"
+							}
+						}
+					],
+					"constructionTime": 57600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "5a7c2eca46aef81a7ca2145d",
+								"name": "Mechanic"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d473c1e081959000e530190",
+			"name": "Vents",
+			"levels": [
+				{
+					"id": "5d473c1e081959000e530190-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 25000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d473c1e081959000e530190-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 1,
+							"item": {
+								"id": "5d1b2fa286f77425227d1674",
+								"name": "Electric motor"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5733279d245977289b77ec24",
+								"name": "Car battery"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5734779624597737e04bf329",
+								"name": "CPU fan"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "61bf7b6302b3924be92fa8c3",
+								"name": "Metal spare parts"
+							}
+						}
+					],
+					"constructionTime": 10800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d473c1e081959000e530190-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 4,
+							"item": {
+								"id": "5d1b2fa286f77425227d1674",
+								"name": "Electric motor"
+							}
+						},
+						{
+							"count": 14,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "590a3b0486f7743954552bdb",
+								"name": "Printed circuit board"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "5733279d245977289b77ec24",
+								"name": "Car battery"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "61bf7b6302b3924be92fa8c3",
+								"name": "Metal spare parts"
+							}
+						}
+					],
+					"constructionTime": 36000,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Strength",
+							"level": 2
+						}
+					],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d484fb3654e7600681d9314",
+			"name": "Security",
+			"levels": [
+				{
+					"id": "5d484fb3654e7600681d9314-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 20000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "590c2c9c86f774245b1f03f2",
+								"name": "Construction measuring tape"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fb3654e7600681d9314-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 45000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5af04b6486f774195a3ebb49",
+								"name": "Pliers Elite"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "590c5bbd86f774785762df04",
+								"name": "WD-40 (100ml)"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "60391b0fb847c71012789415",
+								"name": "TP-200 TNT brick"
+							}
+						}
+					],
+					"constructionTime": 10800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d494a205b56502f18c98a06",
+								"name": "Illumination"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Endurance",
+							"level": 2
+						}
+					],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fb3654e7600681d9314-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 2,
+							"item": {
+								"id": "5d1b304286f774253763a528",
+								"name": "Working LCD"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						},
+						{
+							"count": 8,
+							"item": {
+								"id": "5d1b2ffd86f77425243e8d17",
+								"name": "NIXXOR lens"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "590c392f86f77444754deb29",
+								"name": "SSD drive"
+							}
+						}
+					],
+					"constructionTime": 61200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d494a205b56502f18c98a06",
+								"name": "Illumination"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5a7c2eca46aef81a7ca2145d",
+								"name": "Mechanic"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fba654e7600691aadf7",
+			"name": "Lavatory",
+			"levels": [
+				{
+					"id": "5d484fba654e7600691aadf7-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 2000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5c13cef886f774072e618e82",
+								"name": "Toilet paper"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "57347c93245977448d35f6e3",
+								"name": "Toothpaste"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5c13cd2486f774072c757944",
+								"name": "Soap"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "62a0a098de7ac8199358053b",
+								"name": "Awl"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fba654e7600691aadf7-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 3,
+							"item": {
+								"id": "59e35cbb86f7741778269d83",
+								"name": "Corrugated hose"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "59e35ef086f7741777737012",
+								"name": "Pack of screws"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "59e35de086f7741778269d84",
+								"name": "Electric drill"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5e2af29386f7746d4159f077",
+								"name": "KEKTAPE duct tape"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "61bf83814088ec1a363d7097",
+								"name": "Sewing kit"
+							}
+						}
+					],
+					"constructionTime": 10800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fc8654e760065037abf",
+								"name": "Water Collector"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d484fba654e7600691aadf7",
+								"name": "Lavatory"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fba654e7600691aadf7-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 6,
+							"item": {
+								"id": "59e35cbb86f7741778269d83",
+								"name": "Corrugated hose"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5d1b327086f7742525194449",
+								"name": "Pressure gauge"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "590c2e1186f77425357b6124",
+								"name": "Toolset"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "590c346786f77423e50ed342",
+								"name": "Xenomorph sealing foam"
+							}
+						}
+					],
+					"constructionTime": 25200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fc8654e760065037abf",
+								"name": "Water Collector"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fba654e7600691aadf7",
+								"name": "Lavatory"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d484fc0654e76006657e0ab",
+			"name": "Stash",
+			"levels": [
+				{
+					"id": "5d484fc0654e76006657e0ab-1",
+					"level": 1,
+					"itemRequirements": [],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fc0654e76006657e0ab-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 1,
+							"item": {
+								"id": "5d1b317c86f7742523398392",
+								"name": "Hand drill"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "59e35ef086f7741777737012",
+								"name": "Pack of screws"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "590c5bbd86f774785762df04",
+								"name": "WD-40 (100ml)"
+							}
+						},
+						{
+							"count": 2500000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "590c31c586f774245e3141b2",
+								"name": "Pack of nails"
+							}
+						}
+					],
+					"constructionTime": 86400,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fc0654e76006657e0ab-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 2,
+							"item": {
+								"id": "59e35de086f7741778269d84",
+								"name": "Electric drill"
+							}
+						},
+						{
+							"count": 15,
+							"item": {
+								"id": "59e35ef086f7741777737012",
+								"name": "Pack of screws"
+							}
+						},
+						{
+							"count": 8500000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 7,
+							"item": {
+								"id": "590c31c586f774245e3141b2",
+								"name": "Pack of nails"
+							}
+						}
+					],
+					"constructionTime": 172800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fc0654e76006657e0ab",
+								"name": "Stash"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "54cb50c76803fa8b248b4571",
+								"name": "Prapor"
+							}
+						},
+						{
+							"level": 3,
+							"trader": {
+								"id": "5ac3b934156ae10c4430e83c",
+								"name": "Ragman"
+							}
+						}
+					]
+				},
+				{
+					"id": "5d484fc0654e76006657e0ab-4",
+					"level": 4,
+					"itemRequirements": [
+						{
+							"count": 200000,
+							"item": {
+								"id": "569668774bdc2da2298b4568",
+								"name": "Euros"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "57347c5b245977448d35f6e1",
+								"name": "Bolts"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "57347c77245977448d35f6e2",
+								"name": "Screw nuts"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "590c35a486f774273531c822",
+								"name": "Shustrilo sealing foam"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "60391afc25aff57af81f7085",
+								"name": "Ratchet wrench"
+							}
+						}
+					],
+					"constructionTime": 345600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fc0654e76006657e0ab",
+								"name": "Stash"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fdf654e7600691aadf8",
+								"name": "Intelligence Center"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 4,
+							"trader": {
+								"id": "5935c25fb3acc3127c3d8cd9",
+								"name": "Peacekeeper"
+							}
+						},
+						{
+							"level": 4,
+							"trader": {
+								"id": "5ac3b934156ae10c4430e83c",
+								"name": "Ragman"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fc8654e760065037abf",
+			"name": "Water Collector",
+			"levels": [
+				{
+					"id": "5d484fc8654e760065037abf-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 4,
+							"item": {
+								"id": "59e35cbb86f7741778269d83",
+								"name": "Corrugated hose"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "57347c5b245977448d35f6e1",
+								"name": "Bolts"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "57347c77245977448d35f6e2",
+								"name": "Screw nuts"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "57347c1124597737fb1379e3",
+								"name": "Duct tape"
+							}
+						}
+					],
+					"constructionTime": 7200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fc8654e760065037abf-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 6,
+							"item": {
+								"id": "59e35cbb86f7741778269d83",
+								"name": "Corrugated hose"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5d1b2fa286f77425227d1674",
+								"name": "Electric motor"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "590c2e1186f77425357b6124",
+								"name": "Toolset"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5e2af29386f7746d4159f077",
+								"name": "KEKTAPE duct tape"
+							}
+						}
+					],
+					"constructionTime": 28800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fc8654e760065037abf",
+								"name": "Water Collector"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Attention",
+							"level": 3
+						}
+					],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5c0647fdd443bc2504c2d371",
+								"name": "Jaeger"
+							}
+						}
+					]
+				},
+				{
+					"id": "5d484fc8654e760065037abf-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 20000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5af04b6486f774195a3ebb49",
+								"name": "Pliers Elite"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "590c35a486f774273531c822",
+								"name": "Shustrilo sealing foam"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "60391afc25aff57af81f7085",
+								"name": "Ratchet wrench"
+							}
+						}
+					],
+					"constructionTime": 57600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fc8654e760065037abf",
+								"name": "Water Collector"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "5c0647fdd443bc2504c2d371",
+								"name": "Jaeger"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fcd654e7668ec2ec322",
+			"name": "Medstation",
+			"levels": [
+				{
+					"id": "5d484fcd654e7668ec2ec322-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 50000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5d1b3f2d86f774253763b735",
+								"name": "Disposable syringe"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5d1b3a5d86f774252167ba22",
+								"name": "Pile of meds"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "544fb25a4bdc2dfb738b4567",
+								"name": "Aseptic bandage"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "62a0a043cf4a99369e2624a5",
+								"name": "Bottle of OLOLO Multivitamins"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fcd654e7668ec2ec322-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 150000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5b4335ba86f7744d2837a264",
+								"name": "Medical bloodset"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "59e3606886f77417674759a5",
+								"name": "Bottle of saline solution"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "5e831507ea0a7c419c2f9bd9",
+								"name": "Esmarch tourniquet"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "619cc01e0a7c3a1a2731940c",
+								"name": "Medical tools"
+							}
+						}
+					],
+					"constructionTime": 10800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d484fcd654e7668ec2ec322",
+								"name": "Medstation"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Health",
+							"level": 2
+						}
+					],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "54cb57776803fa99248b456e",
+								"name": "Therapist"
+							}
+						}
+					]
+				},
+				{
+					"id": "5d484fcd654e7668ec2ec322-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 500000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "59e3606886f77417674759a5",
+								"name": "Bottle of saline solution"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5c0530ee86f774697952d952",
+								"name": "LEDX Skin Transilluminator"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5af0534a86f7743b6f354284",
+								"name": "Ophthalmoscope"
+							}
+						}
+					],
+					"constructionTime": 43200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fba654e7600691aadf7",
+								"name": "Lavatory"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fcd654e7668ec2ec322",
+								"name": "Medstation"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Vitality",
+							"level": 3
+						}
+					],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "54cb57776803fa99248b456e",
+								"name": "Therapist"
+							}
+						},
+						{
+							"level": 2,
+							"trader": {
+								"id": "58330581ace78e27b8b10cee",
+								"name": "Skier"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fd1654e76006732bf2e",
+			"name": "Nutrition Unit",
+			"levels": [
+				{
+					"id": "5d484fd1654e76006732bf2e-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 25000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5d1b313086f77425227d1678",
+								"name": "Phase control relay"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "59e36c6f86f774176c10a2a7",
+								"name": "Power cord"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "62a09ee4cf4a99369e262453",
+								"name": "Can of white salt"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fd1654e76006732bf2e-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 4,
+							"item": {
+								"id": "590c311186f77424d1667482",
+								"name": "Wrench"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "59e35cbb86f7741778269d83",
+								"name": "Corrugated hose"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "59faf98186f774067b6be103",
+								"name": "Alkaline cleaner for heat exchangers"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5d1b313086f77425227d1678",
+								"name": "Phase control relay"
+							}
+						}
+					],
+					"constructionTime": 14400,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fba654e7600691aadf7",
+								"name": "Lavatory"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fd1654e76006732bf2e",
+								"name": "Nutrition Unit"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fd1654e76006732bf2e-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 125000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5af0484c86f7740f02001f7f",
+								"name": "Can of Majaica coffee beans"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "59e35abd86f7741778269d82",
+								"name": "Pack of sodium bicarbonate"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5e2af00086f7746d3f3c33f7",
+								"name": "Smoked Chimney drain cleaner"
+							}
+						}
+					],
+					"constructionTime": 50400,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fba654e7600691aadf7",
+								"name": "Lavatory"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fc0654e76006657e0ab",
+								"name": "Stash"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fd1654e76006732bf2e",
+								"name": "Nutrition Unit"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Metabolism",
+							"level": 3
+						}
+					],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d484fd6654e76051d3cc791",
+			"name": "Rest Space",
+			"levels": [
+				{
+					"id": "5d484fd6654e76051d3cc791-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 10000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "57347c1124597737fb1379e3",
+								"name": "Duct tape"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "57347b8b24597737dd42e192",
+								"name": "Classic matches"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fd6654e76051d3cc791-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 35000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5734781f24597737e04bf32a",
+								"name": "DVD drive"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "590a391c86f774385a33c404",
+								"name": "Magnet"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "590a3cd386f77436f20848cb",
+								"name": "Energy-saving lamp"
+							}
+						}
+					],
+					"constructionTime": 7200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fd6654e76051d3cc791",
+								"name": "Rest Space"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5ac3b934156ae10c4430e83c",
+								"name": "Ragman"
+							}
+						}
+					]
+				},
+				{
+					"id": "5d484fd6654e76051d3cc791-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 4,
+							"item": {
+								"id": "59e36c6f86f774176c10a2a7",
+								"name": "Power cord"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "5c06782b86f77426df5407d2",
+								"name": "Capacitors"
+							}
+						},
+						{
+							"count": 7,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "5e2aedd986f7746d404f3aa4",
+								"name": "GreenBat lithium battery"
+							}
+						}
+					],
+					"constructionTime": 36000,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d388e97081959000a123acf",
+								"name": "Heating"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fd6654e76051d3cc791",
+								"name": "Rest Space"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "58330581ace78e27b8b10cee",
+								"name": "Skier"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fda654e7600681d9315",
+			"name": "Workbench",
+			"levels": [
+				{
+					"id": "5d484fda654e7600681d9315-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 2,
+							"item": {
+								"id": "57347c77245977448d35f6e2",
+								"name": "Screw nuts"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "57347c5b245977448d35f6e1",
+								"name": "Bolts"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "544fb5454bdc2df8738b456a",
+								"name": "Leatherman Multitool"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fda654e7600681d9315-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 3,
+							"item": {
+								"id": "590c2e1186f77425357b6124",
+								"name": "Toolset"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "59e35de086f7741778269d84",
+								"name": "Electric drill"
+							}
+						},
+						{
+							"count": 6,
+							"item": {
+								"id": "57347c5b245977448d35f6e1",
+								"name": "Bolts"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5d1c819a86f774771b0acd6c",
+								"name": "Weapon parts"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "62a0a0bb621468534a797ad5",
+								"name": "Set of files \"Master\""
+							}
+						}
+					],
+					"constructionTime": 10800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d494a205b56502f18c98a06",
+								"name": "Illumination"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5a7c2eca46aef81a7ca2145d",
+								"name": "Mechanic"
+							}
+						}
+					]
+				},
+				{
+					"id": "5d484fda654e7600681d9315-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 395000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5af04b6486f774195a3ebb49",
+								"name": "Pliers Elite"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5bc9b355d4351e6d1509862a",
+								"name": "#FireKlean gun lube"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "60391a8b3364dc22b04d0ce5",
+								"name": "Can of thermite"
+							}
+						}
+					],
+					"constructionTime": 39600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fc0654e76006657e0ab",
+								"name": "Stash"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "5a7c2eca46aef81a7ca2145d",
+								"name": "Mechanic"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fdf654e7600691aadf8",
+			"name": "Intelligence Center",
+			"levels": [
+				{
+					"id": "5d484fdf654e7600691aadf8-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 1,
+							"item": {
+								"id": "5c12613b86f7743bbe2c3f76",
+								"name": "Intelligence folder"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "62a0a124de7ac81993580542",
+								"name": "Topographic survey maps"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "574eb85c245977648157eec3",
+								"name": "Factory plan map"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d484fdf654e7600691aadf8-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 3,
+							"item": {
+								"id": "5c12613b86f7743bbe2c3f76",
+								"name": "Intelligence folder"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "590c621186f774138d11ea29",
+								"name": "Secure Flash drive"
+							}
+						},
+						{
+							"count": 7,
+							"item": {
+								"id": "59e36c6f86f774176c10a2a7",
+								"name": "Power cord"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "590a386e86f77429692b27ab",
+								"name": "Damaged hard drive"
+							}
+						}
+					],
+					"constructionTime": 21600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fb3654e7600681d9314",
+								"name": "Security"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fcd654e7668ec2ec322",
+								"name": "Medstation"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fd1654e76006732bf2e",
+								"name": "Nutrition Unit"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fdf654e7600691aadf8",
+								"name": "Intelligence Center"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Attention",
+							"level": 3
+						}
+					],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5a7c2eca46aef81a7ca2145d",
+								"name": "Mechanic"
+							}
+						}
+					]
+				},
+				{
+					"id": "5d484fdf654e7600691aadf8-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 2,
+							"item": {
+								"id": "5c052f6886f7746b1e3db148",
+								"name": "Military COFDM Wireless Signal Transmitter"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5c05300686f7746dce784e5d",
+								"name": "VPX Flash Storage Module"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "62a0a16d0b9d3c46de5b6e97",
+								"name": "Military flash drive"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "5d0375ff86f774186372f685",
+								"name": "Military cable"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "61bf7c024770ee6f9c6b8b53",
+								"name": "Secured magnetic tape cassette"
+							}
+						}
+					],
+					"constructionTime": 86400,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fdf654e7600691aadf8",
+								"name": "Intelligence Center"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "54cb50c76803fa8b248b4571",
+								"name": "Prapor"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d484fe3654e76006657e0ac",
+			"name": "Shooting Range",
+			"levels": [
+				{
+					"id": "5d484fe3654e76006657e0ac-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 4,
+							"item": {
+								"id": "590c31c586f774245e3141b2",
+								"name": "Pack of nails"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "57347c77245977448d35f6e2",
+								"name": "Screw nuts"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "57347c5b245977448d35f6e1",
+								"name": "Bolts"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "57347c1124597737fb1379e3",
+								"name": "Duct tape"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "59e35ef086f7741777737012",
+								"name": "Pack of screws"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "61bf7b6302b3924be92fa8c3",
+								"name": "Metal spare parts"
+							}
+						}
+					],
+					"constructionTime": 3600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d494a205b56502f18c98a06",
+								"name": "Illumination"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d494a0e5b56502f18c98a02",
+			"name": "Library",
+			"levels": [
+				{
+					"id": "5d494a0e5b56502f18c98a02-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 400000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "573478bc24597738002c6175",
+								"name": "Horse figurine"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "573474f924597738002c6174",
+								"name": "Chainlet"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "590c639286f774151567fa95",
+								"name": "Tech manual"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "590c645c86f77412b01304d9",
+								"name": "Diary"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "590c651286f7741e566b6461",
+								"name": "Slim diary"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "62a09e73af34e73a266d932a",
+								"name": "BakeEzy cook book"
+							}
+						}
+					],
+					"constructionTime": 194400,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fd6654e76051d3cc791",
+								"name": "Rest Space"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [
+						{
+							"name": "Memory",
+							"level": 8
+						}
+					],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d494a175b56502f18c98a04",
+			"name": "Scav Case",
+			"levels": [
+				{
+					"id": "5d494a175b56502f18c98a04-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 3,
+							"item": {
+								"id": "59e3639286f7741777737013",
+								"name": "Bronze lion"
+							}
+						},
+						{
+							"count": 6,
+							"item": {
+								"id": "5d235a5986f77443f6329bc6",
+								"name": "Gold skull ring"
+							}
+						},
+						{
+							"count": 8,
+							"item": {
+								"id": "5734758f24597738025ee253",
+								"name": "Golden neck chain"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "59faf7ca86f7740dbe19f6c2",
+								"name": "Roler Submariner gold wrist watch"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5d1b376e86f774252519444e",
+								"name": "\"Fierce Hatchling\" moonshine"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5b7c710788a4506dec015957",
+								"name": "Lucky Scav Junk box"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5bc9bc53d4351e00367fbcee",
+								"name": "Golden rooster"
+							}
+						}
+					],
+					"constructionTime": 288000,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fdf654e7600691aadf8",
+								"name": "Intelligence Center"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d494a205b56502f18c98a06",
+			"name": "Illumination",
+			"levels": [
+				{
+					"id": "5d494a205b56502f18c98a06-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 10000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "56742c284bdc2d98058b456d",
+								"name": "Crickent lighter"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d494a205b56502f18c98a06-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 14,
+							"item": {
+								"id": "5d1b392c86f77425243e98fe",
+								"name": "Light bulb"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						}
+					],
+					"constructionTime": 0,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d494a205b56502f18c98a06",
+								"name": "Illumination"
+							},
+							"level": 1
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d494a205b56502f18c98a06-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 50000,
+							"item": {
+								"id": "5449016a4bdc2d6f028b456f",
+								"name": "Roubles"
+							}
+						},
+						{
+							"count": 7,
+							"item": {
+								"id": "5c06782b86f77426df5407d2",
+								"name": "Capacitors"
+							}
+						},
+						{
+							"count": 6,
+							"item": {
+								"id": "5c06779c86f77426e00dd782",
+								"name": "Bundle of wires"
+							}
+						},
+						{
+							"count": 12,
+							"item": {
+								"id": "590a3cd386f77436f20848cb",
+								"name": "Energy-saving lamp"
+							}
+						}
+					],
+					"constructionTime": 21600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d494a205b56502f18c98a06",
+								"name": "Illumination"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 2,
+							"trader": {
+								"id": "5a7c2eca46aef81a7ca2145d",
+								"name": "Mechanic"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d494a315b56502f18c98a0a",
+			"name": "Air Filtering Unit",
+			"levels": [
+				{
+					"id": "5d494a315b56502f18c98a0a-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 25000,
+							"item": {
+								"id": "5696686a4bdc2da3298b456a",
+								"name": "Dollars"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "5d0378d486f77420421a5ff4",
+								"name": "Military power filter"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "590c595c86f7747884343ad7",
+								"name": "Gas mask air filter"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "619cbf476b8a1b37a54eebf8",
+								"name": "Military corrugated tube"
+							}
+						}
+					],
+					"constructionTime": 172800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d473c1e081959000e530190",
+								"name": "Vents"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 3,
+							"trader": {
+								"id": "58330581ace78e27b8b10cee",
+								"name": "Skier"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d494a385b56502f18c98a0c",
+			"name": "Solar Power",
+			"levels": [
+				{
+					"id": "5d494a385b56502f18c98a0c-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 75000,
+							"item": {
+								"id": "569668774bdc2da2298b4568",
+								"name": "Euros"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "5d0375ff86f774186372f685",
+								"name": "Military cable"
+							}
+						},
+						{
+							"count": 4,
+							"item": {
+								"id": "5d03775b86f774203e7e0c4b",
+								"name": "Phased array element"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "5d0378d486f77420421a5ff4",
+								"name": "Military power filter"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5d1b304286f774253763a528",
+								"name": "Working LCD"
+							}
+						}
+					],
+					"constructionTime": 259200,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fda654e7600681d9315",
+								"name": "Workbench"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": [
+						{
+							"level": 4,
+							"trader": {
+								"id": "5935c25fb3acc3127c3d8cd9",
+								"name": "Peacekeeper"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "5d494a3f5b56502f18c98a0e",
+			"name": "Booze Generator",
+			"levels": [
+				{
+					"id": "5d494a3f5b56502f18c98a0e-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 4,
+							"item": {
+								"id": "5d1b39a386f774252339976f",
+								"name": "Silicone tube"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5d1b32c186f774252167a530",
+								"name": "Analog thermometer"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5d1b327086f7742525194449",
+								"name": "Pressure gauge"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "59e35cbb86f7741778269d83",
+								"name": "Corrugated hose"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "619cbfccbedcde2f5b3f7bdd",
+								"name": "Pipe grip wrench"
+							}
+						},
+						{
+							"count": 3,
+							"item": {
+								"id": "5d1c774f86f7746d6620f8db",
+								"name": "Radiator helix"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "61bf7b6302b3924be92fa8c3",
+								"name": "Metal spare parts"
+							}
+						}
+					],
+					"constructionTime": 172800,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fc8654e760065037abf",
+								"name": "Water Collector"
+							},
+							"level": 3
+						},
+						{
+							"station": {
+								"id": "5d484fd1654e76006732bf2e",
+								"name": "Nutrition Unit"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				}
+			]
+		},
+		{
+			"id": "5d494a445b56502f18c98a10",
+			"name": "Bitcoin Farm",
+			"levels": [
+				{
+					"id": "5d494a445b56502f18c98a10-1",
+					"level": 1,
+					"itemRequirements": [
+						{
+							"count": 15,
+							"item": {
+								"id": "5734779624597737e04bf329",
+								"name": "CPU fan"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "57347c2e24597744902c94a1",
+								"name": "Power supply unit"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "59e36c6f86f774176c10a2a7",
+								"name": "Power cord"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5c05300686f7746dce784e5d",
+								"name": "VPX Flash Storage Module"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "57347cd0245977445a2d6ff1",
+								"name": "T-Shaped plug"
+							}
+						}
+					],
+					"constructionTime": 122400,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d484fdf654e7600691aadf8",
+								"name": "Intelligence Center"
+							},
+							"level": 2
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d494a445b56502f18c98a10-2",
+					"level": 2,
+					"itemRequirements": [
+						{
+							"count": 15,
+							"item": {
+								"id": "5734779624597737e04bf329",
+								"name": "CPU fan"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "57347c2e24597744902c94a1",
+								"name": "Power supply unit"
+							}
+						},
+						{
+							"count": 15,
+							"item": {
+								"id": "590a3b0486f7743954552bdb",
+								"name": "Printed circuit board"
+							}
+						},
+						{
+							"count": 5,
+							"item": {
+								"id": "5d1b313086f77425227d1678",
+								"name": "Phase control relay"
+							}
+						},
+						{
+							"count": 2,
+							"item": {
+								"id": "5d0378d486f77420421a5ff4",
+								"name": "Military power filter"
+							}
+						}
+					],
+					"constructionTime": 180000,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d494a445b56502f18c98a10",
+								"name": "Bitcoin Farm"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d3b396e33c48f02b81cd9f3",
+								"name": "Generator"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				},
+				{
+					"id": "5d494a445b56502f18c98a10-3",
+					"level": 3,
+					"itemRequirements": [
+						{
+							"count": 25,
+							"item": {
+								"id": "5734779624597737e04bf329",
+								"name": "CPU fan"
+							}
+						},
+						{
+							"count": 15,
+							"item": {
+								"id": "5d1b39a386f774252339976f",
+								"name": "Silicone tube"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "5d1b2fa286f77425227d1674",
+								"name": "Electric motor"
+							}
+						},
+						{
+							"count": 10,
+							"item": {
+								"id": "5d1b327086f7742525194449",
+								"name": "Pressure gauge"
+							}
+						},
+						{
+							"count": 1,
+							"item": {
+								"id": "5d03794386f77420415576f5",
+								"name": "6-STEN-140-M military battery"
+							}
+						}
+					],
+					"constructionTime": 381600,
+					"stationLevelRequirements": [
+						{
+							"station": {
+								"id": "5d494a445b56502f18c98a10",
+								"name": "Bitcoin Farm"
+							},
+							"level": 2
+						},
+						{
+							"station": {
+								"id": "5d494a385b56502f18c98a0c",
+								"name": "Solar Power"
+							},
+							"level": 1
+						},
+						{
+							"station": {
+								"id": "5d484fc8654e760065037abf",
+								"name": "Water Collector"
+							},
+							"level": 3
+						}
+					],
+					"skillRequirements": [],
+					"traderRequirements": []
+				}
+			]
+		}
+	]
+}
