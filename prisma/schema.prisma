@@ -52,6 +52,21 @@ model ItemType {
   ItemHasType ItemHasType[]
 }
 
+model Task {
+  id               String             @id @unique @default(cuid())
+  name             String
+  experience       Int
+  wiki             String
+  minPlayerLevel   Int
+  faction          faction            @default(Any)
+  TaskOnMap        TaskOnMap[]
+  TaskReqKey       TaskReqKey[]
+  TaskRewardsItem  TaskRewardsItem[]
+  TaskReqItem      TaskReqItem[]
+  TaskHasObjective TaskHasObjective[]
+  PlayerHasTasks   PlayerHasTasks[]
+}
+
 model ItemHasType {
   type       ItemType @relation(fields: [itemTypeId], references: [id])
   item       Item     @relation(fields: [itemId], references: [id])
@@ -62,7 +77,7 @@ model ItemHasType {
 
 model Hideout {
   id             String           @id @unique @default(cuid())
-  name           String
+  name           String           @unique
   HideoutStation HideoutStation[]
 }
 
@@ -80,7 +95,7 @@ model HideoutStation {
 
 model Skill {
   id              String            @id @unique @default(cuid())
-  name            String
+  name            String            @unique
   HideoutReqSkill HideoutReqSkill[]
 }
 
@@ -118,21 +133,6 @@ model PlayerHasHideout {
   completed        Boolean        @default(false)
   playerId         String
   hideoutStationId String
-}
-
-model Task {
-  id               String             @id @unique @default(cuid())
-  name             String
-  experience       Int
-  wiki             String
-  minPlayerLevel   Int
-  faction          faction            @default(Any)
-  TaskOnMap        TaskOnMap[]
-  TaskReqKey       TaskReqKey[]
-  TaskRewardsItem  TaskRewardsItem[]
-  TaskReqItem      TaskReqItem[]
-  TaskHasObjective TaskHasObjective[]
-  PlayerHasTasks   PlayerHasTasks[]
 }
 
 model TaskOnMap {

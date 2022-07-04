@@ -16,11 +16,17 @@ export function createTypesList() {
             }
         })
     })
-    console.log(hideoutData.hideoutStations[0])
-    let station: HideoutStation = {id: '', name: '', constructionTime: 0, level: 0}
-    station.name = hideoutData.hideoutStations[0].name
-    station.id = hideoutData.hideoutStations[0].id
-    station.constructionTime = hideoutData.hideoutStations[0].levels[0].constructionTime
-    station.level = hideoutData.hideoutStations[0].levels[0].level
+    
+    let skills: string[] = []
+    hideoutData.hideoutStations.forEach((station) => {
+        station.levels.forEach((level) => {
+            level.skillRequirements.forEach((skill) => {
+                if(!skills.includes(skill.name)){
+                    skills.push(skill.name)
+                }
+            })
+        })
+    })
+    console.log(skills)
     
 }
