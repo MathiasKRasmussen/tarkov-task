@@ -1,6 +1,6 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
-import { createTypesList } from '$lib/db/data/maps';
+	import { tester } from '$lib/db/data/formatData';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -14,7 +14,7 @@ import { createTypesList } from '$lib/db/data/maps';
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 
-	createTypesList()
+	tester();
 </script>
 
 <svelte:head>

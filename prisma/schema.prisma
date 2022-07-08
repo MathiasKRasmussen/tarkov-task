@@ -58,6 +58,7 @@ model Task {
   experience       Int
   wiki             String
   minPlayerLevel   Int
+  forKappa         Boolean
   faction          faction            @default(Any)
   TaskOnMap        TaskOnMap[]
   TaskReqKey       TaskReqKey[]
@@ -65,6 +66,17 @@ model Task {
   TaskReqItem      TaskReqItem[]
   TaskHasObjective TaskHasObjective[]
   PlayerHasTasks   PlayerHasTasks[]
+  Requires         TaskReqTask[]      @relation("Requires")
+  Tasks            TaskReqTask[]      @relation("Tasks")
+}
+
+model TaskReqTask {
+  requires   Task   @relation("Requires", fields: [requiresId], references: [id])
+  task       Task   @relation("Tasks", fields: [taskId], references: [id])
+  taskId     String
+  requiresId String
+
+  @@id([taskId, requiresId])
 }
 
 model ItemHasType {
@@ -161,15 +173,13 @@ model TaskRewardsItem {
 }
 
 model TaskReqItem {
-  id            String  @id @unique @default(cuid())
-  item          Item    @relation(fields: [itemId], references: [id])
-  task          Task    @relation(fields: [taskId], references: [id])
-  count         Int
-  minDurability Int
-  optional      Boolean @default(false)
-  foundInRaid   Boolean
-  itemId        String
-  taskId        String
+  id          String  @id @unique @default(cuid())
+  item        Item    @relation(fields: [itemId], references: [id])
+  task        Task    @relation(fields: [taskId], references: [id])
+  count       Int
+  foundInRaid Boolean
+  itemId      String
+  taskId      String
 }
 
 model TaskHasObjective {
