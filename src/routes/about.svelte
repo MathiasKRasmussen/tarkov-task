@@ -1,6 +1,7 @@
-<script context="module">
+<script lang="ts">
 	import { browser, dev } from '$app/env';
-	import { tester } from '$lib/db/data/formatData';
+	import { formatTaskData } from '$lib/db/data/formatData';
+	import { page } from '$app/stores';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -14,7 +15,19 @@
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 
-	tester();
+	formatTaskData();
+
+	async function onPost() {
+		try {
+			const res = await fetch(`${$page.url.origin}/api/formatData/stringTypes`, {
+				method: 'POST'
+			});
+			//progressData = await res.json()
+			console.log('uploaded  sucessfully');
+		} catch (error) {
+			console.log('An error occured', error);
+		}
+	}
 </script>
 
 <svelte:head>
@@ -23,7 +36,7 @@
 </svelte:head>
 
 <div class="flex">
-	<button class="btn btn-primary">Button111111111111111111</button>
+	<button class="btn btn-primary" on:click={onPost}>Post</button>
 </div>
 
 <div class="content">

@@ -9,7 +9,7 @@ import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
 
 
-export function tester() {
+export function formatTaskData() {
     taskData.tasks.forEach((task) => {
         // Adding a list of maps
         task.maps = []

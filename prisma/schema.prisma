@@ -48,7 +48,7 @@ model Item {
 
 model ItemType {
   id          String        @id @unique @default(cuid())
-  name        String
+  name        String        @unique
   ItemHasType ItemHasType[]
 }
 
