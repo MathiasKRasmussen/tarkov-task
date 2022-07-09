@@ -22,6 +22,7 @@ export async function addSkills(): Promise<Skill[]> {
                 name: skill
             }
         })
+        result.push(res)
     }
     console.log(result)
     return result
@@ -36,6 +37,7 @@ export async function addItemTypes(): Promise<ItemType[]> {
                 name: type
             }
         })
+        result.push(res)
     }
     console.log(result)
     return result
