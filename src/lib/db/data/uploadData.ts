@@ -1,17 +1,115 @@
 import { prisma } from '$lib/db/prisma';
-import type { Item, ItemType, Map, Skill } from '@prisma/client';
-import { createItems, createMaps, createSkillList, createTraders, createTypeList } from "$lib/db/data/formatData"
+import type { Hideout, HideoutStation, Item, ItemType, Map, Skill } from '@prisma/client';
+import { createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList } from "$lib/db/data/formatData"
 
 
-/*
-export async function addHideoutStations(): Promise<any> {
-    const result = await prisma.hideoutStation.create({
-        data: {
-            
+
+export async function connectHideouts() {
+    const hideouts = createHideouts()
+    let resultTraders = []
+    let resultSkills = []
+    let resultItems = []
+
+    for (const hideout of hideouts) {
+        for (const station of hideout.levels) {
+            /*
+            for (const trader of station.traderRequirements) {
+                const resTraders = await prisma.hideoutReqTrader.create({
+                    data: {
+                        hideoutStation: {
+                            connect: {
+                                id: station.id
+                            },
+                        },
+                        trader: {
+                            connect: {
+                                id: trader.trader.id
+                            }
+                        },
+                        level: trader.level
+                    }
+                })
+                resultTraders.push(resTraders)
+            }
+            console.log(resultTraders)
+            */
+            /*
+             for (const skill of station.skillRequirements) {
+                 const resSkills = await prisma.hideoutReqSkill.create({
+                     data: {
+                         hideoutStation: {
+                             connect: {
+                                 id: station.id
+                             },
+                         },
+                         skill: {
+                             connect: {
+                                 name: skill.name
+                             }
+                         },
+                         level: skill.level
+                     }
+                 })
+                 resultSkills.push(resSkills)
+             } */
+            // TODO: Need table for hideout relations
+            /*
+           for (const stationReq of station.stationLevelRequirements) {
+               const resStationReq = await prisma.hi
+               console.log(stationReq)
+           } */
+            /*
+             for (const item of station.itemRequirements) {
+                 const resItem = await prisma.hideoutReqItem.create({
+                     data: {
+                         hideoutStation: {
+                             connect: {
+                                 id: station.id
+                             },
+                         },
+                         item: {
+                             connect: {
+                                 id: item.item.id
+                             }
+                         },
+                         count: item.count
+                     }
+                 })
+                 resultItems.push(resItem)
+             } */
         }
-    })
-    return result
-}*/
+    }
+
+}
+
+
+
+export async function addHideout(): Promise<any> {
+    const hideouts = createHideouts()
+    let resultHideouts: Hideout[] = []
+    let resultStations: HideoutStation[] = []
+    for (const hideout of hideouts) {
+        const resHideout: Hideout = await prisma.hideout.create({
+            data: {
+                id: hideout.id,
+                name: hideout.name,
+            }
+        })
+        resultHideouts.push(resHideout)
+
+        for (const station of hideout.levels) {
+            const resStation: HideoutStation = await prisma.hideoutStation.create({
+                data: {
+                    id: station.id,
+                    level: station.level,
+                    constructionTime: station.constructionTime,
+                    hideoutId: hideout.id
+                }
+            })
+            resultStations.push(resStation)
+        }
+    }
+}
 
 export async function findItems(): Promise<any> {
     const items: Item[] = createItems()
@@ -28,31 +126,24 @@ export async function findItems(): Promise<any> {
 export async function addItems(): Promise<any> {
     const result: Item[] = []
     const items: Item[] = createItems()
-    let bool: boolean = false
     for (const item of items) {
-        if (item.name === 'Olight Baldr Pro tactical flashlight with laser (Tan)') {
-            bool = true
-        }
-        if (bool) {
-            console.log(item)
-            try {
+        try {
 
-                const res: Item = await prisma.item.create({
-                    data: {
-                        id: item.id,
-                        name: item.name,
-                        shortName: item.shortName,
-                        width: item.width,
-                        height: item.height,
-                        wiki: item.wiki,
-                        image: item.image,
-                    }
-                })
-                result.push(res)
-            }
-            catch (error) {
-                console.log(error)
-            }
+            const res: Item = await prisma.item.create({
+                data: {
+                    id: item.id,
+                    name: item.name,
+                    shortName: item.shortName,
+                    width: item.width,
+                    height: item.height,
+                    wiki: item.wiki,
+                    image: item.image,
+                }
+            })
+            result.push(res)
+        }
+        catch (error) {
+            console.log(error)
         }
     }
     console.log(result)
@@ -60,31 +151,25 @@ export async function addItems(): Promise<any> {
 
 export async function addTypesToItems(): Promise<any> {
     let result = []
-    let bool = false
     const items: Item[] = createItems()
     for (const item of items) {
-        if (item.id === '6259bdcabd28e4721447a2aa') {
-            bool = true
-        }
-        if (bool) {
-            for (const type of item.types) {
-                try {
+        for (const type of item.types) {
+            try {
 
-                    const res = await prisma.itemHasType.create({
-                        data: {
-                            item: {
-                                connect: {
-                                    id: item.id
-                                },
+                const res = await prisma.itemHasType.create({
+                    data: {
+                        item: {
+                            connect: {
+                                id: item.id
                             },
-                            type: { connect: { name: type } }
-                        }
-                    })
-                    result.push(res)
-                }
-                catch (error) {
-                    console.log(error)
-                }
+                        },
+                        type: { connect: { name: type } }
+                    }
+                })
+                result.push(res)
+            }
+            catch (error) {
+                console.log(error)
             }
         }
     }

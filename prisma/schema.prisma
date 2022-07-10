@@ -103,7 +103,18 @@ model HideoutStation {
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasHideout PlayerHasHideout[]
   hideoutId        String
+  //  Requires         HideoutReqHideout[] @relation("Requires")
+  //  Stations         HideoutReqHideout[] @relation("Stations")
 }
+
+//model HideoutReqHideout {
+//  requires   HideoutStation @relation("Requires", fields: [requiresId], references: [id])
+//  station    HideoutStation @relation("Stations", fields: [stationId], references: [id])
+//  stationId  String
+//  requiresId String
+
+//  @@id([stationId, requiresId])
+//}
 
 model Skill {
   id              String            @id @unique @default(cuid())
