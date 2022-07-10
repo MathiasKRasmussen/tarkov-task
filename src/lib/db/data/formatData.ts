@@ -1,4 +1,4 @@
-import type { HideoutStation, Map, Trader } from '@prisma/client';
+import type { HideoutStation, Item, Map, Trader } from '@prisma/client';
 
 import itemsData from './json/items.json';
 import tradersData from './json/traders.json';
@@ -7,6 +7,19 @@ import typesData from './json/types.json'
 import hideoutData from './json/hideoutStations.json'
 import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
+
+
+export function createItems(): Item[] {
+    return itemsData.items
+}
+
+export function createMaps(): Map[] {
+    return mapsData
+}
+
+export function createTraders(): Trader[] {
+    return tradersData
+}
 
 
 export function formatTaskData() {
