@@ -1,4 +1,4 @@
-import type { Hideout, HideoutStation, Item, Map, Trader } from '@prisma/client';
+import { faction, type Hideout, type HideoutStation, type Item, type Map, type Trader } from '@prisma/client';
 
 import itemsData from './json/items.json';
 import tradersData from './json/traders.json';
@@ -25,9 +25,19 @@ export function createTraders(): Trader[] {
     return tradersData
 }
 
+export function getFaction(name: string) {
+    switch (name) {
+        case 'USEC': return faction.USEC
+        case 'BEAR': return faction.BEAR
+        case 'ANY': return faction.Any
+    }
+    return faction.Any
+}
+
 
 export function formatTaskData() {
-    taskData.tasks.forEach((task) => {
+    let tasks = taskData.tasks
+    tasks.forEach((task) => {
         // Adding a list of maps
         task.maps = []
         // From task object
@@ -63,12 +73,13 @@ export function formatTaskData() {
                             task.items.push({ itemId: objective.target, count: objective.number, foundInRaid: false }); break
                         case "build":   // For Gunsmith - Not found in raid  
                             task.items.push({ itemId: objective.target, count: objective.number, foundInRaid: false }); break
-                        default: return
+                        default: break
                     }
                 })
             }
         })
     })
+    return tasks
 }
 
 export function createTypeList(): string[] {

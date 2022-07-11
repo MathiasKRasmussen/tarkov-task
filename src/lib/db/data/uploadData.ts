@@ -1,6 +1,6 @@
 import { prisma } from '$lib/db/prisma';
-import type { Hideout, HideoutStation, Item, ItemType, Map, Skill } from '@prisma/client';
-import { createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList } from "$lib/db/data/formatData"
+import type { Hideout, HideoutStation, Item, ItemType, Map, Skill, Task } from '@prisma/client';
+import { createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
 
 
 
@@ -54,10 +54,17 @@ export async function connectHideouts() {
              } */
             // TODO: Need table for hideout relations
             /*
-           for (const stationReq of station.stationLevelRequirements) {
-               const resStationReq = await prisma.hi
-               console.log(stationReq)
-           } */
+                        for (const stationReq of station.stationLevelRequirements) {
+                            let id: string = stationReq.station.id + '-' + stationReq.level
+                            const resStationReq = await prisma.hideoutReqHideout.create({
+                                data: {
+                                    stationId: station.id,
+                                    requiresId: id,
+                                }
+                            })
+                            console.log(id)
+                            console.log('------------------------------')
+                        } */
             /*
              for (const item of station.itemRequirements) {
                  const resItem = await prisma.hideoutReqItem.create({
@@ -79,7 +86,165 @@ export async function connectHideouts() {
              } */
         }
     }
+}
 
+export async function connectTasks() {
+    const tasks = formatTaskData()
+    let count = 0
+
+    let resultMaps = []
+    let resultObj = []
+    let resultKey = []
+    let resultReward = []
+    let resultRequest = []
+
+    // tasks[42].finishRewards.items[0].item.id
+    //console.log(tasks[65])
+    for (const task of tasks) {
+        console.log(task.name)
+        console.log(task.items)
+        for (const item of task.items) {
+            count += 1
+        }
+        /*
+        for (const req of task.taskRequirements) {
+            const resReq = await prisma.taskReqTask.create({
+                data: {
+                    task: {
+                        connect: {
+                            id: task.id
+                        }
+                    },
+                    requires: {
+                        connect: {
+                            id: req.task.id
+                        }
+                    }
+                }
+            })
+            resultRequest.push(resReq)
+        }
+        */
+        /*
+        for (const reward of task.finishRewards.items) {
+            const resReward = await prisma.taskRewardsItem.create({
+                data: {
+                    item: {
+                        connect: {
+                            id: reward.item.id
+                        }
+                    },
+                    task: {
+                        connect: {
+                            id: task.id
+                        }
+                    },
+                    count: reward.count
+                }
+            })
+            resultReward.push(resReward)
+        }
+        */
+        /*
+        for (const nKey of task.neededKeys) {
+            for (const key of nKey.keys) {
+                const resKey = await prisma.taskReqKey.create({
+                    data: {
+                        key: {
+                            connect: {
+                                id: key.id
+                            },
+                        },
+                        task: {
+                            connect: {
+                                id: task.id
+                            }
+                        }
+                    }
+                })
+                resultKey.push(resKey)
+            }
+        }
+        */
+        /*
+        for (const objective of task.objectives) {
+            count += 1
+            const resObj = await prisma.taskHasObjective.create({
+                data: {
+                    task: {
+                        connect: {
+                            id: task.id
+                        }
+                    },
+                    description: objective.description,
+                    optional: objective.optional,
+                }
+            })
+            resultObj.push(resObj)
+        }
+        */
+        /*
+        if (task.maps && task.maps.length) {
+            count += task.maps.length
+            console.log(task.name)
+            for (const map of task.maps) {
+                const resMap = await prisma.taskOnMap.create({
+                    data: {
+                        map: {
+                            connect: {
+                                id: map
+                            }
+                        },
+                        task: {
+                            connect: {
+                                id: task.id
+                            }
+                        }
+                    }
+                })
+                resultMaps.push(resMap)
+            }
+        }
+    */
+    }
+    console.log('count', count)
+    console.log(resultRequest.length)
+}
+
+export async function addTasks() {
+    let resultTasks = []
+    const tasks = formatTaskData()
+    for (const task of tasks) {
+        let faction: string = task.factionName === undefined ? 'Any' : task.factionName
+        let forKappa = task.kappa ? true : false
+
+        try {
+
+            const resTask: Task = await prisma.task.create({
+                data: {
+                    id: task.id,
+                    name: task.name,
+                    experience: task.experience,
+                    wiki: task.wikiLink,
+                    minPlayerLevel: task.minPlayerLevel ? task.minPlayerLevel : 0,
+                    faction: getFaction(faction),
+                    forKappa: forKappa,
+                    //traderId: task.trader.id
+                    trader: {
+                        connect: {
+                            id: task.trader.id
+                        }
+                    },
+                }
+            })
+            resultTasks.push(resTask)
+        }
+        catch (error) {
+            console.log(error)
+        }
+
+    }
+    console.log(resultTasks.length)
 }
 
 

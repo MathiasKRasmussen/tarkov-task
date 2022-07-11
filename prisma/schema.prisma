@@ -22,6 +22,7 @@ model Trader {
   name             String
   wiki             String?
   HideoutReqTrader HideoutReqTrader[]
+  Task             Task[]
 }
 
 model Map {
@@ -59,6 +60,8 @@ model Task {
   wiki             String
   minPlayerLevel   Int
   forKappa         Boolean
+  trader           Trader             @relation(fields: [traderId], references: [id])
+  traderId         String
   faction          faction            @default(Any)
   TaskOnMap        TaskOnMap[]
   TaskReqKey       TaskReqKey[]
@@ -94,27 +97,27 @@ model Hideout {
 }
 
 model HideoutStation {
-  id               String             @id @unique @default(cuid())
+  id               String              @id @unique @default(cuid())
   level            Int
   constructionTime Int
-  Hideout          Hideout            @relation(fields: [hideoutId], references: [id])
+  Hideout          Hideout             @relation(fields: [hideoutId], references: [id])
   HideoutReqItem   HideoutReqItem[]
   HideoutReqSkill  HideoutReqSkill[]
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasHideout PlayerHasHideout[]
   hideoutId        String
-  //  Requires         HideoutReqHideout[] @relation("Requires")
-  //  Stations         HideoutReqHideout[] @relation("Stations")
+  Requires         HideoutReqHideout[] @relation("Requires")
+  Stations         HideoutReqHideout[] @relation("Stations")
 }
 
-//model HideoutReqHideout {
-//  requires   HideoutStation @relation("Requires", fields: [requiresId], references: [id])
-//  station    HideoutStation @relation("Stations", fields: [stationId], references: [id])
-//  stationId  String
-//  requiresId String
+model HideoutReqHideout {
+  requires   HideoutStation @relation("Requires", fields: [requiresId], references: [id])
+  station    HideoutStation @relation("Stations", fields: [stationId], references: [id])
+  stationId  String
+  requiresId String
 
-//  @@id([stationId, requiresId])
-//}
+  @@id([stationId, requiresId])
+}
 
 model Skill {
   id              String            @id @unique @default(cuid())
