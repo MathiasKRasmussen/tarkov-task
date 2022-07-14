@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser, dev } from '$app/env';
-	import { formatTaskData } from '$lib/db/data/formatData';
 	import { page } from '$app/stores';
+	import type { PlayerHasTasks } from '@prisma/client';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -11,11 +11,8 @@
 	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
 
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true;
-
-	formatTaskData();
+	export let playerTasks: PlayerHasTasks[];
+	console.log(playerTasks[0].task);
 
 	async function onPost() {
 		try {
@@ -41,4 +38,38 @@
 
 <div>
 	<h1>About this app</h1>
+	<div class="overflow-x-auto">
+		<table class="table table-zebra w-full">
+			<!-- head -->
+			<thead>
+				<tr>
+					<th>Completed</th>
+					<th>Task</th>
+					<th>Trader</th>
+					<th>Items</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each playerTasks as playerTask, index}
+					<!-- row 1 -->
+					<tr>
+						<td
+							><input
+								type="checkbox"
+								checked={playerTask.completed}
+								class="checkbox checkbox-primary"
+							/></td
+						>
+						<td>{playerTask.task.name}</td>
+						<td>{playerTask.task.trader.name}</td>
+						<td>
+							{#each playerTask.task.TaskReqItem as item}
+								{item.item.name}
+							{/each}
+						</td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	</div>
 </div>

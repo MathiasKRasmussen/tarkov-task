@@ -22,6 +22,7 @@ export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> 
             include: {
                 task: {
                     include: {
+                        trader: true,
                         TaskOnMap: {
                             include: {
                                 map: true
@@ -47,7 +48,6 @@ export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> 
                 },
             }
         })
-        console.log(playerTasks)
         return playerTasks
     } catch (error) {
         console.log('getPlayerTasks', error)
