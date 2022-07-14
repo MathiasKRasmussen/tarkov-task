@@ -12,7 +12,6 @@
 	export const router = browser;
 
 	export let playerTasks: PlayerHasTasks[];
-	console.log(playerTasks[0].task);
 
 	async function onPost() {
 		try {
@@ -32,7 +31,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="flex">
+<div class="f	x">
 	<button class="btn btn-primary" on:click={onPost}>Post</button>
 </div>
 
