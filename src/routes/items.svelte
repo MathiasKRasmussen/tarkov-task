@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser, dev } from '$app/env';
 	import { page } from '$app/stores';
-	import type { TaskReqItem } from '@prisma/client';
+	import type { Item } from '@prisma/client';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -11,7 +11,7 @@
 	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
 
-	export let taskItems: TaskReqItem[];
+	export let taskItems: Item[];
 </script>
 
 <svelte:head>
@@ -26,23 +26,19 @@
 			<!-- head -->
 			<thead>
 				<tr>
+					<th>Short Name</th>
+					<th>Item Name</th>
 					<th>In Raid</th>
-					<th>Item</th>
-					<th>Count</th>
+					<th>Other</th>
 				</tr>
 			</thead>
 			<tbody>
 				{#each taskItems as taskItem, index}
 					<tr>
-						<td
-							><input
-								type="checkbox"
-								checked={taskItem.foundInRaid}
-								class="checkbox checkbox-primary"
-							/></td
-						>
-						<td>{taskItem.item.name}</td>
-						<td>{taskItem.count}</td>
+						<td>{taskItem.shortName}</td>
+						<td>{taskItem.name}</td>
+						<td>{taskItem.inRaidCount}</td>
+						<td>{taskItem.otherCount}</td>
 					</tr>
 				{/each}
 			</tbody>
