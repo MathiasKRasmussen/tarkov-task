@@ -8,6 +8,20 @@ import hideoutData from './json/hideoutStations.json'
 import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
 
+export function getStashIds(version: number): string[] {
+    const standard: string = '5d484fc0654e76006657e0ab-1'
+    const leftBehind: string = '5d484fc0654e76006657e0ab-2'
+    const prepareEscape: string = '5d484fc0654e76006657e0ab-3'
+    const edgeOfDarkness: string = '5d484fc0654e76006657e0ab-4'
+    let ids: string[] = []
+    if (1 <= version && version <= 4) {
+        ids.push(standard)
+        if (version > 1) ids.push(leftBehind)
+        if (version > 2) ids.push(prepareEscape)
+        if (version > 3) ids.push(edgeOfDarkness)
+    }
+    return ids
+}
 
 export function createHideouts(): Hideout[] {
     return hideoutData.hideoutStations
@@ -54,6 +68,7 @@ export function formatTaskData() {
         })
 
         // itemTasks
+        task.items = []
         taskItemsData.tasks.forEach((itemTask) => {
             if (task.id === itemTask.gameId) {
                 // Task for Kappa
@@ -64,7 +79,6 @@ export function formatTaskData() {
                 }
 
                 // Add required items for task
-                task.items = []
                 itemTask.objectives.forEach((objective) => {
                     switch (objective.type) {
                         case "find":    //  Has to be found in raid

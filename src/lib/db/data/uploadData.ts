@@ -13,6 +13,31 @@ export async function connectHideouts() {
     for (const hideout of hideouts) {
         for (const station of hideout.levels) {
             /*
+            for (const reqs of station.stationLevelRequirements) {
+                const reqId: string = reqs.station.id + '-' + reqs.level
+                console.log(reqId)
+                console.log(station.id)
+                console.log('----------------')
+
+                const res = await prisma.hideoutReqHideout.create({
+                    data: {
+                        station: {
+                            connect: {
+                                id: station.id
+                            }
+                        },
+                        requires: {
+                            connect: {
+                                id: reqId
+                            }
+                        }
+                    }
+                })
+                console.log(res)
+
+            }
+            */
+            /*
             for (const trader of station.traderRequirements) {
                 const resTraders = await prisma.hideoutReqTrader.create({
                     data: {
@@ -97,16 +122,32 @@ export async function connectTasks() {
     let resultKey = []
     let resultReward = []
     let resultRequest = []
+    let resultItems = []
 
     // tasks[42].finishRewards.items[0].item.id
     //console.log(tasks[65])
     for (const task of tasks) {
-        console.log(task.name)
-        console.log(task.items)
-        for (const item of task.items) {
-            count += 1
+        if (task.items.length) {
+            for (const item of task.items) {
+                const resItem = await prisma.taskReqItem.create({
+                    data: {
+                        task: {
+                            connect: {
+                                id: task.id
+                            },
+                        },
+                        item: {
+                            connect: {
+                                id: item.itemId
+                            },
+                        },
+                        count: item.count,
+                        foundInRaid: item.foundInRaid,
+                    }
+                })
+                resultItems.push(resItem)
+            }
         }
-        /*
         for (const req of task.taskRequirements) {
             const resReq = await prisma.taskReqTask.create({
                 data: {
@@ -124,8 +165,7 @@ export async function connectTasks() {
             })
             resultRequest.push(resReq)
         }
-        */
-        /*
+
         for (const reward of task.finishRewards.items) {
             const resReward = await prisma.taskRewardsItem.create({
                 data: {
@@ -144,8 +184,7 @@ export async function connectTasks() {
             })
             resultReward.push(resReward)
         }
-        */
-        /*
+
         for (const nKey of task.neededKeys) {
             for (const key of nKey.keys) {
                 const resKey = await prisma.taskReqKey.create({
@@ -165,8 +204,7 @@ export async function connectTasks() {
                 resultKey.push(resKey)
             }
         }
-        */
-        /*
+
         for (const objective of task.objectives) {
             count += 1
             const resObj = await prisma.taskHasObjective.create({
@@ -182,8 +220,7 @@ export async function connectTasks() {
             })
             resultObj.push(resObj)
         }
-        */
-        /*
+
         if (task.maps && task.maps.length) {
             count += task.maps.length
             console.log(task.name)
@@ -205,15 +242,20 @@ export async function connectTasks() {
                 resultMaps.push(resMap)
             }
         }
-    */
     }
     console.log('count', count)
-    console.log(resultRequest.length)
+    console.log('Reqs', resultRequest.length)
+    console.log('Maps', resultMaps.length)
+    console.log('Objs', resultObj.length)
+    console.log('Keys', resultKey.length)
+    console.log('Rewards', resultReward.length)
+    console.log('Items', resultItems.length)
 }
 
 export async function addTasks() {
     let resultTasks = []
     const tasks = formatTaskData()
+
     for (const task of tasks) {
         let faction: string = task.factionName === undefined ? 'Any' : task.factionName
         let forKappa = task.kappa ? true : false
@@ -229,7 +271,6 @@ export async function addTasks() {
                     minPlayerLevel: task.minPlayerLevel ? task.minPlayerLevel : 0,
                     faction: getFaction(faction),
                     forKappa: forKappa,
-                    //traderId: task.trader.id
                     trader: {
                         connect: {
                             id: task.trader.id
