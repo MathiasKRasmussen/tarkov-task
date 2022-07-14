@@ -14,7 +14,6 @@ function convertPlayerTaskItemsToItem(playerTasks: PlayerHasTasks[]): TaskReqIte
 // Gets all items needed for all tasks
 export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
     let items: TaskReqItem[] = convertPlayerTaskItemsToItem(playerTasks)
-    //let sortedItems: TaskReqItem[] = []
     let sortedItems: Item[] = []
     items.forEach((item: TaskReqItem) => {
         let alreadyAdded: boolean = false

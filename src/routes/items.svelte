@@ -30,6 +30,7 @@
 					<th>Item Name</th>
 					<th>In Raid</th>
 					<th>Other</th>
+					<th />
 				</tr>
 			</thead>
 			<tbody>
@@ -39,6 +40,14 @@
 						<td>{taskItem.name}</td>
 						<td>{taskItem.inRaidCount}</td>
 						<td>{taskItem.otherCount}</td>
+						<td
+							><a
+								class="btn btn-ghost btn-sm"
+								role="button"
+								sveltekit:prefetch
+								href={`/item/${taskItem.id}`}>View Item</a
+							></td
+						>
 					</tr>
 				{/each}
 			</tbody>
