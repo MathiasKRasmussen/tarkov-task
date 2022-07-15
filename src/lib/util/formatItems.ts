@@ -1,4 +1,4 @@
-import type { Item, PlayerHasTasks, TaskReqItem } from "@prisma/client";
+import type { Item, PlayerHasHideout, PlayerHasTasks, TaskReqItem } from "@prisma/client";
 
 
 function convertPlayerTaskItemsToItem(playerTasks: PlayerHasTasks[]): TaskReqItem[] {
@@ -39,6 +39,7 @@ export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
                 item.item.inRaidCount = 0
                 item.item.otherCount = item.count
             }
+            item.item.stationCount = 0
             sortedItems.push(item.item)
         }
     })
@@ -46,6 +47,39 @@ export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
     return sortedItems
 }
 
+
+export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
+    console.log(items.length, stations.length)
+    stations.forEach((station: PlayerHasHideout) => {
+        station.hideoutStation.HideoutReqItem.forEach((reqItem) => {
+            items.forEach((item: Item) => {
+                if (item.id === reqItem.item.id) {
+                    item.stationCount += reqItem.count
+                }
+            })
+
+        })
+    })
+    items.sort(compareItemCount)
+}
+
+export function getTotalCount(item: Item): number {
+    return item.inRaidCount + getNotInRaidCount(item)
+}
+
+export function getNotInRaidCount(item: Item): number {
+    return item.otherCount + item.stationCount
+}
+
+export function compareItemCount(a: Item, b: Item) {
+    if (getTotalCount(a) < getTotalCount(b)) {
+        return 1;
+    }
+    if (getTotalCount(a) > getTotalCount(b)) {
+        return -1;
+    }
+    return 0;
+}
 
 export function compareItemNames(a: Item, b: Item) {
     if (a.name < b.name) {

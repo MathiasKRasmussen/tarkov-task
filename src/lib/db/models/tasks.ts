@@ -1,5 +1,6 @@
 import { prisma } from '$lib/db/prisma';
-import type { Player, PlayerHasTasks, Task } from '@prisma/client';
+import type { faction, Player, PlayerHasTasks, Task } from '@prisma/client';
+import { getFaction } from '../data/formatData';
 
 export async function getTasks(): Promise<Task[]> {
     let tasks: Task[] = []
@@ -11,12 +12,29 @@ export async function getTasks(): Promise<Task[]> {
     return tasks
 }
 
-export async function getPlayerTasksItems(userId: string): Promise<PlayerHasTasks[]> {
+export async function getTasksByFaction(faction: faction): Promise<Task[]> {
+    let tasks: Task[] = []
+    const factions: faction[] = [getFaction('Any'), faction]
+    try {
+        tasks = await prisma.task.findMany({
+            where: {
+                faction: {
+                    in: factions
+                }
+            }
+        })
+    } catch (error) {
+        console.log('getTasksByFaction', error)
+    }
+    return tasks
+}
+
+export async function getPlayerTasksItems(player: Player): Promise<PlayerHasTasks[]> {
     try {
         const playerTasks: PlayerHasTasks[] = await prisma.playerHasTasks.findMany({
             where: {
                 player: {
-                    id: userId
+                    id: player.id
                 },
                 completed: false,
             },
@@ -40,12 +58,12 @@ export async function getPlayerTasksItems(userId: string): Promise<PlayerHasTask
     }
 }
 
-export async function getPlayerTasks(userId: string): Promise<PlayerHasTasks[]> {
+export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> {
     try {
         const playerTasks: PlayerHasTasks[] = await prisma.playerHasTasks.findMany({
             where: {
                 player: {
-                    id: userId
+                    id: player.id
                 }
             },
             include: {
