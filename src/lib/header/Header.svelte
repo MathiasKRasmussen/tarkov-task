@@ -1,35 +1,25 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+
+	const title: string = 'TARKOV TASKER';
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
-
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/items'}>
-				<a sveltekit:prefetch href="/items">Items</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+	<div class="navbar bg-base-100">
+		<div class="navbar-start">
+			<a class="btn btn-ghost "><h1 class="text-2xl font-bold">{title}</h1></a>
+		</div>
+		<div class="navbar-center hidden lg:flex">
+			<ul class="menu menu-horizontal p-0">
+				<li><a class="text-primary">Items</a></li>
+				<li><a class="text-primary">Parent</a></li>
+				<li><a class="text-primary">Item 3</a></li>
+			</ul>
+		</div>
+		<div class="navbar-end">
+			<a class="btn">Get started</a>
+		</div>
 	</div>
 </header>
 
