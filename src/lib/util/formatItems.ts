@@ -58,7 +58,7 @@ export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
 
         })
     })
-    items.sort(compareItemNames)
+    items.sort(compareItemShortNames)
 }
 
 export function getTotalCount(item: Item): number {
@@ -80,10 +80,10 @@ export function compareItemCount(a: Item, b: Item) {
 }
 
 export function compareRaidItemCount(a: Item, b: Item) {
-    if (a.inRaidCount < a.inRaidCount) {
+    if (a.inRaidCount < b.inRaidCount) {
         return 1;
     }
-    if (a.inRaidCount > a.inRaidCount) {
+    if (a.inRaidCount > b.inRaidCount) {
         return -1;
     }
     return 0;
@@ -94,6 +94,16 @@ export function compareItemNames(a: Item, b: Item) {
         return -1;
     }
     if (a.name > b.name) {
+        return 1;
+    }
+    return 0;
+}
+
+export function compareItemShortNames(a: Item, b: Item) {
+    if (a.shortName < b.shortName) {
+        return -1;
+    }
+    if (a.shortName > b.shortName) {
         return 1;
     }
     return 0;
