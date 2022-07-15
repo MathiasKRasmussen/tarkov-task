@@ -7,10 +7,10 @@ module.exports = {
     themes: [{
       tarkov: {
         "primary": "#9A8866",
-        "secondary": "#8B8873",
+        "secondary": "#332100",
         "accent": "#251C29",
-        "neutral": "#262626",
-        "base-100": "#171715",
+        "neutral": "#242F35",
+        "base-100": "#1A1A1A",
         "info": "#5F378E",
         "success": "#007800",
         "warning": "#FF9900",

@@ -20,18 +20,43 @@
 </svelte:head>
 
 <div>
-	<h1 class="text-primary">Items needed</h1>
+	<h1>Items needed</h1>
+
+	<div class="flex w-full">
+		<div class="form-control w-full max-w-xs">
+			<label class="label">
+				<span class="label-text">Pick the best fantasy franchise</span>
+				<span class="label-text-alt" />
+			</label>
+			<select class="select select-bordered">
+				<option disabled selected>Pick one</option>
+				<option>Star Wars</option>
+				<option>Harry Potter</option>
+				<option>Lord of the Rings</option>
+				<option>Planet of the Apes</option>
+				<option>Star Trek</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Main Table -->
 	<div class="overflow-x-auto">
 		<table class="table table-zebra table-compact w-full">
 			<!-- head -->
 			<thead>
-				<tr>
-					<th />
-					<th> <div class="flex justify-center text-primary">Short Name</div></th>
-					<th> <div class="flex justify-center text-primary">In Raid</div></th>
-					<th> <div class="flex justify-center text-primary">Other</div></th>
-					<th> <div class="flex justify-center text-primary">Hideout</div></th>
-					<th />
+				<tr class="bg-primary">
+					<th class="bg-opacity-0" />
+					<th class="bg-opacity-0">
+						<div class="flex justify-center text-secondary">Short Name</div></th
+					>
+					<th class="bg-opacity-0">
+						<div class="flex justify-center text-secondary">In Raid</div></th
+					>
+					<th class="bg-opacity-0"> <div class="flex justify-center text-secondary">Other</div></th>
+					<th class="bg-opacity-0">
+						<div class="flex justify-center text-secondary">Hideout</div></th
+					>
+					<th class="bg-opacity-0"> <div class="flex justify-center text-secondary">Wiki</div> </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,7 +64,7 @@
 					<tr>
 						<td
 							><div class="avatar flex justify-center">
-								<div class="rounded w-14">
+								<div class="rounded w-12">
 									<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
 										<img src={taskItem.image} alt={taskItem.name} title={taskItem.name} />
 									</a>
@@ -47,7 +72,7 @@
 							</div></td
 						>
 						<td>
-							<div class="flex justify-center text-secondary">
+							<div class="flex justify-center text-primary">
 								{taskItem.shortName}
 							</div>
 						</td>

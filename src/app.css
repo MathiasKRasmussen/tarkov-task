@@ -9,12 +9,12 @@
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--pure-white: #ffffff;
-	--primary-color: #262626;
-	--secondary-color: #1c1c1c;
-	--tertiary-color: #0b0b0b;
+	--primary-color: #2f271cbc;
+	--secondary-color: #292218bc;
+	--tertiary-color: #231d15bc;
 	--accent-color: #ff3e00;
-	--heading-color: rgba(0, 0, 0, 0.7);
-	--text-color: #444444;
+	--heading-color: #9A8866;
+	--text-color: #bfbbbb;
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
 	--column-width: 42rem;
 	--column-margin-top: 4rem;

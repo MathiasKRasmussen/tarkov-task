@@ -43,13 +43,11 @@ export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
             sortedItems.push(item.item)
         }
     })
-    sortedItems.sort(compareItemNames)
     return sortedItems
 }
 
 
 export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
-    console.log(items.length, stations.length)
     stations.forEach((station: PlayerHasHideout) => {
         station.hideoutStation.HideoutReqItem.forEach((reqItem) => {
             items.forEach((item: Item) => {
@@ -60,7 +58,7 @@ export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
 
         })
     })
-    items.sort(compareItemCount)
+    items.sort(compareItemNames)
 }
 
 export function getTotalCount(item: Item): number {
@@ -76,6 +74,16 @@ export function compareItemCount(a: Item, b: Item) {
         return 1;
     }
     if (getTotalCount(a) > getTotalCount(b)) {
+        return -1;
+    }
+    return 0;
+}
+
+export function compareRaidItemCount(a: Item, b: Item) {
+    if (a.inRaidCount < a.inRaidCount) {
+        return 1;
+    }
+    if (a.inRaidCount > a.inRaidCount) {
         return -1;
     }
     return 0;

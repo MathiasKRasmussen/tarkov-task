@@ -41,6 +41,5 @@ export async function getStationItemsByPlayer(player: Player) {
     } catch (error) {
         console.log('getStationItemsByPlayer')
     }
-    //console.log(stations[5].hideoutStation.HideoutReqItem)
     return stations
 }
