@@ -8,8 +8,6 @@ import hideoutData from './json/hideoutStations.json'
 import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
 
-export const userId: string = 'cl5l4ouel3775h4v6oktmwitg'
-
 export function getStashIds(version: number): string[] {
     const standard: string = '5d484fc0654e76006657e0ab-1'
     const leftBehind: string = '5d484fc0654e76006657e0ab-2'

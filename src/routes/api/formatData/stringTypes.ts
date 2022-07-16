@@ -1,4 +1,4 @@
-import { createItems, userId } from "$lib/db/data/formatData"
+import { createItems } from "$lib/db/data/formatData"
 import { createPlayer, getPlayer } from "$lib/db/data/player"
 import { addHideout, addItems, addItemTypes, addMaps, addSkills, addTasks, addTraders, addTypesToItems, connectHideouts, connectTasks, findItems } from "$lib/db/data/uploadData"
 import { getHideoutStations } from "$lib/db/models/hideouts"

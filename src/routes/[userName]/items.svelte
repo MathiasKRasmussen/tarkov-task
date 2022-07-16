@@ -33,28 +33,12 @@
 
 		items = items.sort(sort);
 	};
-
-	async function onPost() {
-		try {
-			const res = await fetch(`${$page.url.origin}/api/formatData/stringTypes`, {
-				method: 'POST'
-			});
-			//progressData = await res.json()
-			console.log('uploaded  sucessfully');
-		} catch (error) {
-			console.log('An error occured', error);
-		}
-	}
 </script>
 
 <svelte:head>
 	<title>Items</title>
 	<meta name="description" content="Items" />
 </svelte:head>
-
-<div class="f	x">
-	<button class="btn btn-primary" on:click={onPost}>Post</button>
-</div>
 
 <div>
 	<h1 class="p-4 font-bold">{header}</h1>

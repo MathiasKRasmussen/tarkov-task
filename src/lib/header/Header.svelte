@@ -1,23 +1,36 @@
 <script lang="ts">
-	import { page, navigating } from '$app/stores';
-
+	import { page } from '$app/stores';
+	import { standardUsername } from '$lib/util/variables';
+	import { userName } from '../../stores/user';
 	const title: string = 'TARKOV TASKER';
 </script>
 
-<header>
+<header class="sticky top-0 z-50">
 	<div class="navbar bg-base-100">
 		<div class="navbar-start">
 			<a class="btn btn-ghost text-primary text-2xl font-bold" sveltekit:prefetch href={`/`}
 				>{title}</a
 			>
 		</div>
-		<div class="navbar-center hidden lg:flex">
-			<ul class="menu menu-horizontal p-0">
-				<li><a class="text-primary" sveltekit:prefetch href={`/items`}>Items</a></li>
-				<li><a class="text-primary" sveltekit:prefetch href={`/`}>Parent</a></li>
-				<li><a class="text-primary" sveltekit:prefetch href={`/`}>Item 3</a></li>
-			</ul>
-		</div>
+		{#if $userName !== standardUsername}
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal p-0">
+					<li>
+						<a class="text-primary font-bold" sveltekit:prefetch href={`/${$userName}/items`}
+							>Items</a
+						>
+					</li>
+					<li>
+						<a class="text-primary font-bold" sveltekit:prefetch href={`/${$userName}/tasks`}
+							>Tasks</a
+						>
+					</li>
+					<li>
+						<a class="text-primary font-bold" sveltekit:prefetch href={`/${$userName}/`}>Hideout</a>
+					</li>
+				</ul>
+			</div>
+		{/if}
 		<div class="navbar-end">
 			<a class="btn" sveltekit:prefetch href={`/`}>Get started</a>
 		</div>
