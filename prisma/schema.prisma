@@ -18,6 +18,17 @@ model Player {
   level            Int                @default(0)
   PlayerHasHideout PlayerHasHideout[]
   PlayerHasTasks   PlayerHasTasks[]
+  PlayerHasTrader  PlayerHasTrader[]
+}
+
+model PlayerHasTrader {
+  player   Player @relation(fields: [playerId], references: [id])
+  trader   Trader @relation(fields: [traderId], references: [id])
+  traderId String
+  playerId String
+  level    Int    @default(1)
+
+  @@id([playerId, traderId])
 }
 
 model Trader {
@@ -26,6 +37,7 @@ model Trader {
   wiki             String?
   HideoutReqTrader HideoutReqTrader[]
   Task             Task[]
+  PlayerHasTrader  PlayerHasTrader[]
 }
 
 model Map {

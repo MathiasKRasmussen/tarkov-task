@@ -1,13 +1,14 @@
 import { prisma } from '$lib/db/prisma';
-import type { faction, HideoutStation, Player, Task } from '@prisma/client';
+import type { faction, HideoutStation, Player, PlayerHasTrader, Task, Trader } from '@prisma/client';
 import { getHideoutStations } from '../models/hideouts';
 import { getTasks, getTasksByFaction } from '../models/tasks';
-import { getStashIds } from './formatData';
+import { createTraders, getStashIds } from './formatData';
 
 export async function createPlayer(name: string, version: number, level: number, faction: faction): Promise<Player> {
     const tasks: Task[] = await getTasksByFaction(faction)
     const stations: HideoutStation[] = await getHideoutStations()
     const stashIds: string[] = getStashIds(version)
+    const traders: Trader[] = createTraders()
 
     try {
         const player: Player = await prisma.player.create({ data: { name: name, version: version, level: level, faction: faction } })
@@ -40,6 +41,23 @@ export async function createPlayer(name: string, version: number, level: number,
                         hideoutStation: {
                             connect: {
                                 id: station.id
+                            }
+                        },
+                        player: {
+                            connect: {
+                                id: player.id
+                            }
+                        }
+                    }
+                })
+            }
+            // Add traders to player
+            for (const trader of traders) {
+                const result = await prisma.playerHasTrader.create({
+                    data: {
+                        trader: {
+                            connect: {
+                                id: trader.id
                             }
                         },
                         player: {

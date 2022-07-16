@@ -11,7 +11,7 @@ export async function post({ request }) {
     const player: Player = await getPlayer('Radelly')
     //const playerTasks = await getPlayerTasksItems(userid)
     //getRequiredTaskItems(playerTasks)
-    await getTasksByFaction(player.faction)
+    //await getTasksByFaction(player.faction)
     console.log("DONE POST")
     return {
         body: {
