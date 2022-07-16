@@ -8,11 +8,11 @@ export async function get({ params }) {
     const player: Player = await getPlayer(userName)
     const playerHasTasks = await getPlayerTasks(player)
     const traders: Trader[] = await getPlayerTraders(player)
-    console.log(traders)
     return {
         body: {
             traders,
             playerHasTasks,
+            player,
         },
     }
 }
