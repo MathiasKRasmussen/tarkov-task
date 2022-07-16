@@ -2,7 +2,7 @@
 	import { getRequiredTaskItems } from '$lib/util/formatItems';
 	import { getTraderImage } from '$lib/util/images';
 
-	import type { PlayerHasTasks, TaskOnMap, Trader } from '@prisma/client';
+	import type { Player, PlayerHasTasks, TaskOnMap, Trader } from '@prisma/client';
 	import { userName } from '../../stores/user';
 	import ItemId from '../item/[itemId].svelte';
 
@@ -74,6 +74,14 @@
 			return '';
 		}
 	}
+
+	// Cancel button clears the update tasks array
+	function onCancel(): void {
+		updatedPlayerTasks.forEach((playerTask: PlayerHasTasks) => {
+			playerTask.completed = !playerTask.completed;
+		});
+		updatedPlayerTasks.length = 0;
+	}
 </script>
 
 <svelte:head>
@@ -117,7 +125,7 @@
 								<div class="pt-4">
 									<input
 										type="checkbox"
-										checked={traderTask.completed}
+										bind:value={traderTask.completed}
 										class="checkbox checkbox-primary align-middle"
 										on:change={() => onChange(traderTask, updatedPlayerTasks)}
 									/>
@@ -254,10 +262,15 @@
 					d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 				/></svg
 			>
-			<span class="text-lg">Remember to save</span>
+			<span class="text-lg"
+				>{'Remember to save ' +
+					updatedPlayerTasks.length +
+					' task' +
+					(updatedPlayerTasks.length > 1 ? 's' : '')}</span
+			>
 		</div>
 		<div class="flex-none">
-			<button class="btn btn-sm btn-neutral">Cancel</button>
+			<button class="btn btn-sm btn-neutral" on:click={() => onCancel()}>Cancel</button>
 			<button class="btn btn-sm btn-success" on:click={() => console.log(updatedPlayerTasks.length)}
 				>Save</button
 			>
