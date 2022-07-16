@@ -69,7 +69,11 @@ export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> 
             include: {
                 task: {
                     include: {
-                        trader: true,
+                        trader: {
+                            include: {
+                                PlayerHasTrader: true
+                            }
+                        },
                         TaskOnMap: {
                             include: {
                                 map: true
