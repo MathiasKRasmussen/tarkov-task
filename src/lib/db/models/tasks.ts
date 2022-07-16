@@ -104,3 +104,23 @@ export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> 
         console.log('getPlayerTasks', error)
     }
 }
+
+export async function updatePlayerTasks(playerTasks: PlayerHasTasks[]): Promise<boolean> {
+    let results: PlayerHasTasks[] = []
+    try {
+        for (const playerTask of playerTasks) {
+            const result = await prisma.playerHasTasks.update({
+                where: {
+                    id: playerTask.id,
+                },
+                data: {
+                    completed: playerTask.completed
+                }
+            })
+            results.push(result)
+        }
+    } catch (error) {
+        console.log('updatePlayerTasks', error)
+    }
+    return playerTasks.length === results.length
+}
