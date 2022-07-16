@@ -12,6 +12,7 @@
 	export let playerHasTasks: PlayerHasTasks[];
 	export let player: Player;
 	let updatedPlayerTasks: PlayerHasTasks[] = [];
+	let updateCheckBoxes: boolean = false;
 
 	// Get trader level
 	function getTraderLevel(trader: Trader): number {
@@ -81,6 +82,7 @@
 			playerTask.completed = !playerTask.completed;
 		});
 		updatedPlayerTasks.length = 0;
+		updateCheckBoxes = !updateCheckBoxes;
 	}
 </script>
 
@@ -123,12 +125,14 @@
 							<div class="card-body flex flex-row pt-2 pb-0 pl-4 pr-2">
 								<!-- Checkbox for showing if task is complete-->
 								<div class="pt-4">
-									<input
-										type="checkbox"
-										bind:value={traderTask.completed}
-										class="checkbox checkbox-primary align-middle"
-										on:change={() => onChange(traderTask, updatedPlayerTasks)}
-									/>
+									{#key updateCheckBoxes}
+										<input
+											type="checkbox"
+											bind:checked={traderTask.completed}
+											class="checkbox checkbox-primary align-middle"
+											on:change={() => onChange(traderTask, updatedPlayerTasks)}
+										/>
+									{/key}
 								</div>
 								<!-- Task Info-->
 								<div
