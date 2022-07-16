@@ -88,9 +88,9 @@
 			<div class="overflow-x-auto pb-6">
 				<div class="card shadow-xl">
 					<!-- Card header -->
-					<div class="card-body bg-primary flex flex-row items-center p-4">
+					<div class="card-body bg-primary flex flex-row items-center pt-3 p-4">
 						<!-- Avatar of trader with level indicator-->
-						<div class="avatar indicator pl-2">
+						<div class="avatar indicator">
 							<!-- Level indicator-->
 							<span
 								class="indicator-item indicator-bottom badge badge-neutral"
@@ -112,7 +112,7 @@
 
 					{#each getTraderTasks(trader) as traderTask, index}
 						<div class="card border border-base-300 even:bg-base-100 odd:bg-base-200">
-							<div class="card-body flex flex-row pt-2 pb-0 pl-2 pr-2">
+							<div class="card-body flex flex-row pt-2 pb-0 pl-4 pr-2">
 								<!-- Checkbox for showing if task is complete-->
 								<div class="pt-4">
 									<input
@@ -162,6 +162,10 @@
 												<p class="flex text-success">
 													{traderTask.task.experience}
 												</p>
+											</div>
+											<!-- Wiki-->
+											<div class="flex flex-row gap-1">
+												<a href={traderTask.task.wiki} target="_blank">Wiki</a>
 											</div>
 										</div>
 										<!-- Task objectives-->

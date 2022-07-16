@@ -30,10 +30,12 @@
 					</li>
 				</ul>
 			</div>
+			<div class="navbar-end">
+				<p>
+					{$userName}
+				</p>
+			</div>
 		{/if}
-		<div class="navbar-end">
-			<a class="btn" sveltekit:prefetch href={`/`}>Get started</a>
-		</div>
 	</div>
 </header>
 
