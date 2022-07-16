@@ -47,14 +47,14 @@
 	}
 
 	// Handle when task is set to be completed/incomplete
-	function onChange(playerTask: PlayerHasTasks) {
-		if (updatedPlayerTasks.includes(playerTask)) {
-			const index: number = updatedPlayerTasks.map((object) => object.id).indexOf(playerTask.id);
-			updatedPlayerTasks.splice(index, 1);
+	function onChange(playerTask: PlayerHasTasks, oldUpdatedTasks: PlayerHasTasks[]) {
+		if (oldUpdatedTasks.includes(playerTask)) {
+			const index: number = oldUpdatedTasks.map((object) => object.id).indexOf(playerTask.id);
+			oldUpdatedTasks.splice(index, 1);
 		} else {
-			updatedPlayerTasks.push(playerTask);
+			oldUpdatedTasks.push(playerTask);
 		}
-		console.log(playerTask);
+		updatedPlayerTasks = oldUpdatedTasks;
 	}
 
 	// Creates a string of all the maps on a task
@@ -85,7 +85,7 @@
 	<h1 class="p-4 font-bold">{header}</h1>
 	<div>
 		{#each traders as trader}
-			<div class="overflow-x-auto pb-6">
+			<div class="overflow-x-auto pb-10">
 				<div class="card shadow-xl">
 					<!-- Card header -->
 					<div class="card-body bg-primary flex flex-row items-center pt-3 p-4">
@@ -111,7 +111,7 @@
 					</div>
 
 					{#each getTraderTasks(trader) as traderTask, index}
-						<div class="card border border-base-300 even:bg-base-100 odd:bg-base-200">
+						<div class="card border border-base-300 even:bg-base-100 odd:bg-base-200 rounded-none">
 							<div class="card-body flex flex-row pt-2 pb-0 pl-4 pr-2">
 								<!-- Checkbox for showing if task is complete-->
 								<div class="pt-4">
@@ -119,7 +119,7 @@
 										type="checkbox"
 										checked={traderTask.completed}
 										class="checkbox checkbox-primary align-middle"
-										on:change={() => onChange(traderTask)}
+										on:change={() => onChange(traderTask, updatedPlayerTasks)}
 									/>
 								</div>
 								<!-- Task Info-->
@@ -238,3 +238,29 @@
 		{/each}
 	</div>
 </div>
+
+{#if updatedPlayerTasks.length}
+	<div class="alert alert-info shadow-lg sticky bottom-0 z-50">
+		<div>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				class="stroke-current flex-shrink-0 w-6 h-6"
+				><path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+				/></svg
+			>
+			<span class="text-lg">Remember to save</span>
+		</div>
+		<div class="flex-none">
+			<button class="btn btn-sm btn-neutral">Cancel</button>
+			<button class="btn btn-sm btn-success" on:click={() => console.log(updatedPlayerTasks.length)}
+				>Save</button
+			>
+		</div>
+	</div>
+{/if}
