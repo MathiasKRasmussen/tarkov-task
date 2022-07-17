@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -22,11 +19,11 @@ model Player {
 }
 
 model PlayerHasTrader {
-  player   Player @relation(fields: [playerId], references: [id])
-  trader   Trader @relation(fields: [traderId], references: [id])
   traderId String
   playerId String
   level    Int    @default(1)
+  player   Player @relation(fields: [playerId], references: [id])
+  trader   Trader @relation(fields: [traderId], references: [id])
 
   @@id([playerId, traderId])
 }
@@ -36,8 +33,8 @@ model Trader {
   name             String
   wiki             String?
   HideoutReqTrader HideoutReqTrader[]
-  Task             Task[]
   PlayerHasTrader  PlayerHasTrader[]
+  Task             Task[]
 }
 
 model Map {
@@ -55,11 +52,11 @@ model Item {
   height          Int?
   wiki            String?
   image           String?
-  ItemHasType     ItemHasType[]
   HideoutReqItem  HideoutReqItem[]
+  ItemHasType     ItemHasType[]
+  TaskReqItem     TaskReqItem[]
   TaskReqKey      TaskReqKey[]
   TaskRewardsItem TaskRewardsItem[]
-  TaskReqItem     TaskReqItem[]
 }
 
 model ItemType {
@@ -74,35 +71,35 @@ model Task {
   experience       Int
   wiki             String
   minPlayerLevel   Int
-  forKappa         Boolean
-  trader           Trader             @relation(fields: [traderId], references: [id])
-  traderId         String
   faction          faction            @default(Any)
-  TaskOnMap        TaskOnMap[]
-  TaskReqKey       TaskReqKey[]
-  TaskRewardsItem  TaskRewardsItem[]
-  TaskReqItem      TaskReqItem[]
-  TaskHasObjective TaskHasObjective[]
+  forKappa         Boolean
+  traderId         String
+  trader           Trader             @relation(fields: [traderId], references: [id])
   PlayerHasTasks   PlayerHasTasks[]
+  TaskHasObjective TaskHasObjective[]
+  TaskOnMap        TaskOnMap[]
+  TaskReqItem      TaskReqItem[]
+  TaskReqKey       TaskReqKey[]
   Requires         TaskReqTask[]      @relation("Requires")
   Tasks            TaskReqTask[]      @relation("Tasks")
+  TaskRewardsItem  TaskRewardsItem[]
 }
 
 model TaskReqTask {
-  requires   Task   @relation("Requires", fields: [requiresId], references: [id])
-  task       Task   @relation("Tasks", fields: [taskId], references: [id])
   taskId     String
   requiresId String
+  requires   Task   @relation("Requires", fields: [requiresId], references: [id])
+  task       Task   @relation("Tasks", fields: [taskId], references: [id])
 
   @@id([taskId, requiresId])
 }
 
 model ItemHasType {
-  type       ItemType @relation(fields: [itemTypeId], references: [id])
-  item       Item     @relation(fields: [itemId], references: [id])
   id         String   @id @unique @default(cuid())
   itemTypeId String
   itemId     String
+  item       Item     @relation(fields: [itemId], references: [id])
+  type       ItemType @relation(fields: [itemTypeId], references: [id])
 }
 
 model Hideout {
@@ -115,21 +112,21 @@ model HideoutStation {
   id               String              @id @unique @default(cuid())
   level            Int
   constructionTime Int
+  hideoutId        String
   Hideout          Hideout             @relation(fields: [hideoutId], references: [id])
+  RequiresStation  HideoutReqHideout[] @relation("RequiresStation")
+  Stations         HideoutReqHideout[] @relation("Stations")
   HideoutReqItem   HideoutReqItem[]
   HideoutReqSkill  HideoutReqSkill[]
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasHideout PlayerHasHideout[]
-  hideoutId        String
-  RequiresStation  HideoutReqHideout[] @relation("RequiresStation")
-  Stations         HideoutReqHideout[] @relation("Stations")
 }
 
 model HideoutReqHideout {
-  requires   HideoutStation @relation("RequiresStation", fields: [requiresId], references: [id])
-  station    HideoutStation @relation("Stations", fields: [stationId], references: [id])
   stationId  String
   requiresId String
+  requires   HideoutStation @relation("RequiresStation", fields: [requiresId], references: [id])
+  station    HideoutStation @relation("Stations", fields: [stationId], references: [id])
 
   @@id([stationId, requiresId])
 }
@@ -141,91 +138,91 @@ model Skill {
 }
 
 model HideoutReqItem {
-  item             Item           @relation(fields: [itemId], references: [id])
-  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
   count            Int
   id               String         @id @unique @default(cuid())
   itemId           String
   hideoutStationId String
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  item             Item           @relation(fields: [itemId], references: [id])
 }
 
 model HideoutReqSkill {
-  skill            Skill          @relation(fields: [skillId], references: [id])
-  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
   level            Int
   id               String         @id @unique @default(cuid())
   skillId          String
   hideoutStationId String
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  skill            Skill          @relation(fields: [skillId], references: [id])
 }
 
 model HideoutReqTrader {
   id               String         @id @unique @default(cuid())
-  trader           Trader         @relation(fields: [traderId], references: [id])
   level            Int
-  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
   traderId         String
   hideoutStationId String
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  trader           Trader         @relation(fields: [traderId], references: [id])
 }
 
 model PlayerHasHideout {
   id               String         @id @unique @default(cuid())
-  player           Player         @relation(fields: [playerId], references: [id])
-  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
   completed        Boolean        @default(false)
   playerId         String
   hideoutStationId String
+  hideoutStation   HideoutStation @relation(fields: [hideoutStationId], references: [id])
+  player           Player         @relation(fields: [playerId], references: [id])
 }
 
 model TaskOnMap {
-  task   Task   @relation(fields: [taskId], references: [id])
-  map    Map    @relation(fields: [mapId], references: [id])
   id     String @id @unique @default(cuid())
   taskId String
   mapId  String
+  map    Map    @relation(fields: [mapId], references: [id])
+  task   Task   @relation(fields: [taskId], references: [id])
 }
 
 model TaskReqKey {
-  task   Task   @relation(fields: [taskId], references: [id])
-  key    Item   @relation(fields: [itemId], references: [id])
   id     String @id @unique @default(cuid())
   taskId String
   itemId String
+  key    Item   @relation(fields: [itemId], references: [id])
+  task   Task   @relation(fields: [taskId], references: [id])
 }
 
 model TaskRewardsItem {
-  task   Task   @relation(fields: [taskId], references: [id])
-  item   Item   @relation(fields: [itemId], references: [id])
   count  Int
   id     String @id @unique @default(cuid())
   taskId String
   itemId String
+  item   Item   @relation(fields: [itemId], references: [id])
+  task   Task   @relation(fields: [taskId], references: [id])
 }
 
 model TaskReqItem {
   id          String  @id @unique @default(cuid())
-  item        Item    @relation(fields: [itemId], references: [id])
-  task        Task    @relation(fields: [taskId], references: [id])
   count       Int
   foundInRaid Boolean
   itemId      String
   taskId      String
+  item        Item    @relation(fields: [itemId], references: [id])
+  task        Task    @relation(fields: [taskId], references: [id])
 }
 
 model TaskHasObjective {
   id          String   @id @unique @default(cuid())
   description String
   optional    Boolean?
-  task        Task     @relation(fields: [taskId], references: [id])
   taskId      String
+  task        Task     @relation(fields: [taskId], references: [id])
 }
 
 model PlayerHasTasks {
   id        String  @id @unique @default(cuid())
-  player    Player  @relation(fields: [playerId], references: [id])
-  task      Task    @relation(fields: [taskId], references: [id])
   completed Boolean @default(false)
   playerId  String
   taskId    String
+  player    Player  @relation(fields: [playerId], references: [id])
+  task      Task    @relation(fields: [taskId], references: [id])
 }
 
 enum faction {

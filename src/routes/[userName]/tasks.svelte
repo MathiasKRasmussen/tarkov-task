@@ -206,7 +206,11 @@
 										<div class="text-justify">
 											{#each traderTask.task.TaskHasObjective as objective}
 												<ul class="list-disc list-inside">
-													<li class="text-accent">{objective.description}</li>
+													{#if objective.optional}
+														<li class="text-accent">(optional) <i class="text-accent">{objective.description}</i></li>
+													 {:else}
+													 	<li class="text-accent">{objective.description}</li>
+													{/if}
 												</ul>
 											{/each}
 										</div>
