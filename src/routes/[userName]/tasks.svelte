@@ -1,11 +1,8 @@
 <script lang="ts">
-	import { getRequiredTaskItems } from '$lib/util/formatItems';
-	import { getTraderImage } from '$lib/util/images';
 	import { page } from '$app/stores';
+import TraderIcon from '$lib/components/traderIcon.svelte';
 
 	import type { Player, PlayerHasTasks, TaskOnMap, Trader } from '@prisma/client';
-	import { userName } from '../../stores/user';
-	import ItemId from '../item/[itemId].svelte';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 
 	const header: string = 'Tasks';
@@ -16,28 +13,6 @@
 	let updatedPlayerTasks: PlayerHasTasks[] = [];
 	let updateCheckBoxes: boolean = false;
 	let saveLoad: boolean = false;
-
-	// Get trader level
-	function getTraderLevel(trader: Trader): number {
-		return trader.PlayerHasTrader.length ? trader.PlayerHasTrader[0].level : 1;
-	}
-
-	// Convert trader level from Int to Roman
-	function getTraderRomanLevel(trader: Trader): string {
-		const level: number = getTraderLevel(trader);
-		switch (level) {
-			case 1:
-				return 'I';
-			case 2:
-				return 'II';
-			case 3:
-				return 'III';
-			case 4:
-				return '♕';
-			default:
-				return 'I';
-		}
-	}
 
 	// Gets the playerTasks for a given trader
 	function getTraderTasks(trader: Trader): PlayerHasTasks[] {
@@ -119,27 +94,7 @@
 			<div class="overflow-x-auto pb-10">
 				<div class="card shadow-xl">
 					<!-- Card header -->
-					<div class="card-body bg-primary flex flex-row items-center pt-3 p-4">
-						<!-- Avatar of trader with level indicator-->
-						<div class="avatar indicator">
-							<!-- Level indicator-->
-							<span
-								class="indicator-item indicator-bottom badge badge-neutral"
-								title={trader.name + ' level ' + getTraderLevel(trader)}
-								>{getTraderRomanLevel(trader)}</span
-							>
-							<!-- Trader avatar-->
-							<div class="avatar flex">
-								<div class="rounded w-14">
-									<a href={trader.wiki} target="_blank">
-										<img src={getTraderImage(trader.name)} alt={trader.name} title={trader.name} />
-									</a>
-								</div>
-							</div>
-						</div>
-						<!-- Trader name-->
-						<h2 class="pl-6 card-title text-secondary font-bold text-3xl">{trader.name}</h2>
-					</div>
+					<TraderIcon {trader}/>
 
 					{#each getTraderTasks(trader) as traderTask, index}
 						<div class="card border border-base-300 even:bg-base-100 odd:bg-base-200 rounded-none">

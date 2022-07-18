@@ -7,9 +7,7 @@ import type { Player, Trader } from "@prisma/client"
 export async function get({ params }) {
     const { userName } = params
     const player: Player = await getPlayer(userName)
-    console.log(player)
     const playerHasTasks = await getPlayerTasks(player)
-    console.log(playerHasTasks)
     playerHasTasks.sort(compareTaskNames)
     const traders: Trader[] = await getPlayerTraders(player)
     return {
