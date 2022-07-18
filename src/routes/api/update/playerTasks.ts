@@ -1,4 +1,3 @@
-import { addCrafts } from "$lib/db/data/uploadData"
 import { updatePlayerTasks } from "$lib/db/models/tasks"
 
 export async function post({ request }) {

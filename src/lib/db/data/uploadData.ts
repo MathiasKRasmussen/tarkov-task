@@ -25,6 +25,8 @@ export async function connectHideouts() {
     let resultTraders = []
     let resultSkills = []
     let resultItems = []
+    let resultReqHideouts = []
+    let count: number = 0
 
     for (const hideout of hideouts) {
         for (const station of hideout.levels) {
@@ -93,8 +95,7 @@ export async function connectHideouts() {
                  })
                  resultSkills.push(resSkills)
              } */
-            // TODO: Need table for hideout relations
-            /*
+             /*
                         for (const stationReq of station.stationLevelRequirements) {
                             let id: string = stationReq.station.id + '-' + stationReq.level
                             const resStationReq = await prisma.hideoutReqHideout.create({
@@ -103,10 +104,10 @@ export async function connectHideouts() {
                                     requiresId: id,
                                 }
                             })
-                            console.log(id)
-                            console.log('------------------------------')
-                        } */
-            /*
+                            resultReqHideouts.push(resStationReq)
+                        } 
+            */
+                        /*
              for (const item of station.itemRequirements) {
                  const resItem = await prisma.hideoutReqItem.create({
                      data: {

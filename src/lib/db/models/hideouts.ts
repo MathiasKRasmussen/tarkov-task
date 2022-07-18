@@ -15,7 +15,7 @@ export async function getHideoutStations(): Promise<HideoutStation[]> {
     return stations
 }
 
-export async function getStationItemsByPlayer(player: Player) {
+export async function getStationItemsByPlayer(player: Player): Promise<PlayerHasHideout[]> {
     let stations: PlayerHasHideout[] = []
     try {
         stations = await prisma.playerHasHideout.findMany({
@@ -33,13 +33,61 @@ export async function getStationItemsByPlayer(player: Player) {
                                 item: true,
                                 count: true
                             }
-                        }
+                        },
                     }
                 }
             }
         })
     } catch (error) {
-        console.log('getStationItemsByPlayer')
+        console.log('getStationItemsByPlayer', error)
+    }
+    return stations
+}
+
+export async function getStationsByPlayer(player: Player): Promise<PlayerHasHideout[]> {
+    let stations: PlayerHasHideout[] = []
+    try {
+        stations = await prisma.playerHasHideout.findMany({
+            where: {
+                player: {
+                    id: player.id
+                },
+            },
+            select: {
+                hideoutStation: {
+                    select: {
+                        HideoutReqItem: {
+                            select: {
+                                item: true,
+                                count: true
+                            }
+                        },
+                        HideoutReqSkill: {
+                            select: {
+                                skill: true
+                            }
+                        },
+                        HideoutReqTrader: {
+                            select: {
+                                trader: true
+                            }
+                        },
+                        RequiresStation: {
+                            select: {
+                                station: {
+                                    select: {
+                                        Hideout: true
+                                    }
+                                }
+                            }
+                        },
+                        Hideout: true,
+                    }
+                }
+            }
+        })
+    } catch (error) {
+        console.log('getStationsByPlayer', error)
     }
     return stations
 }

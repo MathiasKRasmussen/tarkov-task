@@ -50,12 +50,20 @@ export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
 export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
     stations.forEach((station: PlayerHasHideout) => {
         station.hideoutStation.HideoutReqItem.forEach((reqItem) => {
+            let itemExists: boolean = false
             items.forEach((item: Item) => {
                 if (item.id === reqItem.item.id) {
                     item.stationCount += reqItem.count
+                    itemExists = true
                 }
             })
-
+            // If item is not needed for any quest
+            if(!itemExists){
+                reqItem.item.stationCount = reqItem.count
+                reqItem.item.inRaidCount = 0
+                reqItem.item.otherCount = 0
+                items.push(reqItem.item)
+            }
         })
     })
     items.sort(compareItemShortNames)
