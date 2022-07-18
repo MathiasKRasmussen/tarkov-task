@@ -93,8 +93,13 @@ import TraderIcon from '$lib/components/traderIcon.svelte';
 		{#each traders as trader}
 			<div class="overflow-x-auto pb-10">
 				<div class="card shadow-xl">
-					<!-- Card header -->
-					<TraderIcon {trader}/>
+					<!-- Card header: Trader Icon -->
+					<div class="bg-primary flex flex-row items-center pt-3 p-4">
+						<!-- Avatar of trader with level indicator-->
+						<TraderIcon {trader}/>
+						<!-- Trader name-->
+						<h2 class="pl-6 card-title text-secondary font-bold text-3xl">{trader.name}</h2>
+					</div>
 
 					{#each getTraderTasks(trader) as traderTask, index}
 						<div class="card border border-base-300 even:bg-base-100 odd:bg-base-200 rounded-none">
