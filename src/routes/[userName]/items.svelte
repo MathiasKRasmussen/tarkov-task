@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Item } from '@prisma/client';
-	import { page } from '$app/stores';
+	import { createCraftItemsList } from '$lib/db/data/formatData';
 
 	const shortNameCol: string = 'Short Name';
 	const nameCol: string = 'Name';
@@ -15,7 +15,7 @@
 
 	// Holds table sort state.  Initialized to reflect table sorted by id column ascending.
 	let sortBy = { col: 'shortName', ascending: true };
-
+	
 	// Sort table by columns
 	$: sort = (column) => {
 		if (sortBy.col == column) {
@@ -102,8 +102,8 @@
 						</td>
 						<!-- Col 4: Items needed in raid -->
 						<td>
-							<div class="flex justify-center text-error">
-								<b>{taskItem.inRaidCount}</b>
+							<div class="flex justify-center text-error" title={taskItem.craftAble ? 'Can be crafted' : ''}>
+								<b>{taskItem.inRaidCount}{taskItem.craftAble ? '*' : ''}</b>
 							</div>
 						</td>
 						<!-- Col 5: Items needed for tasks not found in raid -->

@@ -7,6 +7,7 @@ import typesData from './json/types.json'
 import hideoutData from './json/hideoutStations.json'
 import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
+import craftsData from './json/craftsItems.json'
 
 export function getStashIds(version: number): string[] {
     const standard: string = '5d484fc0654e76006657e0ab-1'
@@ -120,4 +121,14 @@ export function createSkillList(): string[] {
         })
     })
     return skills
+}
+
+export function createCraftItemsList(): {id: string, name: string}[]{
+    let items: {id: string, name: string}[] = []
+    craftsData.forEach((cd) => {
+        cd.rewardItems.forEach((rewItem) => {
+            items.push(rewItem.item)
+        })
+    })
+    return items
 }

@@ -53,6 +53,7 @@ model Item {
   height          Int?
   wiki            String?
   image           String?
+  craftAble       Boolean @default(false)
   HideoutReqItem  HideoutReqItem[]
   ItemHasType     ItemHasType[]
   TaskReqItem     TaskReqItem[]

@@ -1,8 +1,24 @@
 import { prisma } from '$lib/db/prisma';
 import type { Hideout, HideoutStation, Item, ItemType, Map, Skill, Task } from '@prisma/client';
-import { createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
+import { createCraftItemsList, createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
 
 
+export async function addCrafts(): Promise<Item[]> {
+    const items: {id: string, name: string}[] = createCraftItemsList()
+    let result: Item[] = []
+    for(const item of items){
+        const res = await prisma.item.update({
+            where: {
+                id: item.id
+            }, 
+            data: {
+                craftAble: true
+            }
+        })
+        result.push(res)
+    } 
+    return result
+}
 
 export async function connectHideouts() {
     const hideouts = createHideouts()
@@ -324,7 +340,7 @@ export async function findItems(): Promise<any> {
         const res = await prisma.item.findUnique({
             where: {
                 id: item.id
-            }
+            },
         })
     }
 }
