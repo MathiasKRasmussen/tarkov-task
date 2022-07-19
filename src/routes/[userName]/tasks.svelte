@@ -119,7 +119,9 @@
 								<!-- Task Info-->
 								<div
 									tabindex="0"
-									class="collapse collapse-plus bg-base-{index % 2 === 0 ? '100' : '200'} w-full"
+									class="collapse collapse-plus bg-base-{index % 2 === 0
+										? '100'
+										: '200'} w-full pr-12"
 								>
 									<input type="checkbox" />
 									<!-- Task Header-->

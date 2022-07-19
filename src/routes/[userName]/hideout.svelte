@@ -28,7 +28,7 @@
 
 <div class="flex flex-col justify-center">
 	<h1 class="p-4 font-bold">{header}</h1>
-	<div>
+	<div class="grid grid-cols-2 gap-x-8 gap-y-2 justify-center">
 		{#each hideouts as hideout}
 			<div class="overflow-x-auto pb-10">
 				<div
@@ -73,7 +73,7 @@
 										</div>
 										<!-- Hideout content -->
 										{#if stationHasReqs(playerHasStation.hideoutStation)}
-											<div class="collapse-content bg-base-{index % 2 === 0 ? '100' : '200'}">
+											<div class="collapse-content bg-base-{index % 2 === 0 ? '100' : '200'} pr-12">
 												<!-- Item requirements -->
 												{#if playerHasStation.hideoutStation.HideoutReqItem.length}
 													<div class="divider text-primary">Item requirements</div>
@@ -108,7 +108,7 @@
 												<!-- Skill requirements -->
 												{#if playerHasStation.hideoutStation.HideoutReqSkill.length}
 													<div class="divider text-primary">Skill requirements</div>
-													<div class="flex flex-row gap-8">
+													<div class="flex flex-row gap-8 justify-center">
 														{#each playerHasStation.hideoutStation.HideoutReqSkill as reqSkill}
 															<SkillIcon skill={reqSkill.skill} level={reqSkill.level} />
 														{/each}
@@ -117,7 +117,7 @@
 												<!-- Trader requirements -->
 												{#if playerHasStation.hideoutStation.HideoutReqTrader.length}
 													<div class="divider text-primary">Trader requirements</div>
-													<div class="flex flex-row gap-8">
+													<div class="flex flex-row gap-8 justify-center">
 														{#each playerHasStation.hideoutStation.HideoutReqTrader as trader}
 															<TraderIcon trader={trader.trader} level={trader.level} />
 														{/each}
