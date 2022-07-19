@@ -7,7 +7,6 @@ export async function get({ params }) {
     const player: Player = await getPlayer(userName)
     const playerHasStations: PlayerHasHideout[] = await getStationsByPlayer(player)
     const hideouts: Hideout[] = await getHideouts()
-    console.group(playerHasStations[0].hideoutStation.RequiresStation)
     return {
         body: {
             hideouts,
