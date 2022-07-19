@@ -4,19 +4,19 @@ import { createCraftItemsList, createHideouts, createItems, createMaps, createSk
 
 
 export async function addCrafts(): Promise<Item[]> {
-    const items: {id: string, name: string}[] = createCraftItemsList()
+    const items: { id: string, name: string }[] = createCraftItemsList()
     let result: Item[] = []
-    for(const item of items){
+    for (const item of items) {
         const res = await prisma.item.update({
             where: {
                 id: item.id
-            }, 
+            },
             data: {
                 craftAble: true
             }
         })
         result.push(res)
-    } 
+    }
     return result
 }
 
@@ -95,37 +95,37 @@ export async function connectHideouts() {
                  })
                  resultSkills.push(resSkills)
              } */
-             /*
-                        for (const stationReq of station.stationLevelRequirements) {
-                            let id: string = stationReq.station.id + '-' + stationReq.level
-                            const resStationReq = await prisma.hideoutReqHideout.create({
-                                data: {
-                                    stationId: station.id,
-                                    requiresId: id,
-                                }
-                            })
-                            resultReqHideouts.push(resStationReq)
-                        } 
-            */
-                        /*
-             for (const item of station.itemRequirements) {
-                 const resItem = await prisma.hideoutReqItem.create({
-                     data: {
-                         hideoutStation: {
-                             connect: {
-                                 id: station.id
-                             },
-                         },
-                         item: {
-                             connect: {
-                                 id: item.item.id
-                             }
-                         },
-                         count: item.count
-                     }
-                 })
-                 resultItems.push(resItem)
-             } */
+            /*
+                       for (const stationReq of station.stationLevelRequirements) {
+                           let id: string = stationReq.station.id + '-' + stationReq.level
+                           const resStationReq = await prisma.hideoutReqHideout.create({
+                               data: {
+                                   stationId: station.id,
+                                   requiresId: id,
+                               }
+                           })
+                           resultReqHideouts.push(resStationReq)
+                       } 
+           */
+            /*
+ for (const item of station.itemRequirements) {
+     const resItem = await prisma.hideoutReqItem.create({
+         data: {
+             hideoutStation: {
+                 connect: {
+                     id: station.id
+                 },
+             },
+             item: {
+                 connect: {
+                     id: item.item.id
+                 }
+             },
+             count: item.count
+         }
+     })
+     resultItems.push(resItem)
+ } */
         }
     }
 }

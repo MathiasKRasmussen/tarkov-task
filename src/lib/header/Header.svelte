@@ -25,7 +25,9 @@
 						>
 					</li>
 					<li>
-						<a class="text-primary font-bold" sveltekit:prefetch href={`/${$userName}/`}>Hideout</a>
+						<a class="text-primary font-bold" sveltekit:prefetch href={`/${$userName}/hideout`}
+							>Hideout</a
+						>
 					</li>
 				</ul>
 			</div>

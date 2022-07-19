@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-import TraderIcon from '$lib/components/traderIcon.svelte';
+	import TraderIcon from '$lib/components/traderIcon.svelte';
+	import { getTraderLevel } from '$lib/util/trader';
 
 	import type { Player, PlayerHasTasks, TaskOnMap, Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
@@ -96,7 +97,7 @@ import TraderIcon from '$lib/components/traderIcon.svelte';
 					<!-- Card header: Trader Icon -->
 					<div class="bg-primary flex flex-row items-center pt-3 p-4">
 						<!-- Avatar of trader with level indicator-->
-						<TraderIcon {trader}/>
+						<TraderIcon {trader} level={getTraderLevel(trader)} />
 						<!-- Trader name-->
 						<h2 class="pl-6 card-title text-secondary font-bold text-3xl">{trader.name}</h2>
 					</div>
@@ -167,9 +168,11 @@ import TraderIcon from '$lib/components/traderIcon.svelte';
 											{#each traderTask.task.TaskHasObjective as objective}
 												<ul class="list-disc list-inside">
 													{#if objective.optional}
-														<li class="text-accent">(optional) <i class="text-accent">{objective.description}</i></li>
-													 {:else}
-													 	<li class="text-accent">{objective.description}</li>
+														<li class="text-accent">
+															(optional) <i class="text-accent">{objective.description}</i>
+														</li>
+													{:else}
+														<li class="text-accent">{objective.description}</li>
 													{/if}
 												</ul>
 											{/each}

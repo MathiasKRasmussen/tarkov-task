@@ -53,7 +53,7 @@ model Item {
   height          Int?
   wiki            String?
   image           String?
-  craftAble       Boolean @default(false)
+  craftAble       Boolean           @default(false)
   HideoutReqItem  HideoutReqItem[]
   ItemHasType     ItemHasType[]
   TaskReqItem     TaskReqItem[]
@@ -136,6 +136,8 @@ model HideoutReqHideout {
 model Skill {
   id              String            @id @unique @default(cuid())
   name            String            @unique
+  wiki            String?
+  image           String?
   HideoutReqSkill HideoutReqSkill[]
 }
 

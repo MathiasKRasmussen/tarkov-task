@@ -1,5 +1,5 @@
 import { prisma } from '$lib/db/prisma';
-import type { HideoutStation, Player, PlayerHasHideout } from '@prisma/client';
+import type { Hideout, HideoutStation, Player, PlayerHasHideout } from '@prisma/client';
 
 export async function getHideoutStations(): Promise<HideoutStation[]> {
     let stations: HideoutStation[] = []
@@ -13,6 +13,20 @@ export async function getHideoutStations(): Promise<HideoutStation[]> {
         console.log('getHideoutStations', error)
     }
     return stations
+}
+
+export async function getHideouts(): Promise<Hideout[]> {
+    let hideouts: Hideout[] = []
+    try {
+        hideouts = await prisma.hideout.findMany({
+            orderBy: {
+                name: 'asc'
+            }
+        })
+    } catch (error) {
+        console.log('getHideouts', error)
+    }
+    return hideouts
 }
 
 export async function getStationItemsByPlayer(player: Player): Promise<PlayerHasHideout[]> {
@@ -54,8 +68,10 @@ export async function getStationsByPlayer(player: Player): Promise<PlayerHasHide
                 },
             },
             select: {
+                completed: true,
                 hideoutStation: {
                     select: {
+                        level: true,
                         HideoutReqItem: {
                             select: {
                                 item: true,
@@ -64,18 +80,20 @@ export async function getStationsByPlayer(player: Player): Promise<PlayerHasHide
                         },
                         HideoutReqSkill: {
                             select: {
+                                level: true,
                                 skill: true
                             }
                         },
                         HideoutReqTrader: {
                             select: {
+                                level: true,
                                 trader: true
                             }
                         },
                         RequiresStation: {
                             select: {
                                 station: {
-                                    select: {
+                                    include: {
                                         Hideout: true
                                     }
                                 }
@@ -83,6 +101,11 @@ export async function getStationsByPlayer(player: Player): Promise<PlayerHasHide
                         },
                         Hideout: true,
                     }
+                }
+            },
+            orderBy: {
+                hideoutStation: {
+                    id: 'asc'
                 }
             }
         })

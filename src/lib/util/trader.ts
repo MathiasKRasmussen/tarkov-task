@@ -6,8 +6,7 @@ export function getTraderLevel(trader: Trader): number {
 }
 
 // Convert trader level from Int to Roman
-export function getTraderRomanLevel(trader: Trader): string {
-    const level: number = getTraderLevel(trader);
+export function getTraderRomanLevel(level: number): string {
     switch (level) {
         case 1:
             return 'I';
