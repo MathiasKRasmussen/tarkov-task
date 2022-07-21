@@ -3,59 +3,77 @@
 </script>
 
 <script lang="ts">
+	import { page } from '$app/stores';
 	import Counter from '$lib/Counter.svelte';
+	import { levelIcon } from '$lib/util/level';
+	import type { Player } from '@prisma/client';
+	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
+	import { userName } from '../stores/user';
+	let header: string = 'Tarkov Tasker';
+	let loadingUser: boolean = true;
+	let player: Player;
+
+	getProfile();
+
+	async function getProfile() {
+		await $userName;
+		if ($userName) {
+			try {
+				const res = await fetch(`${$page.url.origin}/api/get/${$userName}`, { method: 'GET' });
+				let data = await res.json();
+				loadingUser = !data.success;
+				header += `: ${$userName}`;
+				player = data.player;
+			} catch (error) {
+				console.log('An error occured loading your player', error);
+			}
+		}
+		loadingUser = false;
+	}
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>{header}</title>
+	<meta name="description" content="Home page" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
+{#if loadingUser}
+	<div class="flex flex-col justify-center items-center pt-60">
+		<Circle2 size="120" colorOuter="#9A8866" colorCenter="#786849" colorInner="#CFA85F" unit="px" />
+		<p class="pt-8"><i>Just loading a bit</i></p>
+	</div>
+{:else}
+	{#if $userName}
+		<h1>{$userName}</h1>
+	{:else}
+		<h1>Create Player</h1>
+	{/if}
+	<div class="avatar flex">
+		<div class="rounded w-20">
+			<a
+				href={'https://gamepedia.cursecdn.com/escapefromtarkov_gamepedia/a/a1/BEAR_Icon.png?version=fc35ab29fb9a893d78870c3dc3533547'}
+				target="_blank"
+			>
+				<img src={`/static/svg/${player.faction}.svg`} alt={'hmm'} title={'hmm'} />
+			</a>
+		</div>
+	</div>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
+	<div class="flex flex-row content-center">
+		<div class="avatar w-80">
+			<div class="rounded w-16">
+				<img src={levelIcon(player.level)} alt={'hmm'} title={'hmm'} />
+			</div>
+			<div class="flex level text-3xl">
+				{player.level}
+			</div>
+		</div>
+	</div>
 	<Counter />
-</section>
+{/if}
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.level {
+		color: #8c8b8a;
 	}
 </style>

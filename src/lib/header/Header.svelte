@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { standardUsername } from '$lib/util/variables';
 	import { userName } from '../../stores/user';
 	const title: string = 'TARKOV TASKER';
 </script>
@@ -11,7 +10,7 @@
 				>{title}</a
 			>
 		</div>
-		{#if $userName !== standardUsername}
+		{#if $userName}
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal p-0">
 					<li>

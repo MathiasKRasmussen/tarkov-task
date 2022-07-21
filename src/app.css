@@ -9,9 +9,9 @@
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--pure-white: #ffffff;
-	--primary-color: #181714;
-	--secondary-color: #0e0d0b;
-	--tertiary-color: #000000;
+	--primary-color: #5e4b2315;
+	--secondary-color: #332f25;
+	--tertiary-color: #0e0c09;
 	--accent-color: #ff9d00;
 	--heading-color: #9A8866;
 	--text-color: #bfbbbb;
@@ -24,10 +24,6 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	background-color: var(--primary-color);
-	background: linear-gradient(180deg,
-			var(--primary-color) 0%,
-			var(--secondary-color) 10.45%,
-			var(--tertiary-color) 41.35%);
 }
 
 body::before {

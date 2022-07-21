@@ -1,1 +1,0 @@
-export const standardUsername: string = '1234'

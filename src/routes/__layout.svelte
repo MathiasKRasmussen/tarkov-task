@@ -6,34 +6,36 @@
 	import BackToTop from '$lib/components/backToTop.svelte';
 </script>
 
-<Header />
+<div class="flex flex-col min-h-screen">
+	<Header />
 
-<main>
-	<!-- If navigating show loading animation-->
-	{#if $navigating}
-		<div class="flex flex-col justify-center items-center pt-60">
-			<Circle2
-				size="120"
-				colorOuter="#9A8866"
-				colorCenter="#786849"
-				colorInner="#CFA85F"
-				unit="px"
-			/>
-			<p class="pt-8"><i>Just loading a bit</i></p>
-		</div>
-	{:else}
-		<slot />
+	<main>
+		<!-- If navigating show loading animation-->
+		{#if $navigating}
+			<div class="flex flex-col justify-center items-center pt-60">
+				<Circle2
+					size="120"
+					colorOuter="#9A8866"
+					colorCenter="#786849"
+					colorInner="#CFA85F"
+					unit="px"
+				/>
+				<p class="pt-8"><i>Just loading a bit</i></p>
+			</div>
+		{:else}
+			<slot />
+		{/if}
+	</main>
+
+	<BackToTop />
+
+	<!-- Dont show footer while navigating -->
+	{#if !$navigating}
+		<footer>
+			<p>Made with dank memes</p>
+		</footer>
 	{/if}
-</main>
-
-<BackToTop />
-
-<!-- Dont show footer while navigating -->
-{#if !$navigating}
-	<footer>
-		<p>Made with dank memes</p>
-	</footer>
-{/if}
+</div>
 
 <style>
 	main {
