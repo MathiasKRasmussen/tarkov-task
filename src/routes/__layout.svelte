@@ -3,6 +3,7 @@
 	import '../app.css';
 	import { navigating } from '$app/stores';
 	import { Circle2 } from 'svelte-loading-spinners';
+	import BackToTop from '$lib/components/backToTop.svelte';
 </script>
 
 <Header />
@@ -24,6 +25,8 @@
 		<slot />
 	{/if}
 </main>
+
+<BackToTop />
 
 <!-- Dont show footer while navigating -->
 {#if !$navigating}

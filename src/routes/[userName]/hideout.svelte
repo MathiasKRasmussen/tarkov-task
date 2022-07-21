@@ -1,14 +1,19 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import SaveAlert from '$lib/components/saveAlert.svelte';
 	import SkillIcon from '$lib/components/skillIcon.svelte';
 	import TraderIcon from '$lib/components/traderIcon.svelte';
 	import { isHideoutStationComplete } from '$lib/util/hideout';
 	import type { Hideout, HideoutStation, Player, PlayerHasHideout } from '@prisma/client';
 
-	const header: string = 'Hideout Stations';
-
 	export let hideouts: Hideout[];
 	export let playerHasStations: PlayerHasHideout[];
 	export let player: Player;
+
+	const header: string = 'Hideout Stations';
+	let updateCheckBoxes: boolean = false;
+	let saveLoad: boolean = false;
+	let updatedPlayerStations: PlayerHasHideout[] = [];
 
 	function stationHasReqs(station: HideoutStation): boolean {
 		return (
@@ -18,7 +23,43 @@
 		);
 	}
 
-	let updateCheckBoxes: boolean = false;
+	// On checkbox change add/remove station from updated array
+	function onChange(playerStation: PlayerHasHideout, oldUpdatedStations: PlayerHasHideout[]): void {
+		if (oldUpdatedStations.includes(playerStation)) {
+			const index: number = oldUpdatedStations.map((object) => object.id).indexOf(playerStation.id);
+			oldUpdatedStations.splice(index, 1);
+		} else {
+			oldUpdatedStations.push(playerStation);
+		}
+		updatedPlayerStations = oldUpdatedStations;
+	}
+
+	// Cancel button clears the update stations array
+	function onCancel(): void {
+		updatedPlayerStations.forEach((playerStation: PlayerHasHideout) => {
+			playerStation.completed = !playerStation.completed;
+		});
+		updatedPlayerStations.length = 0;
+		updateCheckBoxes = !updateCheckBoxes;
+	}
+
+	async function onSave(): Promise<void> {
+		saveLoad = true;
+		try {
+			const res = await fetch(`${$page.url.origin}/api/update/playerHideout`, {
+				method: 'POST',
+				body: JSON.stringify({
+					updatedPlayerStations
+				})
+			});
+			let progressData = await res.json();
+			saveLoad = !progressData.success;
+			updatedPlayerStations.length = 0;
+			updateCheckBoxes = !updateCheckBoxes;
+		} catch (error) {
+			console.log('An error occured', error);
+		}
+	}
 </script>
 
 <svelte:head>
@@ -32,7 +73,7 @@
 		{#each hideouts as hideout}
 			<div class="overflow-x-auto pb-10">
 				<div
-					class="card {isHideoutStationComplete(hideout, playerHasStations)
+					class="card  {isHideoutStationComplete(hideout, playerHasStations)
 						? 'shadow-md shadow-success'
 						: ''}"
 				>
@@ -54,8 +95,7 @@
 												type="checkbox"
 												bind:checked={playerHasStation.completed}
 												class="checkbox checkbox-primary align-middle"
-												on:change={() =>
-													console.log(playerHasStation.hideoutStation.RequiresStation)}
+												on:change={() => onChange(playerHasStation, updatedPlayerStations)}
 											/>
 										{/key}
 									</div>
@@ -135,3 +175,13 @@
 		{/each}
 	</div>
 </div>
+
+<!-- Alert for saving stations-->
+{#if updatedPlayerStations.length}
+	<SaveAlert
+		{saveLoad}
+		elementsToSave={updatedPlayerStations.length}
+		onCancel={() => onCancel()}
+		onSave={() => onSave()}
+	/>
+{/if}

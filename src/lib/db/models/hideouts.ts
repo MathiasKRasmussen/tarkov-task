@@ -68,6 +68,7 @@ export async function getStationsByPlayer(player: Player): Promise<PlayerHasHide
                 },
             },
             select: {
+                id: true,
                 completed: true,
                 hideoutStation: {
                     select: {
@@ -113,4 +114,25 @@ export async function getStationsByPlayer(player: Player): Promise<PlayerHasHide
         console.log('getStationsByPlayer', error)
     }
     return stations
+}
+
+
+export async function updatePlayerStations(playerHideouts: PlayerHasHideout[]): Promise<boolean> {
+    let results: PlayerHasHideout[] = []
+    try {
+        for (const playerHideout of playerHideouts) {
+            const result = await prisma.playerHasHideout.update({
+                where: {
+                    id: playerHideout.id,
+                },
+                data: {
+                    completed: playerHideout.completed
+                }
+            })
+            results.push(result)
+        }
+    } catch (error) {
+        console.log('updatePlayerStations', error)
+    }
+    return playerHideouts.length === results.length
 }
