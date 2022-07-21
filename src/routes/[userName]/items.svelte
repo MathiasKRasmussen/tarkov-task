@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Item } from '@prisma/client';
 	import { createCraftItemsList } from '$lib/db/data/formatData';
+	import { loop_guard } from 'svelte/internal';
 
 	const shortNameCol: string = 'Short Name';
 	const nameCol: string = 'Name';
@@ -13,9 +14,13 @@
 
 	export let items: Item[];
 
+	let searchText: string = '';
+	let searchItems: Item[] = [];
+	let searchClicked: boolean = false;
+
 	// Holds table sort state.  Initialized to reflect table sorted by id column ascending.
 	let sortBy = { col: 'shortName', ascending: true };
-	
+
 	// Sort table by columns
 	$: sort = (column) => {
 		if (sortBy.col == column) {
@@ -33,6 +38,25 @@
 
 		items = items.sort(sort);
 	};
+
+	function searchForItems(term: string): void {
+		items.find((item) => {
+			if (
+				item.name.toLowerCase().includes(term.toLowerCase()) ||
+				item.shortName.toLowerCase().includes(term.toLowerCase())
+			) {
+				searchItems.push(item);
+				searchClicked = true;
+			}
+		});
+	}
+
+	function clearSearch() {
+		if (searchItems.length) {
+			searchItems.length = 0;
+		}
+		searchClicked = false;
+	}
 </script>
 
 <svelte:head>
@@ -42,6 +66,46 @@
 
 <div>
 	<h1 class="p-4 font-bold">{header}</h1>
+
+	<div class="pb-8">
+		<div class="relative">
+			<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+				<svg
+					aria-hidden="true"
+					class="w-5 h-5 text-primary"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+					/></svg
+				>
+			</div>
+			<form on:submit|preventDefault={() => searchForItems(searchText)}>
+				<input
+					type="text"
+					id="default-search"
+					class="block p-4 pl-10 w-full text-sm text-primary bg-base-100 rounded-lg input-bordered input-primary border border-secondary"
+					placeholder="Search Items"
+					required
+					bind:value={searchText}
+					on:input={() => clearSearch()}
+				/>
+			</form>
+		</div>
+	</div>
+	{#key searchClicked}
+		<h1>Here</h1>
+		{#if searchItems.length}
+			{#each searchItems as item}
+				<div>{item.name}</div>
+			{/each}
+		{/if}
+	{/key}
 
 	<!-- Main Table -->
 	<div class="overflow-x-auto">
@@ -102,7 +166,10 @@
 						</td>
 						<!-- Col 4: Items needed in raid -->
 						<td>
-							<div class="flex justify-center text-error" title={taskItem.craftAble ? 'Can be crafted' : ''}>
+							<div
+								class="flex justify-center text-error"
+								title={taskItem.craftAble ? 'Can be crafted' : ''}
+							>
 								<b>{taskItem.inRaidCount}{taskItem.craftAble ? '*' : ''}</b>
 							</div>
 						</td>
