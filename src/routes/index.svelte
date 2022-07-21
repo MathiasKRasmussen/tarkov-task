@@ -59,14 +59,14 @@
 		</div>
 	</div>
 
-	<div class="flex flex-row content-center">
-		<div class="avatar w-80">
+	<div class="flex flex-row w-20 items-center gap-2">
+		<div class="avatar flex flex-row">
 			<div class="rounded w-16">
 				<img src={levelIcon(player.level)} alt={'hmm'} title={'hmm'} />
 			</div>
-			<div class="flex level text-3xl">
-				{player.level}
-			</div>
+		</div>
+		<div class="flex flex-row level font-bold text-3xl">
+			{player.level}
 		</div>
 	</div>
 	<Counter />
