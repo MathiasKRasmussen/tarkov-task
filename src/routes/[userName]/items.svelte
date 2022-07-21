@@ -46,9 +46,9 @@
 				item.shortName.toLowerCase().includes(term.toLowerCase())
 			) {
 				searchItems.push(item);
-				searchClicked = true;
 			}
 		});
+		searchClicked = true;
 	}
 
 	function clearSearch() {
@@ -67,7 +67,7 @@
 <div>
 	<h1 class="p-4 font-bold">{header}</h1>
 
-	<div class="pb-8">
+	<div class="pb-2">
 		<div class="relative">
 			<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 				<svg
@@ -99,13 +99,20 @@
 		</div>
 	</div>
 	{#key searchClicked}
-		<h1>Here</h1>
 		{#if searchItems.length}
-			{#each searchItems as item}
-				<div>{item.name}</div>
-			{/each}
+			<div class="pt-4">
+				{#each searchItems as item}
+					<div>{item.name}</div>
+				{/each}
+			</div>
+		{:else if searchClicked}
+			<div class="pt-4">
+				<i class="pl-4 text-primary text-sm">No items found</i>
+			</div>
 		{/if}
 	{/key}
+
+	<div class="divider" />
 
 	<!-- Main Table -->
 	<div class="overflow-x-auto">
