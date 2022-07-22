@@ -31,7 +31,7 @@ export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
         })
         // If item has not been added
         if (!alreadyAdded) {
-            // IF item needs to be found in raid
+            // If item needs to be found in raid
             if (item.foundInRaid) {
                 item.item.inRaidCount = item.count
                 item.item.otherCount = 0
@@ -58,7 +58,7 @@ export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
                 }
             })
             // If item is not needed for any quest
-            if(!itemExists){
+            if (!itemExists) {
                 reqItem.item.stationCount = reqItem.count
                 reqItem.item.inRaidCount = 0
                 reqItem.item.otherCount = 0
@@ -67,6 +67,23 @@ export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
         })
     })
     items.sort(compareItemShortNames)
+}
+
+export function addRemainingItems(allItems: Item[], existingItems: Item[]) {
+    allItems.forEach((item) => {
+        let exists: boolean = false
+        existingItems.find((exItem) => {
+            if (exItem.id === item.id) {
+                exists = true
+            }
+        });
+        if (!exists) {
+            item.stationCount = 0
+            item.inRaidCount = 0
+            item.otherCount = 0
+            existingItems.push(item)
+        }
+    })
 }
 
 export function getTotalCount(item: Item): number {

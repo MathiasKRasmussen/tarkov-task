@@ -101,15 +101,20 @@
 
 		<div class="divider" />
 
-		{#if searchText.length <= 1 || !searchText.replace(/\s/g, '').length}
+		{#if !searchText.replace(/\s/g, '').length}
 			<!-- Main Table -->
 			<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} {items} />
-		{:else if searchText.length > 1 && searchItems.length}
+		{:else if searchItems.length}
 			<!-- Seaarch Table -->
 			<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} items={searchItems} />
-		{:else if searchText.length > 1 && searchClicked}
-			<div class="flex justify-center">
-				<i class="pl-4 text-primary text-md">No items found</i>
+		{:else if searchClicked}
+			<div class="flex flex-col justify-center items-center">
+				<i class="pl-4 pb-2 text-primary text-xl">No items found</i>
+				<div class="text-primary">
+					Try looking on the
+
+					<a href="https://tarkov-market.com/" target="_blank"><i>Tarkov Market</i></a>
+				</div>
 			</div>
 		{/if}
 	{/if}

@@ -1,8 +1,9 @@
 import { getPlayer } from "$lib/db/data/player"
 import { getStationItemsByPlayer } from "$lib/db/models/hideouts"
+import { getAllItems } from "$lib/db/models/items"
 import { getPlayerTasksItems } from "$lib/db/models/tasks"
-import { addHideoutItems, getRequiredTaskItems } from "$lib/util/formatItems"
-import type { Player } from "@prisma/client"
+import { addHideoutItems, addRemainingItems, getRequiredTaskItems } from "$lib/util/formatItems"
+import type { Item, Player } from "@prisma/client"
 
 export async function get({ params }) {
     const { userName } = params
@@ -11,6 +12,8 @@ export async function get({ params }) {
     const items = getRequiredTaskItems(playerTasks)
     const playerHasStations = await getStationItemsByPlayer(player)
     addHideoutItems(items, playerHasStations)
+    //const allItems: Item[] = await getAllItems()
+    //addRemainingItems(allItems, items)
     return {
         body: {
             items,
