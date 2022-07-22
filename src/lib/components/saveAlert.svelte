@@ -38,7 +38,7 @@
 			>
 			<!-- Alert box text -->
 			<span class="text-lg"
-				>{`Remember to save ${elementsToSave} update${elementsToSave > 1 ? 's' : ''}`}</span
+				>{`Remember to save ${elementsToSave} change${elementsToSave > 1 ? 's' : ''}`}</span
 			>
 		</div>
 		<!-- Save and cancel button -->
