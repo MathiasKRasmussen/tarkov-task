@@ -1,5 +1,5 @@
 import { prisma } from '$lib/db/prisma';
-import type { Item, ItemHasType } from '@prisma/client';
+import type { Item, ItemHasType, Player } from '@prisma/client';
 
 export async function getAllItems(): Promise<Item[]> {
     let result: Item[]
@@ -11,7 +11,7 @@ export async function getAllItems(): Promise<Item[]> {
     return result
 }
 
-export async function getKeys(): Promise<ItemHasType[]> {
+export async function getKeys(player: Player): Promise<ItemHasType[]> {
     try {
         const result: ItemHasType[] = await prisma.itemHasType.findMany({
             where: {
@@ -29,7 +29,15 @@ export async function getKeys(): Promise<ItemHasType[]> {
                         },
                         TaskReqKey: {
                             include: {
-                                task: true
+                                task: {
+                                    include: {
+                                        PlayerHasTasks: {
+                                            where: {
+                                                playerId: player.id
+                                            },
+                                        }
+                                    }
+                                }
                             }
                         }
                     },

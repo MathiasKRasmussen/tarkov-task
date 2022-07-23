@@ -112,7 +112,6 @@
 				<i class="pl-4 pb-2 text-primary text-xl">No items found</i>
 				<div class="text-primary">
 					Try looking on the
-
 					<a href="https://tarkov-market.com/" target="_blank"><i>Tarkov Market</i></a>
 				</div>
 			</div>
