@@ -1,5 +1,5 @@
 import { getPlayer } from "$lib/db/data/player"
-import { getPlayerTasks } from "$lib/db/models/tasks"
+import { getPlayerTasks, getTasks } from "$lib/db/models/tasks"
 import { getPlayerTraders, getTraders } from "$lib/db/models/traders"
 import { compareTaskNames } from "$lib/util/formatTasks"
 import type { Player, Trader } from "@prisma/client"

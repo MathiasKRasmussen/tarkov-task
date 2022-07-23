@@ -2176,6 +2176,7 @@
                 {
                     "type": "pickup",
                     "target": "Chemical container",
+                    "hint": "West 112",
                     "number": 1,
                     "location": 3,
                     "gps": {
@@ -3357,6 +3358,7 @@
                     "type": "mark",
                     "tool": "5991b51486f77447b112d44f",
                     "target": "Ritual spot",
+                    "hint": "East 321",
                     "number": 1,
                     "location": 3,
                     "gps": {
@@ -3602,6 +3604,7 @@
                 {
                     "type": "locate",
                     "target": "Generator 1",
+                    "hint": "West 219",
                     "number": 1,
                     "location": 3,
                     "gps": {
@@ -3614,6 +3617,7 @@
                 {
                     "type": "locate",
                     "target": "Generator 2",
+                    "hint": "East 220",
                     "number": 1,
                     "location": 3,
                     "gps": {
@@ -7230,6 +7234,13 @@
                     "number": 1,
                     "location": -1,
                     "id": 240
+                },
+                {
+                    "type": "find",
+                    "target": "62a09cfe4f842e1bd12da3e4",
+                    "number": 1,
+                    "location": -1,
+                    "id": 506
                 }
             ],
             "gameId": "5b47891f86f7744d1b23c571"
@@ -7697,6 +7708,7 @@
                 {
                     "type": "pickup",
                     "target": "Jaeger's photo album",
+                    "hint": "West 303",
                     "number": 1,
                     "location": 3,
                     "gps": {
@@ -8353,7 +8365,7 @@
         {
             "id": 157,
             "require": {
-                "level": 17,
+                "level": 20,
                 "quests": [
                     156
                 ]
@@ -8401,13 +8413,13 @@
             },
             "giver": 6,
             "turnin": 6,
-            "title": "The Huntsman path - Woods cleaning",
+            "title": "The Huntsman Path - Forest Cleaning",
             "locales": {
-                "en": "The Huntsman path - Woods cleaning",
+                "en": "The Huntsman Path - Forest Cleaning",
                 "ru": "Путь охотника. Очистка леса",
                 "cs": "Cesta lovce. Čistění lesa"
             },
-            "wiki": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Woods_Cleaning",
+            "wiki": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Forest_Cleaning",
             "exp": 5900,
             "unlocks": [],
             "reputation": [
@@ -8553,9 +8565,9 @@
             },
             "giver": 6,
             "turnin": 6,
-            "title": "The Huntsman path - The trophy",
+            "title": "The Huntsman Path - Trophy",
             "locales": {
-                "en": "The Huntsman path - The trophy",
+                "en": "The Huntsman Path - Trophy",
                 "ru": "Путь охотника. Трофей",
                 "cs": "Cesta lovce. Trofej"
             },
@@ -8674,14 +8686,14 @@
             "require": {
                 "level": 17,
                 "quests": [
-                    164
+                    156
                 ]
             },
             "giver": 6,
             "turnin": 6,
-            "title": "The Huntsman path - Woods keeper",
+            "title": "The Huntsman Path - Woods Keeper",
             "locales": {
-                "en": "The Huntsman path - Woods keeper",
+                "en": "The Huntsman Path - Woods Keeper",
                 "ru": "Путь охотника. Санитар леса",
                 "cs": "Cesta lovce. Lesník"
             },
@@ -9759,6 +9771,7 @@
                 {
                     "type": "locate",
                     "target": "Sanitar's office",
+                    "hint": "East 110",
                     "number": 1,
                     "location": 3,
                     "gps": {
@@ -10288,7 +10301,6 @@
                     233,
                     234,
                     235,
-                    236,
                     237,
                     238,
                     239,
@@ -10477,6 +10489,90 @@
                     "number": 1,
                     "location": -1,
                     "id": 494
+                },
+                {
+                    "type": "find",
+                    "target": "62a09ec84f842e1bd12da3f2",
+                    "number": 1,
+                    "location": -1,
+                    "id": 507
+                },
+                {
+                    "type": "find",
+                    "target": "62a09e974f842e1bd12da3f0",
+                    "number": 1,
+                    "location": -1,
+                    "id": 508
+                },
+                {
+                    "type": "find",
+                    "target": "62a09e73af34e73a266d932a",
+                    "number": 1,
+                    "location": -1,
+                    "id": 509
+                },
+                {
+                    "type": "find",
+                    "target": "62a09e410b9d3c46de5b6e78",
+                    "number": 1,
+                    "location": -1,
+                    "id": 510
+                },
+                {
+                    "type": "find",
+                    "target": "62a09e08de7ac81993580532",
+                    "number": 1,
+                    "location": -1,
+                    "id": 511
+                },
+                {
+                    "type": "find",
+                    "target": "62a09dd4621468534a797ac7",
+                    "number": 1,
+                    "location": -1,
+                    "id": 512
+                },
+                {
+                    "type": "find",
+                    "target": "62a09d79de7ac81993580530",
+                    "number": 1,
+                    "location": -1,
+                    "id": 513
+                },
+                {
+                    "type": "find",
+                    "target": "62a09d3bcf4a99369e262447",
+                    "number": 1,
+                    "location": -1,
+                    "id": 514
+                },
+                {
+                    "type": "find",
+                    "target": "62a09cfe4f842e1bd12da3e4",
+                    "number": 1,
+                    "location": -1,
+                    "id": 515
+                },
+                {
+                    "type": "find",
+                    "target": "62a09cb7a04c0c5c6e0a84f8",
+                    "number": 1,
+                    "location": -1,
+                    "id": 516
+                },
+                {
+                    "type": "find",
+                    "target": "62a091170b9d3c46de5b6cf2",
+                    "number": 1,
+                    "location": -1,
+                    "id": 517
+                },
+                {
+                    "type": "find",
+                    "target": "62a08f4c4f842e1bd12d9d62",
+                    "number": 1,
+                    "location": -1,
+                    "id": 518
                 }
             ],
             "gameId": "5c51aac186f77432ea65c552"
@@ -11238,6 +11334,7 @@
             "require": {
                 "level": 10,
                 "quests": [
+                    6,
                     192
                 ]
             },
@@ -11382,14 +11479,15 @@
             "require": {
                 "level": 17,
                 "quests": [
-                    165
+                    156,
+                    102
                 ]
             },
             "giver": 6,
             "turnin": 6,
-            "title": "The Huntsman path - Factory Chief",
+            "title": "The Huntsman Path - Factory Chief",
             "locales": {
-                "en": "The Huntsman path - Factory Chief",
+                "en": "The Huntsman Path - Factory Chief",
                 "ru": "Путь охотника. Начальник завода",
                 "cs": "Tagilla"
             },
@@ -12147,14 +12245,24 @@
                     "target": "Water pump operation data",
                     "number": 1,
                     "location": 7,
-                    "id": 477
+                    "id": 477,
+                    "gps": {
+                        "leftPercent": 43.9,
+                        "topPercent": 20.53,
+                        "floor": "Ground_Level"
+                    }
                 },
                 {
                     "type": "pickup",
                     "target": "Pumping station operation report",
                     "number": 1,
                     "location": 7,
-                    "id": 478
+                    "id": 478,
+                    "gps": {
+                        "leftPercent": 59.73,
+                        "topPercent": 14.23,
+                        "floor": "Ground_Level"
+                    }
                 }
             ],
             "gameId": "6179b3bdc7560e13d23eeb8d"
@@ -12162,7 +12270,7 @@
         {
             "id": 231,
             "require": {
-                "level": 20,
+                "level": 17,
                 "quests": [
                     23
                 ]
@@ -12190,7 +12298,12 @@
                     "target": "Informant's briefcase",
                     "number": 1,
                     "location": 7,
-                    "id": 479
+                    "id": 479,
+                    "gps": {
+                        "leftPercent": 34.8,
+                        "topPercent": 49.88,
+                        "floor": "Ground_Level"
+                    }
                 }
             ],
             "gameId": "6179ad56c760af5ad2053587"
@@ -12224,7 +12337,12 @@
                     "target": "Helicopter",
                     "number": 1,
                     "location": 7,
-                    "id": 480
+                    "id": 480,
+                    "gps": {
+                        "leftPercent": 57.88,
+                        "topPercent": 25.38,
+                        "floor": "Ground_Level"
+                    }
                 }
             ],
             "gameId": "6179ac7511973d018217d0b9"
@@ -12300,8 +12418,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 36.51,
+                        "topPercent": 61.03,
                         "floor": "Ground_Level"
                     },
                     "id": 482
@@ -12343,8 +12461,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 73.45,
+                        "topPercent": 39.05,
                         "floor": "Ground_Level"
                     },
                     "id": 483
@@ -12355,57 +12473,14 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 73.45,
+                        "topPercent": 39.05,
                         "floor": "Ground_Level"
                     },
                     "id": 484
                 }
             ],
             "gameId": "61904daa7d0d857927447b9c"
-        },
-        {
-            "id": 236,
-            "require": {
-                "level": null,
-                "quests": [
-                    122
-                ]
-            },
-            "giver": 5,
-            "turnin": 5,
-            "title": "Communication Difficulties",
-            "locales": {
-                "en": "Communication Difficulties",
-                "ru": "Трудности в общении",
-                "cs": "Komunikační potíže"
-            },
-            "wiki": "https://escapefromtarkov.fandom.com/wiki/Communication_Difficulties",
-            "exp": 9000,
-            "unlocks": [
-                "545cdae64bdc2d39198b4568"
-            ],
-            "reputation": [
-                {
-                    "trader": 5,
-                    "rep": 0.02
-                }
-            ],
-            "objectives": [
-                {
-                    "type": "locate",
-                    "target": "The area around the lighthouse",
-                    "number": 1,
-                    "location": 7,
-                    "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
-                        "floor": "Ground_Level"
-                    },
-                    "id": 496
-                }
-            ],
-            "gameId": "6179ad74bca27a099552e03a"
         },
         {
             "id": 237,
@@ -12442,8 +12517,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 63.95,
+                        "topPercent": 73.73,
                         "floor": "Ground_Level"
                     },
                     "id": 485
@@ -12454,8 +12529,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 59.86,
+                        "topPercent": 63.14,
                         "floor": "Ground_Level"
                     },
                     "id": 486
@@ -12536,8 +12611,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 47.72,
+                        "topPercent": 29.18,
                         "floor": "Ground_Level"
                     },
                     "id": 488
@@ -12549,8 +12624,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 54.58,
+                        "topPercent": 16.9,
                         "floor": "Ground_Level"
                     },
                     "id": 489
@@ -12562,8 +12637,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 42.18,
+                        "topPercent": 88.04,
                         "floor": "Ground_Level"
                     },
                     "id": 490
@@ -12575,8 +12650,8 @@
                     "number": 1,
                     "location": 7,
                     "gps": {
-                        "leftPercent": null,
-                        "topPercent": null,
+                        "leftPercent": 52.08,
+                        "topPercent": 58.85,
                         "floor": "Ground_Level"
                     },
                     "id": 491
@@ -12659,10 +12734,15 @@
                     "target": "Lost group",
                     "number": 1,
                     "location": 7,
-                    "id": 495
+                    "id": 495,
+                    "gps": {
+                        "leftPercent": 57.09,
+                        "topPercent": 64.67,
+                        "floor": "Ground_Level"
+                    }
                 }
             ],
-            "gameId": "6179afd0bca27a099552e040"
+            "gameId": "6179b5b06e9dd54ac275e409"
         },
         {
             "id": 242,
@@ -12695,7 +12775,12 @@
                     "target": "Fuel Tanks",
                     "number": 1,
                     "location": 7,
-                    "id": 497
+                    "id": 497,
+                    "gps": {
+                        "leftPercent": 55.77,
+                        "topPercent": 4.04,
+                        "floor": "Ground_Level"
+                    }
                 },
                 {
                     "type": "mark",
@@ -12703,7 +12788,12 @@
                     "target": "Tanker Truck 1",
                     "number": 1,
                     "location": 7,
-                    "id": 498
+                    "id": 498,
+                    "gps": {
+                        "leftPercent": 55.11,
+                        "topPercent": 5.98,
+                        "floor": "Ground_Level"
+                    }
                 },
                 {
                     "type": "mark",
@@ -12711,7 +12801,12 @@
                     "target": "Tanker Truck 2",
                     "number": 1,
                     "location": 7,
-                    "id": 499
+                    "id": 499,
+                    "gps": {
+                        "leftPercent": 64.35,
+                        "topPercent": 22.15,
+                        "floor": "Ground_Level"
+                    }
                 },
                 {
                     "type": "mark",
@@ -12719,7 +12814,12 @@
                     "target": "Tanker Truck 3",
                     "number": 1,
                     "location": 7,
-                    "id": 500
+                    "id": 500,
+                    "gps": {
+                        "leftPercent": 46.54,
+                        "topPercent": 32.74,
+                        "floor": "Ground_Level"
+                    }
                 }
             ],
             "gameId": "6179b3a12153c15e937d52bc"
@@ -12805,6 +12905,104 @@
                 }
             ],
             "gameId": "6179b5eabca27a099552e052"
+        },
+        {
+            "id": 245,
+            "require": {
+                "level": null,
+                "quests": [
+                    105
+                ]
+            },
+            "giver": 4,
+            "turnin": 4,
+            "title": "Broadcast",
+            "locales": {
+                "en": "Broadcast"
+            },
+            "nokappa": true,
+            "wiki": "https://escapefromtarkov.fandom.com/wiki/Broadcast",
+            "exp": 6700,
+            "unlocks": [],
+            "reputation": [
+                {
+                    "trader": 4,
+                    "rep": 0.03
+                }
+            ],
+            "objectives": [
+                {
+                    "type": "key",
+                    "target": "62987da96188c076bc0d8c51",
+                    "number": 1,
+                    "location": 7,
+                    "id": 519
+                },
+                {
+                    "type": "locate",
+                    "target": "The hidden recording studio",
+                    "number": 1,
+                    "location": 7,
+                    "id": 520
+                },
+                {
+                    "type": "place",
+                    "target": "5ac78a9b86f7741cca0bbd8d",
+                    "number": 1,
+                    "location": 7,
+                    "id": 521
+                }
+            ],
+            "gameId": "626bd75e47ea7f506e5493c5"
+        },
+        {
+            "id": 246,
+            "require": {
+                "level": null,
+                "quests": [
+                    47
+                ]
+            },
+            "giver": 2,
+            "turnin": 2,
+            "title": "Top Secret",
+            "locales": {
+                "en": "Top Secret"
+            },
+            "nokappa": true,
+            "wiki": "https://escapefromtarkov.fandom.com/wiki/Top_Secret",
+            "exp": 11700,
+            "unlocks": [],
+            "reputation": [
+                {
+                    "trader": 2,
+                    "rep": 0.03
+                }
+            ],
+            "objectives": [
+                {
+                    "type": "key",
+                    "target": "62987c658081af308d7558c6",
+                    "number": 1,
+                    "location": 7,
+                    "id": 522
+                },
+                {
+                    "type": "locate",
+                    "target": "Radar station commandant's office",
+                    "number": 1,
+                    "location": 7,
+                    "id": 523
+                },
+                {
+                    "type": "pickup",
+                    "target": "military HDD with archived flight routes",
+                    "number": 1,
+                    "location": 7,
+                    "id": 524
+                }
+            ],
+            "gameId": "6179b5eabca27a099552e054"
         }
     ]
 }

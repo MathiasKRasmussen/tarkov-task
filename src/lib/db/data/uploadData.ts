@@ -1,6 +1,77 @@
 import { prisma } from '$lib/db/prisma';
-import type { Hideout, HideoutStation, Item, ItemType, Map, Skill, Task } from '@prisma/client';
+import { faction, type Hideout, type HideoutStation, type Item, type ItemType, type Map, type Player, type Skill, type Task } from '@prisma/client';
 import { createCraftItemsList, createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
+import { getPlayerTasks, getTasks } from '../models/tasks';
+
+export async function updateTasks() {
+    let resultTasks = []
+    const tasks = formatTaskData()
+
+    for (const task of tasks) {
+        let faction: string = task.factionName === undefined ? 'Any' : task.factionName
+        let forKappa = task.kappa ? true : false
+
+        try {
+
+            const resTask: Task = await prisma.task.upsert({
+                where: {
+                    id: task.id
+                },
+                update: {
+                    id: task.id,
+                    name: task.name,
+                    experience: task.experience,
+                    wiki: task.wikiLink,
+                    minPlayerLevel: task.minPlayerLevel ? task.minPlayerLevel : 0,
+                    faction: getFaction(faction),
+                    forKappa: forKappa,
+                    trader: {
+                        connect: {
+                            id: task.trader.id
+                        }
+                    },
+                },
+                create: {
+                    id: task.id,
+                    name: task.name,
+                    experience: task.experience,
+                    wiki: task.wikiLink,
+                    minPlayerLevel: task.minPlayerLevel ? task.minPlayerLevel : 0,
+                    faction: getFaction(faction),
+                    forKappa: forKappa,
+                    trader: {
+                        connect: {
+                            id: task.trader.id
+                        }
+                    },
+                }
+            })
+            resultTasks.push(resTask)
+        }
+        catch (error) {
+            console.log(error)
+        }
+        console.log(task.name)
+    }
+    console.log(resultTasks.length)
+    console.log(tasks.length)
+}
+
+export async function deleteTaskConnections() {
+    const reqItems = await prisma.taskReqItem.deleteMany()
+    const reqTasks = await prisma.taskReqTask.deleteMany()
+    const rewItems = await prisma.taskRewardsItem.deleteMany()
+    const reqKeys = await prisma.taskReqKey.deleteMany()
+    const hasObj = await prisma.taskHasObjective.deleteMany()
+    const onMaps = await prisma.taskOnMap.deleteMany()
+
+    console.log('reqItems', reqItems)
+    console.log('reqTasks', reqTasks)
+    console.log('rewItems', rewItems)
+    console.log('reqKeys', reqKeys)
+    console.log('hasObj', hasObj)
+    console.log('onMaps', onMaps)
+}
 
 
 export async function addCrafts(): Promise<Item[]> {
@@ -130,6 +201,44 @@ export async function connectHideouts() {
     }
 }
 
+export async function addRemainingTasks(player: Player) {
+    const tasks = await getTasks()
+    let result = []
+    for (let task of tasks) {
+        let isAdded = false
+        if (task.faction === faction.BEAR) {
+            isAdded = true
+        }
+        if (!isAdded) {
+            const res = await prisma.playerHasTasks.create({
+                data: {
+                    completed: false,
+                    task: {
+                        connect: {
+                            id: task.id
+                        }
+                    },
+                    player: {
+                        connect: {
+                            id: player.id
+                        }
+                    }
+                }
+            })
+            console.log(task.name)
+            result.push(res)
+        }
+    }
+    console.log(result)
+    console.log(result.length)
+}
+
+export async function deletePlayerTasks() {
+    await prisma.playerHasTasks.deleteMany()
+    console.log('deleted')
+}
+
+
 export async function connectTasks() {
     const tasks = formatTaskData()
     let count = 0
@@ -141,8 +250,6 @@ export async function connectTasks() {
     let resultRequest = []
     let resultItems = []
 
-    // tasks[42].finishRewards.items[0].item.id
-    //console.log(tasks[65])
     for (const task of tasks) {
         if (task.items.length) {
             for (const item of task.items) {
@@ -223,7 +330,6 @@ export async function connectTasks() {
         }
 
         for (const objective of task.objectives) {
-            count += 1
             const resObj = await prisma.taskHasObjective.create({
                 data: {
                     task: {
@@ -240,7 +346,6 @@ export async function connectTasks() {
 
         if (task.maps && task.maps.length) {
             count += task.maps.length
-            console.log(task.name)
             for (const map of task.maps) {
                 const resMap = await prisma.taskOnMap.create({
                     data: {
@@ -259,6 +364,8 @@ export async function connectTasks() {
                 resultMaps.push(resMap)
             }
         }
+        count += 1
+        console.log(count, task.name)
     }
     console.log('count', count)
     console.log('Reqs', resultRequest.length)

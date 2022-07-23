@@ -136,8 +136,8 @@ model HideoutReqHideout {
 model Skill {
   id              String            @id @unique @default(cuid())
   name            String            @unique
-  wiki            String?
   image           String?
+  wiki            String?
   HideoutReqSkill HideoutReqSkill[]
 }
 

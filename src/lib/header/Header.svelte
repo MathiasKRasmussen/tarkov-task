@@ -28,6 +28,10 @@
 							>Hideout</a
 						>
 					</li>
+					<li>
+						<a class="text-primary font-bold" sveltekit:prefetch href={`/${$userName}/keys`}>Keys</a
+						>
+					</li>
 				</ul>
 			</div>
 			<div class="navbar-end">

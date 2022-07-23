@@ -73,7 +73,7 @@ export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> 
                             include: {
                                 PlayerHasTrader: true
                             }
-                        }, 
+                        },
                         TaskOnMap: {
                             include: {
                                 map: true
