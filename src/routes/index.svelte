@@ -13,13 +13,10 @@
 	let loadingUser: boolean = true;
 	let player: Player;
 
-	let color: string = '#464646';
-
 	getProfile();
 
 	async function getProfile() {
 		await $userName;
-		console.log('dab');
 		if ($userName) {
 			try {
 				const res = await fetch(`${$page.url.origin}/api/get/${$userName}`, { method: 'GET' });
@@ -32,7 +29,6 @@
 			}
 		}
 		loadingUser = false;
-		console.log(loadingUser);
 	}
 </script>
 
