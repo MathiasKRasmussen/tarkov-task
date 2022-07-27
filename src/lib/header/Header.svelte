@@ -35,6 +35,10 @@
 				</ul>
 			</div>
 			<div class="navbar-end">
+				<div class="rounded w-20">
+					<!-- TODO: Change to player faction-->
+					<img src={`/static/svg/${'USEC'}.svg`} alt={'hmm'} title={'hmm'} />
+				</div>
 				<p>
 					{$userName}
 				</p>
