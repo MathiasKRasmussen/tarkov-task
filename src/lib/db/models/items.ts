@@ -24,7 +24,15 @@ export async function getKeys(player: Player): Promise<ItemHasType[]> {
                     include: {
                         TaskReqItem: {
                             include: {
-                                task: true
+                                task: {
+                                    include: {
+                                        PlayerHasTasks: {
+                                            where: {
+                                                playerId: player.id
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         },
                         TaskReqKey: {

@@ -109,10 +109,12 @@
 			<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} items={searchItems} />
 		{:else if searchClicked}
 			<div class="flex flex-col justify-center items-center">
-				<i class="pl-4 pb-2 text-primary text-xl">No items found</i>
+				<div class="pl-4 pb-2 text-primary text-xl font-bold">No items found</div>
 				<div class="text-primary">
 					Try looking on the
 					<a href="https://tarkov-market.com/" target="_blank"><i>Tarkov Market</i></a>
+					or the
+					<a href="https://escapefromtarkov.fandom.com/wiki/Loot" target="_blank"><i>Wiki</i></a>
 				</div>
 			</div>
 		{/if}
