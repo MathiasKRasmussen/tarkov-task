@@ -1,5 +1,6 @@
 import { getPlayer } from "$lib/db/data/player"
 import { getPlayerTradersWithTasks } from "$lib/db/models/traders"
+import { eftSort } from "$lib/util/trader"
 import type { Player, Trader } from "@prisma/client"
 
 export async function get({ params }) {
@@ -7,6 +8,7 @@ export async function get({ params }) {
     console.log(params.playerName)
     let player: Player = await getPlayer(params.playerName)
     let traders: Trader[] = await getPlayerTradersWithTasks(player)
+    traders = eftSort(traders)
     return {
         body: {
             player,

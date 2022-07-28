@@ -10,7 +10,8 @@
 	<div class="stat-title text-accent text-xl">{header}</div>
 	<div class="pt-6 pb-4">
 		<div
-			class="radial-progress cursor-help font-bold text-xl {percentage < 10
+			class="radial-progress cursor-help font-bold text-xl border-2 border-secondary {percentage <
+			10
 				? 'text-error'
 				: percentage > 90
 				? 'text-success'
