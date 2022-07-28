@@ -4,14 +4,16 @@
 
 <script lang="ts">
 	import { page } from '$app/stores';
+	import ProfileHeader from '$lib/components/stats/profileHeader.svelte';
+	import TraderStats from '$lib/components/stats/traderStats.svelte';
 	import Counter from '$lib/Counter.svelte';
-	import { levelIcon } from '$lib/util/level';
-	import type { Player } from '@prisma/client';
+	import type { Player, Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
 	let header: string = 'Tarkov Tasker';
 	let loadingUser: boolean = true;
 	let player: Player;
+	let traders: Trader[];
 
 	getProfile();
 
@@ -24,6 +26,7 @@
 				loadingUser = !data.success;
 				header += `: ${$userName}`;
 				player = data.player;
+				traders = data.traders;
 			} catch (error) {
 				console.log('An error occured loading your player', error);
 			}
@@ -44,17 +47,14 @@
 	</div>
 {:else}
 	{#if $userName}
-		<div class="flex flex-col w-full justify-center">
-			<div class="flex flex-row items-center gap-2 justify-center">
-				<div class="avatar flex flex-row">
-					<div class="rounded w-16">
-						<img src={levelIcon(player.level)} alt={'hmm'} title={'hmm'} />
-					</div>
-				</div>
-				<h1 class="font-bold level">{$userName}</h1>
-			</div>
-			<div class="flex flex-row level font-bold text-3xl">
-				{player.level}
+		<div class="flex flex-col w-full justify-center gap-4">
+			<ProfileHeader {player} />
+
+			<div class="divider text-primary"><h2 class="level">Traders</h2></div>
+			<div class="grid grid-cols-4 justify-center gap-4">
+				{#each traders as trader}
+					<TraderStats {trader} />
+				{/each}
 			</div>
 		</div>
 	{:else}

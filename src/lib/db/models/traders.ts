@@ -20,3 +20,34 @@ export async function getPlayerTraders(player: Player): Promise<Trader[]> {
     })
     return traders
 }
+
+export async function getPlayerTradersWithTasks(player: Player): Promise<Trader[]> {
+    const traders: Trader[] = await prisma.trader.findMany({
+        include: {
+            PlayerHasTrader: {
+                where: {
+                    player: {
+                        id: player.id
+                    }
+                }
+            },
+            Task: {
+                include: {
+                    PlayerHasTasks: {
+                        where: {
+                            player: {
+                                id: player.id
+                            }
+                        }
+                    },
+                    TaskReqItem: {
+                        include: {
+                            item: true
+                        }
+                    }
+                }
+            }
+        }
+    })
+    return traders
+}

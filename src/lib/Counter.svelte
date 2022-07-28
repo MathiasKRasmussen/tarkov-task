@@ -51,13 +51,11 @@
 <style>
 	.counter {
 		display: flex;
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		margin: 1rem 0;
 	}
 
 	.counter button {
-		width: 2em;
+		width: 1.5em;
 		padding: 0;
 		display: flex;
 		align-items: center;
@@ -85,7 +83,7 @@
 	}
 
 	.counter-viewport {
-		width: 8em;
+		width: 5em;
 		height: 4em;
 		overflow: hidden;
 		text-align: center;
