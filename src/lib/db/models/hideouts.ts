@@ -136,3 +136,29 @@ export async function updatePlayerStations(playerHideouts: PlayerHasHideout[]): 
     }
     return playerHideouts.length === results.length
 }
+
+
+export async function getPlayerStations(player: Player): Promise<HideoutStation[]> {
+    try {
+        const stations: HideoutStation[] = await prisma.hideoutStation.findMany({
+            include: {
+                PlayerHasHideout: {
+                    where: {
+                        player: {
+                            id: player.id
+                        }
+                    }
+                },
+                HideoutReqItem: {
+                    include: {
+                        item: true
+                    }
+                }
+            }
+        })
+        return stations
+    }
+    catch (error) {
+        console.log('getPlayerStations', error)
+    }
+}

@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { isMoney } from '$lib/util/items';
+
 	import type { Trader } from '@prisma/client';
 	import TraderIcon from '../traderIcon.svelte';
 
-	import TraderTasksItemsStat from './traderTasksItemsStat.svelte';
+	import ProgressStat from './progressStat.svelte';
 
 	export let trader: Trader;
 
@@ -13,9 +15,13 @@
 	trader.Task.forEach((task) => {
 		if (task.PlayerHasTasks[0]?.completed) {
 			completedTask += 1;
-			completedItems += task.TaskReqItem.length;
+			task.TaskReqItem.forEach((taskReqItem) => {
+				if (!isMoney(taskReqItem.item)) completedItems += taskReqItem.count;
+			});
 		}
-		totalItems += task.TaskReqItem.length;
+		task.TaskReqItem.forEach((taskReqItem) => {
+			if (!isMoney(taskReqItem.item)) totalItems += taskReqItem.count;
+		});
 	});
 </script>
 
@@ -32,9 +38,21 @@
 		</div>
 
 		<!-- Displays Task progress -->
-		<TraderTasksItemsStat completed={completedTask} total={totalTask} header={'Tasks'} />
+		<ProgressStat
+			completed={completedTask}
+			total={totalTask}
+			header={'Tasks'}
+			thickness={10}
+			size={7}
+		/>
 
 		<!-- Displays Task Item progress -->
-		<TraderTasksItemsStat completed={completedItems} total={totalItems} header={'Items'} />
+		<ProgressStat
+			completed={completedItems}
+			total={totalItems}
+			header={'Items'}
+			thickness={10}
+			size={7}
+		/>
 	</div>
 </div>

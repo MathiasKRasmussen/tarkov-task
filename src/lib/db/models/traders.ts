@@ -1,4 +1,5 @@
 import { prisma } from '$lib/db/prisma';
+import { eftSort } from '$lib/util/trader';
 import type { Player, Trader } from '@prisma/client';
 
 export async function getTraders(): Promise<Trader[]> {
@@ -7,7 +8,7 @@ export async function getTraders(): Promise<Trader[]> {
 }
 
 export async function getPlayerTraders(player: Player): Promise<Trader[]> {
-    const traders: Trader[] = await prisma.trader.findMany({
+    let traders: Trader[] = await prisma.trader.findMany({
         include: {
             PlayerHasTrader: {
                 where: {
@@ -18,11 +19,12 @@ export async function getPlayerTraders(player: Player): Promise<Trader[]> {
             }
         }
     })
+    traders = eftSort(traders)
     return traders
 }
 
 export async function getPlayerTradersWithTasks(player: Player): Promise<Trader[]> {
-    const traders: Trader[] = await prisma.trader.findMany({
+    let traders: Trader[] = await prisma.trader.findMany({
         include: {
             PlayerHasTrader: {
                 where: {
@@ -42,12 +44,13 @@ export async function getPlayerTradersWithTasks(player: Player): Promise<Trader[
                     },
                     TaskReqItem: {
                         include: {
-                            item: true
+                            item: true,
                         }
                     }
                 }
             }
         }
     })
+    traders = eftSort(traders)
     return traders
 }

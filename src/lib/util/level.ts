@@ -1,3 +1,4 @@
+import { faction } from "@prisma/client"
 
 export function levelIcon(level: number) {
     if (level < 5) {
@@ -34,5 +35,14 @@ export function levelIcon(level: number) {
         return 'https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/d/de/Rank80.png'
     } else {
         return 'https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/8/8c/Rank5.png'
+    }
+}
+
+
+export function factionFullName(f: faction): string {
+    if (f === faction.USEC) {
+        return 'United Security'
+    } else {
+        return 'Battle Encounter Assault Regiment'
     }
 }
