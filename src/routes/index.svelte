@@ -52,13 +52,14 @@
 	{#if $userName}
 		<div class="flex flex-col w-full justify-center gap-4">
 			<!-- Header player info -->
-			<div class="divider text-primary"><h2 class="level text-3xl">Player Profile</h2></div>
-			<div class="pt-2">
-				<HeaderStats {player} />
-			</div>
+			<h1 class="p-4 font-bold">Player Profile</h1>
+			<HeaderStats {player} />
+
+			<!-- Overall stats -->
 			<div class="divider text-primary"><h2 class="level text-lg">Overall</h2></div>
 			<OverallStats {traders} {stations} />
 
+			<!-- Trader Stats -->
 			<div class="divider text-primary"><h2 class="level text-lg">Traders</h2></div>
 			<div class="grid grid-cols-4 justify-center gap-4">
 				{#each traders as trader}
