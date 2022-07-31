@@ -81,16 +81,16 @@
 			You've been selected for a chance to get one year of subscription to use Wikipedia for free!
 		</p>
 		<div class="form-control w-full max-w-xs">
-			<label class="label">
-				<span class="label-text" title="sdf" alt="fsd">Escape from Tarkov edition </span>
+			<label class="label flex flex-col">
+				<span class="label-text">Escape from Tarkov edition </span>
+				<select class="select select-primary">
+					{#each versions as version}
+						<option selected={player ? player.version === version.value : false}
+							>{version.name}</option
+						>
+					{/each}
+				</select>
 			</label>
-			<select class="select select-primary ">
-				{#each versions as version}
-					<option selected={player ? player.version === version.value : false}
-						>{version.name}</option
-					>
-				{/each}
-			</select>
 		</div>
 	</label>
 </label>
