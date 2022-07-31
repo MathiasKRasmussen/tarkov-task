@@ -3,7 +3,6 @@
 	import Tooltip from '@fouita/tooltip';
 	import { getRequiredTaskItems } from '$lib/util/formatItems';
 	import { iconWidth } from '$lib/util/items';
-	let show_elm = false;
 	let currentId: string = '';
 
 	export let shortNameCol: string;
@@ -74,25 +73,22 @@
 						><div class="avatar flex justify-center">
 							<div
 								class="rounded w-12"
-								on:mouseleave={() => {
-									show_elm = false;
-									currentId = '';
-								}}
-								on:mouseenter={() => {
-									show_elm = true;
-									currentId = taskItem.id;
-								}}
+								on:mouseleave={() => (currentId = '')}
+								on:mouseenter={() => (currentId = taskItem.id)}
 							>
+								<!-- Tooltip that shows full size of image -->
 								<Tooltip
 									pointer="end"
 									position="right"
 									color="red-500"
-									show={show_elm && currentId === taskItem.id}
+									show={currentId === taskItem.id}
 								>
+									<!-- The full size icon -->
 									<div class="p-0.5 w-{iconWidth(taskItem)} bg-primary">
 										<img src={taskItem.nameIcon} alt={taskItem.name} title={taskItem.name} />
 									</div>
 								</Tooltip>
+								<!-- Small icon -->
 								<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
 									<img src={taskItem.nameIcon} alt={taskItem.name} />
 								</a>
@@ -117,19 +113,20 @@
 							class="flex justify-center text-error"
 							title={taskItem.craftAble ? 'Can be crafted' : ''}
 						>
-							<b>{taskItem.inRaidCount}{taskItem.craftAble ? '*' : ''}</b>
+							<b>{taskItem.inRaidCount ? taskItem.inRaidCount : 0}{taskItem.craftAble ? '*' : ''}</b
+							>
 						</div>
 					</td>
 					<!-- Col 5: Items needed for tasks not found in raid -->
 					<td>
 						<div class="flex justify-center text-success">
-							<b>{taskItem.otherCount}</b>
+							<b>{taskItem.otherCount ? taskItem.otherCount : 0}</b>
 						</div>
 					</td>
 					<!-- Col 6: Items needed for hideout stations -->
 					<td>
 						<div class="flex justify-center text-success">
-							<b>{taskItem.stationCount}</b>
+							<b>{taskItem.stationCount ? taskItem.stationCount : 0}</b>
 						</div>
 					</td>
 					<!-- Col 7: Link to item's wiki -->

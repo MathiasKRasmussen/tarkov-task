@@ -2,11 +2,38 @@ import { prisma } from '$lib/db/prisma';
 import type { Item, ItemHasType, Player } from '@prisma/client';
 
 export async function getAllItems(): Promise<Item[]> {
-    let result: Item[]
+    let result: Item[] = []
     try {
         result = await prisma.item.findMany()
     } catch (error) {
         console.log('getAllItems', error)
+    }
+    return result
+}
+
+export async function searchItems(input: string): Promise<Item[]> {
+    let result: Item[] = []
+    try {
+        result = await prisma.item.findMany({
+            where: {
+                OR: [
+                    {
+                        name: {
+                            contains: input,
+                            mode: 'insensitive',
+                        },
+                    },
+                    {
+                        name: {
+                            contains: input,
+                            mode: 'insensitive',
+                        },
+                    },
+                ],
+            }
+        })
+    } catch (error) {
+        console.log('searchItems', error)
     }
     return result
 }

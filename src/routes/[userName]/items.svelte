@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Item } from '@prisma/client';
 	import ItemTable from '$lib/components/itemTable.svelte';
+	import { page } from '$app/stores';
+	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 
 	const shortNameCol: string = 'Short Name';
 	const nameCol: string = 'Name';
@@ -8,6 +10,7 @@
 	const otherCol: string = 'Other Task';
 	const hideoutCol: string = 'Hideout';
 	const wikiCol: string = 'Wiki';
+	let saveLoad = false;
 
 	const header: string = 'Items';
 
@@ -28,6 +31,23 @@
 			}
 		});
 		searchClicked = true;
+	}
+
+	async function databaseSearch() {
+		saveLoad = true;
+		try {
+			const res = await fetch(`${$page.url.origin}/api/get/searchItems`, {
+				method: 'POST',
+				body: JSON.stringify({
+					searchText
+				})
+			});
+			let progressData = await res.json();
+			searchItems = progressData.items;
+			saveLoad = !progressData.success;
+		} catch (error) {
+			console.log('An error occured', error);
+		}
 	}
 </script>
 
@@ -77,29 +97,44 @@
 					on:input={() => searchForItems(searchText)}
 				/>
 				<button
-					class="btn btn-square rounded-none rounded-r-lg btn-primary"
-					disabled={searchText.replace(/\s/g, '').length === 0}
-					on:click={() => (searchText = '')}
+					class="btn btn-square rounded-none rounded-r-lg btn-primary {saveLoad ? 'loading' : ''}"
+					disabled={searchText.replace(/\s/g, '').length < 3}
+					on:click={databaseSearch}
 					title="Clear input"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M6 18L18 6M6 6l12 12"
-						/></svg
-					>
+					{#if !saveLoad}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+							/></svg
+						>
+					{/if}
 				</button>
 			</div>
 		</div>
 
 		<div class="divider" />
+
+		{#if saveLoad}
+			<div class="flex flex-col items-center pt-10">
+				<Circle2
+					size="120"
+					colorOuter="#9A8866"
+					colorCenter="#786849"
+					colorInner="#CFA85F"
+					unit="px"
+				/>
+				<p class="pt-8"><i>Trying to find the items</i></p>
+			</div>
+		{/if}
 
 		{#if !searchText.replace(/\s/g, '').length}
 			<!-- Main Table -->
@@ -107,7 +142,7 @@
 		{:else if searchItems.length}
 			<!-- Seaarch Table -->
 			<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} items={searchItems} />
-		{:else if searchClicked}
+		{:else if searchClicked && !saveLoad}
 			<div class="flex flex-col justify-center items-center">
 				<div class="pl-4 pb-2 text-primary text-xl font-bold">No items found</div>
 				<div class="text-primary">
