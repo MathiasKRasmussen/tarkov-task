@@ -3,12 +3,11 @@
 	import SaveAlert from '$lib/components/saveAlert.svelte';
 	import SkillIcon from '$lib/components/skillIcon.svelte';
 	import TraderIcon from '$lib/components/traderIcon.svelte';
-	import { isHideoutStationComplete } from '$lib/util/hideout';
+	import { hideoutImage, isHideoutStationComplete } from '$lib/util/hideout';
 	import type { Hideout, HideoutStation, Player, PlayerHasHideout } from '@prisma/client';
 
 	export let hideouts: Hideout[];
 	export let playerHasStations: PlayerHasHideout[];
-	export let player: Player;
 
 	const header: string = 'Hideout Stations';
 	let updateCheckBoxes: boolean = false;
@@ -77,9 +76,15 @@
 						? 'shadow-md shadow-success'
 						: ''}"
 				>
-					<!-- Card header: Trader Icon -->
+					<!-- Card header: Hideout Icon and name -->
 					<div class="bg-primary flex flex-row items-center pt-3 p-4">
-						<!-- Trader name-->
+						<!-- Hideout image -->
+						<div class="avatar flex">
+							<div class="rounded w-14">
+								<img src={hideoutImage(hideout.name)} alt={hideout.name} title={hideout.name} />
+							</div>
+						</div>
+						<!-- Hideout name -->
 						<h2 class="pl-6 card-title text-secondary font-bold text-3xl">{hideout.name}</h2>
 					</div>
 					{#each playerHasStations as playerHasStation, index}

@@ -1,5 +1,10 @@
 <script lang="ts">
 	import type { Item } from '@prisma/client';
+	import Tooltip from '@fouita/tooltip';
+	import { getRequiredTaskItems } from '$lib/util/formatItems';
+	import { iconWidth } from '$lib/util/items';
+	let show_elm = false;
+	let currentId: string = '';
 
 	export let shortNameCol: string;
 	export let nameCol: string;
@@ -67,9 +72,29 @@
 					<!-- Col 1: Item image -->
 					<td
 						><div class="avatar flex justify-center">
-							<div class="rounded w-12">
+							<div
+								class="rounded w-12"
+								on:mouseleave={() => {
+									show_elm = false;
+									currentId = '';
+								}}
+								on:mouseenter={() => {
+									show_elm = true;
+									currentId = taskItem.id;
+								}}
+							>
+								<Tooltip
+									pointer="end"
+									position="right"
+									color="red-500"
+									show={show_elm && currentId === taskItem.id}
+								>
+									<div class="p-0.5 w-{iconWidth(taskItem)} bg-primary">
+										<img src={taskItem.nameIcon} alt={taskItem.name} title={taskItem.name} />
+									</div>
+								</Tooltip>
 								<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
-									<img src={taskItem.image} alt={taskItem.name} title={taskItem.name} />
+									<img src={taskItem.nameIcon} alt={taskItem.name} />
 								</a>
 							</div>
 						</div></td
@@ -123,3 +148,14 @@
 		</tbody>
 	</table>
 </div>
+
+<style>
+	.zoom {
+	}
+
+	.zoom:hover {
+		transform: scale(
+			1.5
+		); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+</style>

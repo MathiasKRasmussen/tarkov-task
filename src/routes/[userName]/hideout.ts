@@ -11,7 +11,6 @@ export async function get({ params }) {
         body: {
             hideouts,
             playerHasStations,
-            player,
         },
     }
 }

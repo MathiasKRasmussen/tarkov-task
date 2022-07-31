@@ -1,6 +1,6 @@
 import { prisma } from '$lib/db/prisma';
 import { faction, type Hideout, type HideoutStation, type Item, type ItemType, type Map, type Player, type Skill, type Task } from '@prisma/client';
-import { createCraftItemsList, createHideouts, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
+import { createCraftItemsList, createHideouts, createItemIcons, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
 import { getPlayerTasks, getTasks } from '../models/tasks';
 
 export async function updateTasks() {
@@ -55,6 +55,31 @@ export async function updateTasks() {
     }
     console.log(resultTasks.length)
     console.log(tasks.length)
+}
+
+export async function addItemIcons() {
+    const items: { id: string; gridImageLink: string; iconLink: string; }[] = createItemIcons()
+    let createdItems: Item[] = []
+    let count: number = 1
+    for (let item of items) {
+        try {
+            const res: Item = await prisma.item.update({
+                where: {
+                    id: item.id
+                },
+                data: {
+                    icon: item.iconLink,
+                    nameIcon: item.gridImageLink
+                }
+            })
+            createdItems.push(res)
+            console.log(count)
+            count += 1
+        } catch (error) {
+            console.log('addItemIcons', error)
+        }
+    }
+    console.log(createdItems.length, items.length)
 }
 
 export async function deleteTaskConnections() {

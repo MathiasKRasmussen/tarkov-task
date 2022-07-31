@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getTraderLevel, getTraderRomanLevel } from '$lib/util/trader';
+	import { getTraderRomanLevel } from '$lib/util/trader';
 	import type { Trader } from '@prisma/client';
 
 	export let trader: Trader;

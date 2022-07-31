@@ -11,3 +11,8 @@ export function isHideoutStationComplete(hideout: Hideout, playerHasStations: Pl
     })
     return isComplete
 }
+
+export function hideoutImage(name: string): string {
+    let urlName: string = name.split(' ').join('_')
+    return `https://cdn.tarkov-market.app/images/hideout/${urlName}.png`
+}

@@ -8,6 +8,7 @@ import hideoutData from './json/hideoutStations.json'
 import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
 import craftsData from './json/craftsItems.json'
+import iconData from './json/itemIcons.json'
 
 export function getStashIds(version: number): string[] {
     const standard: string = '5d484fc0654e76006657e0ab-1'
@@ -22,6 +23,10 @@ export function getStashIds(version: number): string[] {
         if (version > 3) ids.push(edgeOfDarkness)
     }
     return ids
+}
+
+export function createItemIcons(): { id: string; gridImageLink: string; iconLink: string; }[] {
+    return iconData.items
 }
 
 export function createHideouts(): Hideout[] {
@@ -123,8 +128,8 @@ export function createSkillList(): string[] {
     return skills
 }
 
-export function createCraftItemsList(): {id: string, name: string}[]{
-    let items: {id: string, name: string}[] = []
+export function createCraftItemsList(): { id: string, name: string }[] {
+    let items: { id: string, name: string }[] = []
     craftsData.forEach((cd) => {
         cd.rewardItems.forEach((rewItem) => {
             items.push(rewItem.item)

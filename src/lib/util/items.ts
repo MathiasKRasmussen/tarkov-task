@@ -13,3 +13,7 @@ export function isUSD(item: Item): boolean {
 export function isEUR(item: Item): boolean {
     return item.shortName === 'EUR'
 }
+
+export function iconWidth(item: Item): number {
+    return item.width ? item.width * 16 : 16
+}

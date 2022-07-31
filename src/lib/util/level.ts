@@ -1,5 +1,7 @@
 import { faction } from "@prisma/client"
 
+export const maxLevel: number = 79;
+
 export function levelIcon(level: number) {
     if (level < 5) {
         return 'https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/8/8c/Rank5.png'
