@@ -33,6 +33,7 @@
 		searchClicked = true;
 	}
 
+	// Searches the database for item
 	async function databaseSearch() {
 		saveLoad = true;
 		try {
@@ -49,6 +50,11 @@
 			console.log('An error occured', error);
 		}
 	}
+
+	// On enter click for search input
+	const onKeyPress = (e) => {
+		if (e.charCode === 13 && searchText.replace(/\s/g, '').length > 2) databaseSearch();
+	};
 </script>
 
 <svelte:head>
@@ -94,14 +100,17 @@
 					placeholder="Search Items"
 					required
 					bind:value={searchText}
+					on:keypress={onKeyPress}
 					on:input={() => searchForItems(searchText)}
 				/>
+				<!-- Search button -->
 				<button
 					class="btn btn-square rounded-none rounded-r-lg btn-primary {saveLoad ? 'loading' : ''}"
 					disabled={searchText.replace(/\s/g, '').length < 3}
 					on:click={databaseSearch}
 					title="Clear input"
 				>
+					<!-- Shows loading if searching -->
 					{#if !saveLoad}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -123,6 +132,7 @@
 
 		<div class="divider" />
 
+		<!-- If loading shgow loading animation-->
 		{#if saveLoad}
 			<div class="flex flex-col items-center pt-10">
 				<Circle2
@@ -136,20 +146,27 @@
 			</div>
 		{/if}
 
+		<!-- Search cant be white space -->
 		{#if !searchText.replace(/\s/g, '').length}
 			<!-- Main Table -->
 			<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} {items} />
 		{:else if searchItems.length}
-			<!-- Seaarch Table -->
+			<!-- Search Table -->
 			<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} items={searchItems} />
 		{:else if searchClicked && !saveLoad}
+			<!-- If the item cannot be found -->
 			<div class="flex flex-col justify-center items-center">
 				<div class="pl-4 pb-2 text-primary text-xl font-bold">No items found</div>
-				<div class="text-primary">
-					Try looking on the
-					<a href="https://tarkov-market.com/" target="_blank"><i>Tarkov Market</i></a>
-					or the
-					<a href="https://escapefromtarkov.fandom.com/wiki/Loot" target="_blank"><i>Wiki</i></a>
+				<div class="text-primary flex flex-col items-center">
+					<div class="j">
+						Try searching by clicking the search button or <kbd class="kbd kbd-md">ENTER</kbd>
+					</div>
+					<div>
+						If you cant find the item try looking on the
+						<a href="https://tarkov-market.com/" target="_blank"><i>Tarkov Market</i></a>
+						or the
+						<a href="https://escapefromtarkov.fandom.com/wiki/Loot" target="_blank"><i>Wiki</i></a>
+					</div>
 				</div>
 			</div>
 		{/if}

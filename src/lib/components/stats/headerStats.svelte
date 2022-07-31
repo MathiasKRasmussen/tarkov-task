@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { factionFullName, levelIcon, maxLevel } from '$lib/util/level';
+	import { factionFullName, levelIcon, versionName } from '$lib/util/player';
 	import type { Player } from '@prisma/client';
 
 	export let player: Player;
@@ -24,7 +24,8 @@
 	<!-- Name cell -->
 	<div class="stat w-2/3">
 		<div class="stat-title text-accent">Name</div>
-		<div class="stat-value main-text pb-4">{player.name}</div>
+		<div class="stat-value main-text">{player.name}</div>
+		<div class="stat-desc text-accent">{versionName(player.version)}</div>
 	</div>
 
 	<!-- Faction cell -->

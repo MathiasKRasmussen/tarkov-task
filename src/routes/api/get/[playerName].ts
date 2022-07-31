@@ -4,7 +4,6 @@ import { getPlayerTradersWithTasks } from "$lib/db/models/traders"
 import type { HideoutStation, Player, Trader } from "@prisma/client"
 
 export async function get({ params }) {
-    console.log(params.playerName)
     let player: Player = await getPlayer(params.playerName)
     let traders: Trader[] = await getPlayerTradersWithTasks(player)
     let stations: HideoutStation[] = await getPlayerStations(player)

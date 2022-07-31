@@ -1,6 +1,10 @@
 import { faction } from "@prisma/client"
 
 export const maxLevel: number = 79;
+const version1: string = 'Standard Edition'
+const version2: string = 'Left Behind Edition'
+const version3: string = 'Prepare for Escape Edition'
+const version4: string = 'Edge of Darkness Limited Edition'
 
 export function levelIcon(level: number) {
     if (level < 5) {
@@ -47,4 +51,18 @@ export function factionFullName(f: faction): string {
     } else {
         return 'Battle Encounter Assault Regiment'
     }
+}
+
+export function versionName(value: number): string {
+    switch (value) {
+        case 1: return version1
+        case 2: return version2
+        case 3: return version3
+        case 4: return version4
+        default: return version1
+    }
+}
+
+export function versionList(): { value: number, name: string }[] {
+    return [{ value: 0, name: version1 }, { value: 2, name: version2 }, { value: 3, name: version3 }, { value: 4, name: version4 }]
 }
