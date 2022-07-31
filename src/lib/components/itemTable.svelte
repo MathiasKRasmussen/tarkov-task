@@ -11,6 +11,7 @@
 	export let otherCol: string;
 	export let hideoutCol: string;
 	export let items: Item[];
+	const maxNameLength: number = 55;
 
 	// Holds table sort state.  Initialized to reflect table sorted by id column ascending.
 	let sortBy = { col: 'shortName', ascending: true };
@@ -103,8 +104,12 @@
 					</td>
 					<!-- Col 3: Item Name -->
 					<td>
-						<div class="flex justify-center text-primary">
-							<b>{taskItem.name}</b>
+						<div class="flex justify-center text-primary" title={taskItem.name}>
+							<b
+								>{taskItem.name.length > maxNameLength
+									? taskItem.name.substring(0, maxNameLength) + '..'
+									: taskItem.name}</b
+							>
 						</div>
 					</td>
 					<!-- Col 4: Items needed in raid -->

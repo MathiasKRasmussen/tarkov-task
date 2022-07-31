@@ -15,5 +15,5 @@ export function isEUR(item: Item): boolean {
 }
 
 export function iconWidth(item: Item): number {
-    return item.width ? item.width * 16 : 16
+    return item.width > 4 ? 4 * 16 : item.width * 16
 }
