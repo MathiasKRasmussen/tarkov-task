@@ -21,6 +21,10 @@ export function getTraderRomanLevel(level: number): string {
     }
 }
 
+export function getTraderRomanList(): string[] {
+    return ['I', 'II', 'III', '♕']
+}
+
 export function eftSort(traders: Trader[]) {
     let newTraders: Trader[] = []
     newTraders.push(getTrader(traders, 'Prapor'))

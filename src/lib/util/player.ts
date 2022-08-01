@@ -1,4 +1,4 @@
-import { faction } from "@prisma/client"
+import { faction, type Trader } from "@prisma/client"
 
 export const maxLevel: number = 79;
 const version1: string = 'Standard Edition'
@@ -64,5 +64,15 @@ export function versionName(value: number): string {
 }
 
 export function versionList(): { value: number, name: string }[] {
-    return [{ value: 0, name: version1 }, { value: 2, name: version2 }, { value: 3, name: version3 }, { value: 4, name: version4 }]
+    return [{ value: 1, name: version1 }, { value: 2, name: version2 }, { value: 3, name: version3 }, { value: 4, name: version4 }]
+}
+
+export function createTempPlayerTrader(traders: Trader[]): { trader: Trader, level: number }[] {
+    let playerTraders: { trader: Trader, level: number }[] = []
+    traders.forEach((trader) => {
+        if (trader.PlayerHasTrader.length) {
+            playerTraders.push({ trader: trader, level: trader.PlayerHasTrader[0].level })
+        }
+    })
+    return playerTraders
 }

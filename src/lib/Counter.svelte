@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
+	import { maxLevel as max } from './util/player';
+	export let count: number;
 	const minLevel: number = 0;
-	const maxLevel: number = 79;
-
-	let count = 0;
+	const maxLevel: number = max;
 
 	const displayed_count = spring();
 	$: displayed_count.set(count);
@@ -51,7 +51,7 @@
 <style>
 	.counter {
 		display: flex;
-		margin: 1rem 0;
+		margin: 0.5rem 0;
 	}
 
 	.counter button {
@@ -63,7 +63,6 @@
 		border: 0;
 		background-color: transparent;
 		touch-action: manipulation;
-		color: var(--text-color);
 		font-size: 2rem;
 	}
 
@@ -83,8 +82,8 @@
 	}
 
 	.counter-viewport {
-		width: 5em;
-		height: 4em;
+		width: 3em;
+		height: 2em;
 		overflow: hidden;
 		text-align: center;
 		position: relative;
@@ -96,8 +95,7 @@
 		width: 100%;
 		height: 100%;
 		font-weight: 400;
-		color: var(--accent-color);
-		font-size: 4rem;
+		font-size: 2rem;
 		align-items: center;
 		justify-content: center;
 	}
