@@ -113,7 +113,7 @@
 
 	<!-- Main content -->
 	<div class="flex flex-col justify-center">
-		<h1 class="pt-2 font-bold" id={traders[0].name}>{header}</h1>
+		<h1 class="pt-2 pb-4 font-bold" id={traders[0].name}>{header}</h1>
 		<div>
 			{#each traders as trader, index}
 				<div class={index === 0 ? 'p-0' : 'p-8'} id={index === 0 ? '' : trader.name} />
