@@ -164,7 +164,7 @@
 													<div class="divider text-primary">Trader requirements</div>
 													<div class="flex flex-row gap-8 justify-center">
 														{#each playerHasStation.hideoutStation.HideoutReqTrader as trader}
-															<TraderIcon trader={trader.trader} level={trader.level} />
+															<TraderIcon trader={trader.trader} level={trader.level} size={20} />
 														{/each}
 													</div>
 												{/if}

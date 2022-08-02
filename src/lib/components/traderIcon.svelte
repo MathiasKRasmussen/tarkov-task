@@ -11,7 +11,7 @@
 <div class="avatar indicator">
 	<!-- Level indicator-->
 	<span
-		class="indicator-item indicator-bottom badge badge-neutral cursor-help"
+		class="indicator-item indicator-bottom badge badge-neutral cursor-help w-6 h-6 text-lg"
 		title={`${trader.name} level ${level}`}>{getTraderRomanLevel(level)}</span
 	>
 	<!-- Trader avatar-->
