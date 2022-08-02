@@ -89,11 +89,12 @@
 </svelte:head>
 
 <!-- Quick link to traders -->
+<h1 class="pt-2 pb-4 font-bold" id={traders[0].name}>{header}</h1>
+
 <div class="flex flex-row gap-10 justify-center">
 	<div class="w-40 flex flex-col">
-		<div class="p-8" />
 		<!-- Side bar toast -->
-		<div class="toast toast-start toast-middle sticky top-32 z-10 ">
+		<div class="toast toast-start toast-middle sticky top-40 z-10 ">
 			<div class="alert alert-primary border border-primary sticky top-0 z-10 p-2 justify-center">
 				<div class="grid grid-cols-1 gap-8 place-items-center p-2">
 					{#each traders as trader}
@@ -113,7 +114,6 @@
 
 	<!-- Main content -->
 	<div class="flex flex-col justify-center">
-		<h1 class="pt-2 pb-4 font-bold" id={traders[0].name}>{header}</h1>
 		<div>
 			{#each traders as trader, index}
 				<div class={index === 0 ? 'p-0' : 'p-8'} id={index === 0 ? '' : trader.name} />
