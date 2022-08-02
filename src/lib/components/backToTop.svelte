@@ -24,8 +24,10 @@
 <button
 	class="back_to_start btn btn-circle btn-info items-center font-bold w-14 h-14"
 	on:click={goStart}
-	class:hidden>Top</button
+	class:hidden
 >
+	<img src={`/static/svg/arrowUp.svg`} alt={`Update player`} title={`Update player`} />
+</button>
 
 <style>
 	.back_to_start {

@@ -26,9 +26,11 @@
 	let newLevel: number = 0;
 	let newTraderLevels: { trader: Trader; level: number }[] = [];
 	let saveLoad: boolean = false;
+	let playerUpdated: boolean = false;
 
 	getProfile();
 
+	// Gets all profile information
 	async function getProfile() {
 		await $userName;
 		if ($userName) {
@@ -51,17 +53,33 @@
 		loadingUser = false;
 	}
 
-	function hasUpdates(): boolean {
-		if (newVersion !== player.version) return true;
-		if (newLevel !== player.level) return true;
-		traders.forEach((trader) => {
-			newTraderLevels.forEach((newTrader) => {
-				if (trader.id === newTrader.trader.id) {
-					if (trader.PlayerHasTrader[0].level !== newTrader.level) return true;
-				}
+	// Update player info
+	async function updatePlayer() {
+		saveLoad = true;
+		try {
+			const res = await fetch(`${$page.url.origin}/api/update/player`, {
+				method: 'POST',
+				body: JSON.stringify({
+					player,
+					newLevel,
+					newVersion,
+					newTraderLevels
+				})
 			});
-		});
-		return false;
+			let progressData = await res.json();
+			await getProfile();
+			saveLoad = !progressData.success;
+			playerUpdated = true;
+		} catch (error) {
+			console.log('An error occured', error);
+		}
+	}
+
+	// Resets any changes made
+	function cancelPlayerUpdate() {
+		newVersion = player.version;
+		newLevel = player.level;
+		newTraderLevels = createTempPlayerTrader(traders);
 	}
 </script>
 
@@ -70,17 +88,28 @@
 	<meta name="description" content="Home page" />
 </svelte:head>
 
+<!-- When loading the user -->
 {#if loadingUser}
 	<div class="flex flex-col justify-center items-center pt-60">
 		<Circle2 size="120" colorOuter="#9A8866" colorCenter="#786849" colorInner="#CFA85F" unit="px" />
 		<p class="pt-8"><i>Just loading a bit</i></p>
 	</div>
+	<!-- If a user is logged in -->
 {:else if $userName}
 	<div class="flex flex-col w-full justify-center gap-4">
-		<label for="player-setting-modal" class="btn modal-button">open modal</label>
+		<div class="flex flex-row justify-center items-center">
+			<h1 class="p-4 font-bold">Player Profile</h1>
+			<!-- Update profile button -->
+			<label
+				for="player-setting-modal"
+				class="btn btn-ghost modal-button modal-open w-16"
+				on:click={() => (playerUpdated = false)}
+			>
+				<img src={`/static/svg/cogwheel.svg`} alt={`Update player`} title={`Update player`} />
+			</label>
+		</div>
 
 		<!-- Header player info -->
-		<h1 class="p-4 font-bold">Player Profile</h1>
 		<HeaderStats {player} />
 
 		<!-- Overall stats -->
@@ -95,70 +124,82 @@
 			{/each}
 		</div>
 	</div>
+	<!-- If no user logged in -->
 {:else}
 	<h1>Create Player</h1>
 {/if}
 
+<!-- Modal for updating profile -->
 {#if createModal}
 	<input type="checkbox" id="player-setting-modal" class="modal-toggle" />
 	<div class="modal flex flex-col">
 		<div class="modal-box flex flex-col w-5/6 max-w-5xl items-center p-8">
-			<h3 class="font-bold text-2xl text-primary">Update Player</h3>
-
-			<div class="divider" />
-			<div class="grid grid-cols-2 place-items-center w-full">
-				<div class="flex flex-col w-3/4 items-center gap-2">
-					<h4 class="text-accent">Game edition</h4>
-					<span class="text-xs">{gameVersions[newVersion - 1].name}</span>
-					<input
-						type="range"
-						min="1"
-						max="4"
-						bind:value={newVersion}
-						step="1"
-						class="range range-primary range-sm"
-					/>
+			<!-- When user saved show close button -->
+			{#if playerUpdated}
+				<h3 class="font-bold text-2xl text-primary">Player Updated</h3>
+				<div class="modal-action">
+					<label for="player-setting-modal" class="btn btn-md btn-info w-24">Close</label>
 				</div>
-				<div class="flex flex-col w-3/4 items-center gap-1">
-					<h4 class="text-accent">Player level</h4>
-					<Counter bind:count={newLevel} />
+				<!-- Update player info content-->
+			{:else}
+				<h3 class="font-bold text-2xl text-primary">Update Player</h3>
+				<div class="divider" />
+				<div class="grid grid-cols-2 place-items-center w-full">
+					<!-- Game edition -->
+					<div class="flex flex-col w-3/4 items-center gap-2">
+						<h4 class="text-accent">Game edition</h4>
+						<span class="text-xs">{gameVersions[newVersion - 1].name}</span>
+						<input
+							type="range"
+							min="1"
+							max="4"
+							bind:value={newVersion}
+							step="1"
+							class="range range-primary range-sm"
+						/>
+					</div>
+					<!-- Player level -->
+					<div class="flex flex-col w-3/4 items-center gap-1">
+						<h4 class="text-accent">Player level</h4>
+						<Counter bind:count={newLevel} />
+					</div>
 				</div>
-			</div>
-			<div class="divider" />
-			<h4 class="text-accent justify-center pb-4">Traders</h4>
-			<div class="grid grid-cols-8 gap-4 place-items-center">
-				{#each newTraderLevels as traderLevel}
-					<div class="gap-4 flex flex-col items-center">
-						<TraderIcon trader={traderLevel.trader} level={traderLevel.level} size={20} />
-						<div class="pt-2">
-							<input
-								type="range"
-								min="1"
-								max="4"
-								step={traderLevel.trader.name === 'Fence' ? 3 : 1}
-								bind:value={traderLevel.level}
-								class="range range-xs range-accent"
-							/>
-							<!-- Show levels under range bar-->
-							<div class="w-full flex justify-between text-xs px-2">
-								<!-- Fence only can be level 1 or 4-->
-								{#if traderLevel.trader.name === 'Fence'}
-									<span class="justify-center text-accent">{romanLevels[0]}</span>
-									<span class="justify-center text-accent"
-										>{romanLevels[romanLevels.length - 1]}</span
-									>
-								{:else}
-									{#each romanLevels as romanLevel}
-										<span class="justify-center text-accent">{romanLevel}</span>
-									{/each}
-								{/if}
+				<div class="divider" />
+				<!-- Trader levels -->
+				<h4 class="text-accent justify-center pb-4">Traders</h4>
+				<div class="grid grid-cols-8 gap-4 place-items-center">
+					{#each newTraderLevels as traderLevel}
+						<div class="gap-4 flex flex-col items-center">
+							<TraderIcon trader={traderLevel.trader} level={traderLevel.level} size={20} />
+							<!-- Trader level range bar -->
+							<div class="pt-2">
+								<input
+									type="range"
+									min="1"
+									max="4"
+									step={traderLevel.trader.name === 'Fence' ? 3 : 1}
+									bind:value={traderLevel.level}
+									class="range range-xs range-accent"
+								/>
+								<!-- Show levels under range bar-->
+								<div class="w-full flex justify-between text-xs px-2">
+									<!-- Fence only can be level 1 or 4-->
+									{#if traderLevel.trader.name === 'Fence'}
+										<span class="justify-center text-accent">{romanLevels[0]}</span>
+										<span class="justify-center text-accent"
+											>{romanLevels[romanLevels.length - 1]}</span
+										>
+									{:else}
+										{#each romanLevels as romanLevel}
+											<span class="justify-center text-accent">{romanLevel}</span>
+										{/each}
+									{/if}
+								</div>
 							</div>
 						</div>
-					</div>
-				{/each}
-			</div>
-			<div class="pt-12 w-full">
-				<div class="alert alert-info shadow-lg justify-center">
+					{/each}
+				</div>
+				<div class="pt-12 w-full">
 					<!-- Show spinner while saving -->
 					{#if saveLoad}
 						<div class="flex justify-center w-full">
@@ -173,16 +214,27 @@
 							</div>
 						</div>
 					{:else}
-						<!-- Save and cancel button -->
-						<div class="flex-none">
+						<div class="flex flex-row gap-6 justify-center">
+							<!-- Cancel button reverts changes -->
 							<div class="modal-action">
-								<label for="player-setting-modal" class="btn btn-md btn-neutral">Cancel</label>
+								<label
+									for="player-setting-modal"
+									class="btn btn-md btn-neutral w-24"
+									on:click={cancelPlayerUpdate}>Cancel</label
+								>
 							</div>
-							<button class="btn btn-md btn-success">Save</button>
+							<!-- Save button updates changes -->
+							<div class="modal-action">
+								<label
+									for="player-setting-modal"
+									class="btn btn-md btn-success w-24"
+									on:click={updatePlayer}>Save</label
+								>
+							</div>
 						</div>
 					{/if}
 				</div>
-			</div>
+			{/if}
 		</div>
 	</div>
 {/if}

@@ -76,6 +76,44 @@ export async function createPlayer(name: string, version: number, level: number,
     }
 }
 
+export async function updatePlayer(player: Player, newVersion: number, newLevel: number, newTraderLevels: { trader: Trader; level: number }[]): Promise<Player> {
+    try {
+        // Update player level and version
+        const resPlayer: Player = await prisma.player.update({
+            where: {
+                id: player.id
+            },
+            data: {
+                level: newLevel,
+                version: newVersion,
+            }
+        })
+
+        if (resPlayer) {
+
+            // update players trader levels
+            for (const traderLevel of newTraderLevels) {
+                await prisma.playerHasTrader.update({
+                    where:
+                    {
+                        playerId_traderId: {
+                            playerId: player.id,
+                            traderId: traderLevel.trader.id
+                        }
+                    },
+                    data: {
+                        level: traderLevel.level
+                    }
+                })
+            }
+        }
+        return resPlayer
+
+    } catch (error) {
+        console.log('updatePlayer', error)
+    }
+}
+
 export async function getPlayer(name: string): Promise<Player> {
     try {
         const player: Player = await prisma.player.findUnique({

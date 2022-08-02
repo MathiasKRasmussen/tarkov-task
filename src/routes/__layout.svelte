@@ -32,7 +32,7 @@
 	<!-- Dont show footer while navigating -->
 	{#if !$navigating}
 		<footer>
-			<p>Made with dank memes</p>
+			<p>Made with wholesome memes</p>
 		</footer>
 	{/if}
 </div>
