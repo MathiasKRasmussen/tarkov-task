@@ -5,6 +5,7 @@
 	export let trader: Trader;
 	export let level: number;
 	export let size: number = 14;
+	export let href: string = '';
 </script>
 
 <!-- Avatar of trader with level indicator-->
@@ -17,9 +18,15 @@
 	<!-- Trader avatar-->
 	<div class="avatar flex">
 		<div class="rounded w-{size}">
-			<a href={trader.wiki} target="_blank">
-				<img src={trader.image} alt={trader.name} title={trader.name} />
-			</a>
+			{#if href.length}
+				<a sveltekit:prefetch {href}>
+					<img src={trader.image} alt={trader.name} title={trader.name} />
+				</a>
+			{:else}
+				<a href={trader.wiki} target="_blank">
+					<img src={trader.image} alt={trader.name} title={trader.name} />
+				</a>
+			{/if}
 		</div>
 	</div>
 </div>
