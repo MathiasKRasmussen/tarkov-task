@@ -36,6 +36,7 @@ model Trader {
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasTrader  PlayerHasTrader[]
   Task             Task[]
+  Barter           Barter[]
 }
 
 model Map {
@@ -61,6 +62,64 @@ model Item {
   TaskReqItem     TaskReqItem[]
   TaskReqKey      TaskReqKey[]
   TaskRewardsItem TaskRewardsItem[]
+  CraftReqItem    CraftReqItem[]
+  CraftRewItem    CraftRewItem[]
+  BarterReqItem   BarterReqItem[]
+  BarterRewItem   BarterRewItem[]
+}
+
+model Barter {
+  id            String          @id @unique @default(cuid())
+  traderId      String
+  trader        Trader          @relation(fields: [traderId], references: [id])
+  traderLevel   Int
+  BarterReqItem BarterReqItem[]
+  BarterRewItem BarterRewItem[]
+}
+
+model BarterReqItem {
+  count    Float
+  id       String @id @unique @default(cuid())
+  itemId   String
+  barterId String
+  Barter   Barter @relation(fields: [barterId], references: [id])
+  item     Item   @relation(fields: [itemId], references: [id])
+}
+
+model BarterRewItem {
+  count    Float
+  id       String @id @unique @default(cuid())
+  itemId   String
+  barterId String
+  Barter   Barter @relation(fields: [barterId], references: [id])
+  item     Item   @relation(fields: [itemId], references: [id])
+}
+
+model Craft {
+  id             String         @id @unique @default(cuid())
+  duration       Int
+  stationId      String
+  HideoutStation HideoutStation @relation(fields: [stationId], references: [id])
+  CraftReqItem   CraftReqItem[]
+  CraftRewItem   CraftRewItem[]
+}
+
+model CraftReqItem {
+  count   Float
+  id      String @id @unique @default(cuid())
+  itemId  String
+  craftId String
+  Craft   Craft  @relation(fields: [craftId], references: [id])
+  item    Item   @relation(fields: [itemId], references: [id])
+}
+
+model CraftRewItem {
+  count   Float
+  id      String @id @unique @default(cuid())
+  itemId  String
+  craftId String
+  Craft   Craft  @relation(fields: [craftId], references: [id])
+  item    Item   @relation(fields: [itemId], references: [id])
 }
 
 model ItemType {
@@ -124,6 +183,7 @@ model HideoutStation {
   HideoutReqSkill  HideoutReqSkill[]
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasHideout PlayerHasHideout[]
+  Craft            Craft[]
 }
 
 model HideoutReqHideout {

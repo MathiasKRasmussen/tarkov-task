@@ -9,6 +9,8 @@ import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
 import craftsData from './json/craftsItems.json'
 import iconData from './json/itemIcons.json'
+import crafts from './json/crafts.json'
+import barters from './json/barters.json'
 
 export function getStashIds(version: number): string[] {
     const standard: string = '5d484fc0654e76006657e0ab-1'
@@ -23,6 +25,14 @@ export function getStashIds(version: number): string[] {
         if (version > 3) ids.push(edgeOfDarkness)
     }
     return ids
+}
+
+export function createCrafts() {
+    return crafts.crafts
+}
+
+export function createBarters() {
+    return barters.barters
 }
 
 export function createItemIcons(): { id: string; gridImageLink: string; iconLink: string; }[] {

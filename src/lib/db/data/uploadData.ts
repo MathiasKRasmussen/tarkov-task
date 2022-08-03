@@ -1,6 +1,6 @@
 import { prisma } from '$lib/db/prisma';
-import { faction, type Hideout, type HideoutStation, type Item, type ItemType, type Map, type Player, type Skill, type Task } from '@prisma/client';
-import { createCraftItemsList, createHideouts, createItemIcons, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
+import { faction, type Barter, type Craft, type Hideout, type HideoutStation, type Item, type ItemType, type Map, type Player, type Skill, type Task } from '@prisma/client';
+import { createBarters, createCraftItemsList, createCrafts, createHideouts, createItemIcons, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
 import { getPlayerTasks, getTasks } from '../models/tasks';
 
 export async function updateTasks() {
@@ -98,8 +98,117 @@ export async function deleteTaskConnections() {
     console.log('onMaps', onMaps)
 }
 
+export async function addCrafts() {
+    const crafts = createCrafts()
+    let result: Craft[] = []
+    for (let craft of crafts) {
+        const stationId: string = `${craft.station.id}-${craft.level}`
+        const res: Craft = await prisma.craft.create({
+            data: {
+                duration: craft.duration,
+                HideoutStation: {
+                    connect: {
+                        id: stationId
+                    }
+                },
+            }
+        })
+        result.push(res)
+        for (let req of craft.requiredItems) {
+            await prisma.craftReqItem.create({
+                data: {
+                    count: req.count,
+                    Craft: {
+                        connect: {
+                            id: res.id
+                        }
+                    },
+                    item: {
+                        connect: {
+                            id: req.item.id
+                        }
+                    }
+                }
+            })
+        }
+        for (let rew of craft.rewardItems) {
+            await prisma.craftRewItem.create({
+                data: {
+                    count: rew.count,
+                    Craft: {
+                        connect: {
+                            id: res.id
+                        }
+                    },
+                    item: {
+                        connect: {
+                            id: rew.item.id
+                        }
+                    }
+                }
+            })
+        }
+    }
+    console.log(crafts.length, result.length)
+}
 
-export async function addCrafts(): Promise<Item[]> {
+export async function addBarters() {
+    const barters = createBarters()
+    let result: Barter[] = []
+    console.log(barters.length)
+    for (let barter of barters) {
+        const res: Barter = await prisma.barter.create({
+            data: {
+                traderLevel: barter.level,
+                trader: {
+                    connect: {
+                        id: barter.trader.id
+                    }
+                }
+            }
+        })
+        result.push(res)
+        for (let req of barter.requiredItems) {
+            await prisma.barterReqItem.create({
+                data: {
+                    count: req.count,
+                    Barter: {
+                        connect: {
+                            id: res.id
+                        }
+                    },
+                    item: {
+                        connect: {
+                            id: req.item.id
+                        }
+                    }
+                }
+            })
+        }
+        for (let rew of barter.rewardItems) {
+            await prisma.barterRewItem.create({
+                data: {
+                    count: rew.count,
+                    Barter: {
+                        connect: {
+                            id: res.id
+                        }
+                    },
+                    item: {
+                        connect: {
+                            id: rew.item.id
+                        }
+                    }
+                }
+            })
+        }
+        console.log(barters.length, result.length)
+    }
+    console.log(barters.length, result.length)
+}
+
+
+export async function addCraftable(): Promise<Item[]> {
     const items: { id: string, name: string }[] = createCraftItemsList()
     let result: Item[] = []
     for (const item of items) {
@@ -204,7 +313,7 @@ export async function connectHideouts() {
                        } 
            */
             /*
- for (const item of station.itemRequirements) {
+    for (const item of station.itemRequirements) {
      const resItem = await prisma.hideoutReqItem.create({
          data: {
              hideoutStation: {
@@ -221,7 +330,7 @@ export async function connectHideouts() {
          }
      })
      resultItems.push(resItem)
- } */
+    } */
         }
     }
 }

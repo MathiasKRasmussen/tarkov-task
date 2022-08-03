@@ -53,6 +53,13 @@
 		loadingUser = false;
 	}
 
+	async function updateData() {
+		await fetch(`${$page.url.origin}/api/update/data`, {
+			method: 'POST',
+			body: JSON.stringify({})
+		});
+	}
+
 	// Update player info
 	async function updatePlayer() {
 		saveLoad = true;
@@ -96,6 +103,7 @@
 	</div>
 	<!-- If a user is logged in -->
 {:else if $userName}
+	<button class="btn btn-primary" on:click={updateData}>Button</button>
 	<div class="flex flex-col w-full justify-center gap-4">
 		<div class="flex flex-row justify-center items-center">
 			<h1 class="p-4 font-bold">Player Profile</h1>
