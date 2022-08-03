@@ -11,6 +11,71 @@ export async function getAllItems(): Promise<Item[]> {
     return result
 }
 
+export async function getItem(id: string): Promise<Item> {
+    try {
+        const item = await prisma.item.findFirst({
+            where: {
+                id: id
+            },
+            include: {
+                TaskReqItem: {
+                    include: {
+                        task: true
+                    }
+                },
+                TaskRewardsItem: {
+                    include: {
+                        task: true
+                    }
+                },
+                TaskReqKey: {
+                    include: {
+                        task: true
+                    }
+                },
+                ItemHasType: {
+                    include: {
+                        type: true
+                    }
+                },
+                CraftReqItem: {
+                    include: {
+                        Craft: true
+                    }
+                },
+                CraftRewItem: {
+                    include: {
+                        Craft: true
+                    }
+                },
+                BarterReqItem: {
+                    include: {
+                        Barter: true
+                    }
+                },
+                BarterRewItem: {
+                    include: {
+                        Barter: true
+                    }
+                },
+                HideoutReqItem: {
+                    include: {
+                        hideoutStation: {
+                            include: {
+                                Hideout: true
+                            }
+                        }
+                    }
+                },
+
+            }
+        })
+        return item
+    } catch (error) {
+        console.log("getItem", error)
+    }
+}
+
 export async function searchItems(input: string): Promise<Item[]> {
     let result: Item[] = []
     try {
