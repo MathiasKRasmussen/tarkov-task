@@ -7,6 +7,16 @@ export async function getTraders(): Promise<Trader[]> {
     return traders
 }
 
+export async function getTrader(name: string): Promise<Trader> {
+    const trader: Trader = await prisma.trader.findFirst({
+        where: {
+            name: name
+        }
+    })
+    return trader
+}
+
+
 export async function getPlayerTraders(player: Player): Promise<Trader[]> {
     let traders: Trader[] = await prisma.trader.findMany({
         include: {

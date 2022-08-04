@@ -1,23 +1,42 @@
 import { getItem } from '$lib/db/models/items'
-import type { Item } from '@prisma/client'
+import { getTraders } from '$lib/db/models/traders'
+import type { Item, Trader } from '@prisma/client'
 import { request, gql } from 'graphql-request'
 export async function get({ params }) {
     const { itemId } = params
     const item: Item = await getItem(itemId)
-    console.log(item)
+    const traders: Trader[] = await getTraders()
+    let priceData;
     const query = gql`
     {
         item(id: "${itemId}") {
             low24hPrice
             avg24hPrice
             high24hPrice
+            sellFor {
+                price
+                currency
+                vendor {
+                    name
+                }
+            }
+            buyFor {
+                price
+                currency
+                vendor {
+                    name
+                }
+            }
         }
     }
     `
-    request('https://api.tarkov.dev/graphql', query).then((data) => console.log(data))
+    await request('https://api.tarkov.dev/graphql', query).then((data) => priceData = data.item)
+    console.log(item, priceData)
     return {
         body: {
-            itemId
+            item,
+            priceData,
+            traders
         },
     }
 }
