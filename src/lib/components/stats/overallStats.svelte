@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { currencySymbol } from '$lib/util/itemPrice';
+
 	import { isEUR, isMoney, isRUB, isUSD } from '$lib/util/items';
 
 	import type { HideoutStation, Item, Trader } from '@prisma/client';
@@ -115,7 +117,7 @@
 		<ProgressStat
 			completed={completedRUB}
 			total={totalRUB}
-			header={'RUB'}
+			header={`RUB (${currencySymbol('RUB')})`}
 			thickness={10}
 			size={6}
 		/>
@@ -123,7 +125,7 @@
 		<ProgressStat
 			completed={completedUSD}
 			total={totalUSD}
-			header={'USD'}
+			header={`USD (${currencySymbol('USD')})`}
 			thickness={10}
 			size={6}
 		/>
@@ -131,7 +133,7 @@
 		<ProgressStat
 			completed={completedEUR}
 			total={totalEUR}
-			header={'EUR'}
+			header={`EUR (${currencySymbol('EUR')})`}
 			thickness={10}
 			size={6}
 		/>
