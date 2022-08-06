@@ -34,7 +34,32 @@ function isBetterValue(current: number, offer: { price: number, currency: string
 export function getFleaCurrentPrice(sellfor: { price: number, currency: string, vendor: { name: string } }[]): number {
     sellfor.forEach((offer) => {
         if (offer.vendor.name === 'Flea Market') return offer.price
-        console.log(offer)
     })
     return 0
+}
+
+export function fleaProfit(fleaPrice: number, traderPrice: number, currency: string): number {
+    if (currency === 'RUB') {
+        return fleaPrice - traderPrice
+    } else if (currency === 'USD') {
+        return fleaPrice - (traderPrice * usdRUBValue)
+    } else if (currency === 'EUR') {
+        return fleaPrice - (traderPrice * euroRUBValue)
+    }
+    return 0
+}
+
+// Converts a value in 'inputCurrency' to 'outputCurrency
+export function convertCurrency(price: number, inputCurrency: string, outputCurrency: string): number {
+    if (inputCurrency === 'RUB') {
+        if (outputCurrency === 'USD') return price / usdRUBValue
+        else if (outputCurrency === 'EUR') return price / euroRUBValue
+    } else if (inputCurrency === 'USD') {
+        if (outputCurrency === 'RUB') return price * usdRUBValue
+        else if (outputCurrency === 'EUR') return (price * usdRUBValue) / euroRUBValue
+    } else if (inputCurrency === 'EUR') {
+        if (outputCurrency === 'RUB') return price * euroRUBValue
+        else if (outputCurrency === 'USD') return (price * euroRUBValue) / usdRUBValue
+    }
+    return price
 }

@@ -7,7 +7,7 @@ export async function get({ params }) {
     const item: Item = await getItem(itemId)
     const traders: Trader[] = await getTraders()
     let priceData;
-    const query = gql`
+    const query = gql` 
     {
         item(id: "${itemId}") {
             low24hPrice
@@ -31,7 +31,7 @@ export async function get({ params }) {
     }
     `
     await request('https://api.tarkov.dev/graphql', query).then((data) => priceData = data.item)
-    console.log(item, priceData)
+    console.log(item.CraftReqItem[0].Craft.CraftReqItem)
     return {
         body: {
             item,

@@ -33,10 +33,10 @@ model Trader {
   name             String
   wiki             String?
   image            String?
+  Barter           Barter[]
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasTrader  PlayerHasTrader[]
   Task             Task[]
-  Barter           Barter[]
 }
 
 model Map {
@@ -54,25 +54,25 @@ model Item {
   height          Int?
   wiki            String?
   image           String?
+  craftAble       Boolean           @default(false)
   icon            String?
   nameIcon        String?
-  craftAble       Boolean           @default(false)
+  BarterReqItem   BarterReqItem[]
+  BarterRewItem   BarterRewItem[]
+  CraftReqItem    CraftReqItem[]
+  CraftRewItem    CraftRewItem[]
   HideoutReqItem  HideoutReqItem[]
   ItemHasType     ItemHasType[]
   TaskReqItem     TaskReqItem[]
   TaskReqKey      TaskReqKey[]
   TaskRewardsItem TaskRewardsItem[]
-  CraftReqItem    CraftReqItem[]
-  CraftRewItem    CraftRewItem[]
-  BarterReqItem   BarterReqItem[]
-  BarterRewItem   BarterRewItem[]
 }
 
 model Barter {
   id            String          @id @unique @default(cuid())
   traderId      String
-  trader        Trader          @relation(fields: [traderId], references: [id])
   traderLevel   Int
+  trader        Trader          @relation(fields: [traderId], references: [id])
   BarterReqItem BarterReqItem[]
   BarterRewItem BarterRewItem[]
 }
@@ -177,13 +177,13 @@ model HideoutStation {
   constructionTime Int
   hideoutId        String
   Hideout          Hideout             @relation(fields: [hideoutId], references: [id])
+  Craft            Craft[]
   RequiresStation  HideoutReqHideout[] @relation("RequiresStation")
   Stations         HideoutReqHideout[] @relation("Stations")
   HideoutReqItem   HideoutReqItem[]
   HideoutReqSkill  HideoutReqSkill[]
   HideoutReqTrader HideoutReqTrader[]
   PlayerHasHideout PlayerHasHideout[]
-  Craft            Craft[]
 }
 
 model HideoutReqHideout {

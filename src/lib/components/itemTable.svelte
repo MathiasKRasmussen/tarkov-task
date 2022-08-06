@@ -99,17 +99,21 @@
 					<!-- Col 2: Item ShortName -->
 					<td>
 						<div class="flex justify-center text-primary">
-							<b>{taskItem.shortName}</b>
+							<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
+								<b>{taskItem.shortName}</b>
+							</a>
 						</div>
 					</td>
 					<!-- Col 3: Item Name -->
 					<td>
 						<div class="flex justify-center text-primary" title={taskItem.name}>
-							<b
-								>{taskItem.name.length > maxNameLength
-									? taskItem.name.substring(0, maxNameLength) + '..'
-									: taskItem.name}</b
-							>
+							<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
+								<b class="text-primary"
+									>{taskItem.name.length > maxNameLength
+										? taskItem.name.substring(0, maxNameLength) + '..'
+										: taskItem.name}</b
+								>
+							</a>
 						</div>
 					</td>
 					<!-- Col 4: Items needed in raid -->

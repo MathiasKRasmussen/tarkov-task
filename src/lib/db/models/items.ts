@@ -40,22 +40,52 @@ export async function getItem(id: string): Promise<Item> {
                 },
                 CraftReqItem: {
                     include: {
-                        Craft: true
+                        Craft: {
+                            include: {
+                                HideoutStation: {
+                                    include: {
+                                        Hideout: true
+                                    }
+                                },
+                                CraftReqItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                },
+                                CraftRewItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 CraftRewItem: {
                     include: {
-                        Craft: true
+                        Craft: {
+                            include: {
+                                HideoutStation: true
+                            }
+                        }
                     }
                 },
                 BarterReqItem: {
                     include: {
-                        Barter: true
+                        Barter: {
+                            include: {
+                                trader: true
+                            }
+                        }
                     }
                 },
                 BarterRewItem: {
                     include: {
-                        Barter: true
+                        Barter: {
+                            include: {
+                                trader: true
+                            }
+                        }
                     }
                 },
                 HideoutReqItem: {
