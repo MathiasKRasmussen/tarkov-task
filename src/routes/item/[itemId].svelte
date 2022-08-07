@@ -226,33 +226,47 @@
 			<div class="flex w-full bg-primary justify-center">
 				<h2 class="py-3 text-3xl text-secondary font-bold">Tasks / Hideout</h2>
 			</div>
-			<div class="flex flex-col px-4 py-0 w-full">
+			<div class="flex flex-col p-0 w-full">
 				<div class="overflow-x-auto">
-					<table class="table table-zebra w-full">
+					<table class="table table-auto table-zebra w-full">
 						<!-- head -->
 						<thead>
-							<tr>
-								<th class="text-primary">Amount</th>
-								<th class="text-primary">Task / Hideout</th>
+							<tr class="border border-b-[1px] border-primary border-x-0 border-y-0">
+								<th class="text-primary w-1/6  ">
+									<div class="flex justify-center text-primary">Amount</div>
+								</th>
+								<th class="text-primary flex justify-center">Task / Hideout</th>
 							</tr>
 						</thead>
 						<tbody>
 							<!-- Tasks-->
 							{#each item.TaskReqItem as reqItem}
 								<tr>
-									<td class={reqItem.foundInRaid ? 'text-error' : 'text-success'}
+									<td
+										class="font-bold flex justify-center {reqItem.foundInRaid
+											? 'text-error'
+											: 'text-success'}"
+										title={reqItem.foundInRaid ? 'Find in raid' : 'Item can be bought'}
 										>{reqItem.count}</td
 									>
-									<td class="text-accent">{reqItem.task.name}</td>
+									<td>
+										<div class="text-accent flex justify-center">
+											{reqItem.task.name}
+										</div>
+									</td>
 								</tr>
 							{/each}
 							<!-- Hideout stations-->
 							{#each item.HideoutReqItem as reqItem}
 								<tr>
-									<td class="text-success">{reqItem.count}</td>
-									<td class="text-accent"
-										>{reqItem.hideoutStation.Hideout.name + ' ' + reqItem.hideoutStation.level}</td
+									<td class="text-success font-bold flex justify-center" title="Item can be bought"
+										>{reqItem.count}</td
 									>
+									<td>
+										<div class="text-accent flex justify-center">
+											{reqItem.hideoutStation.Hideout.name + ' ' + reqItem.hideoutStation.level}
+										</div>
+									</td>
 								</tr>
 							{/each}
 						</tbody>
