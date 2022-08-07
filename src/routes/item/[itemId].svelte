@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CraftBarterItem from '$lib/components/item/craftBarterItem.svelte';
+	import Crafting from '$lib/components/item/crafting.svelte';
 	import FleaPrice from '$lib/components/item/fleaPrice.svelte';
 	import { getRequiredTaskItems } from '$lib/util/formatItems';
 	import { hideoutImage } from '$lib/util/hideout';
@@ -98,7 +99,7 @@
 
 <h1 class="py-2">{item.name}</h1>
 <div class="flex flex-row gap-14 justify-center">
-	<div class="card w-3/5 bg-base-100 shadow-xl">
+	<div class="card w-2/3 bg-base-100 shadow-xl">
 		<div class="card-body">
 			<div class="divider">
 				<h2 class="card-title justify-center flex">Traders</h2>
@@ -185,8 +186,8 @@
 	</div>
 
 	<!-- Image card -->
-	<div class="flex">
-		<div class="card w-64 bg-base-100 shadow-xl">
+	<div class="flex w-1/3">
+		<div class="card bg-base-100 shadow-xl">
 			<!-- Image with icon on top -->
 			<figure>
 				<img src={item.image} alt="Image of {item.name}" title={item.name} />
@@ -223,49 +224,19 @@
 		<h2 class="py-3 text-3xl text-secondary font-bold">Crafts</h2>
 	</div>
 	<div class="flex flex-col p-4 w-full">
-		{#each item.CraftReqItem as craftReqItem, index}
+		<!-- All crafting that rewards item -->
+		{#each item.CraftRewItem as craftRewItem, index}
 			{#if index !== 0}
 				<div class="divider" />
 			{/if}
-			<div class="flex flex-row">
-				<!-- Hideout info -->
-				<div class="flex flex-col items-center gap-1 w-1/6">
-					<!-- Hideout name and level -->
-					<span class="text-primary"
-						>{`${craftReqItem.Craft.HideoutStation.Hideout.name} ${craftReqItem.Craft.HideoutStation.level}`}</span
-					>
-					<!-- Hideout image -->
-					<div class="rounded w-14">
-						<img
-							src={hideoutImage(craftReqItem.Craft.HideoutStation.Hideout.name)}
-							alt={craftReqItem.Craft.HideoutStation.Hideout.name}
-							title={craftReqItem.Craft.HideoutStation.Hideout.name}
-						/>
-					</div>
-				</div>
-				<div class="divider divider-horizontal" />
-				<div class="flex flex-row gap-6 items-center">
-					<!-- All required items for craft -->
-					<div class="flex flex-row gap-2 items-center">
-						{#each craftReqItem.Craft.CraftReqItem as reqItem}
-							<CraftBarterItem item={reqItem.item} count={reqItem.count} />
-						{/each}
-					</div>
-					<!-- Duration to craft -->
-					<div class="flex flex-col gap-2 items-center">
-						<div class="w-12">
-							<img src={`/static/svg/rightArrow.svg`} alt="{`Arrow that points to reward item`}}" />
-						</div>
-						<span class="text-accent">{timeString(craftReqItem.Craft.duration)}</span>
-					</div>
-
-					<div class="flex flex-row gap-2 items-center">
-						{#each craftReqItem.Craft.CraftRewItem as rewItem}
-							<CraftBarterItem item={rewItem.item} count={rewItem.count} />
-						{/each}
-					</div>
-				</div>
-			</div>
+			<Crafting craft={craftRewItem.Craft} />
+		{/each}
+		<!-- All crafting that requires the item-->
+		{#each item.CraftReqItem as craftReqItem, index}
+			{#if item.CraftRewItem.length || index !== 0}
+				<div class="divider" />
+			{/if}
+			<Crafting craft={craftReqItem.Craft} />
 		{/each}
 	</div>
 </div>

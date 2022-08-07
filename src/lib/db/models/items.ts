@@ -65,7 +65,21 @@ export async function getItem(id: string): Promise<Item> {
                     include: {
                         Craft: {
                             include: {
-                                HideoutStation: true
+                                HideoutStation: {
+                                    include: {
+                                        Hideout: true
+                                    }
+                                },
+                                CraftReqItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                },
+                                CraftRewItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                }
                             }
                         }
                     }
