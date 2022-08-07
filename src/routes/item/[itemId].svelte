@@ -98,7 +98,7 @@
 </script>
 
 <h1 class="py-2">{item.name}</h1>
-<div class="flex flex-row gap-14 justify-center">
+<div class="flex flex-row gap-14 justify-center pb-8">
 	<div class="card w-2/3 bg-base-100 shadow-xl">
 		<div class="card-body">
 			<div class="divider">
@@ -219,24 +219,73 @@
 	</div>
 </div>
 
-<div class="card w-full flex-wrap justify-center bg-base-100 shadow-xl lg:card-side">
-	<div class="flex w-full bg-primary justify-center">
-		<h2 class="py-3 text-3xl text-secondary font-bold">Crafts</h2>
+<!-- Show what tasks and hideout stations the item is needed for -->
+{#if item.TaskReqItem.length || item.HideoutReqItem.length}
+	<div class="pb-8">
+		<div class="card w-full flex-wrap justify-center bg-base-100 shadow-xl lg:card-side">
+			<div class="flex w-full bg-primary justify-center">
+				<h2 class="py-3 text-3xl text-secondary font-bold">Tasks / Hideout</h2>
+			</div>
+			<div class="flex flex-col px-4 py-0 w-full">
+				<div class="overflow-x-auto">
+					<table class="table table-zebra w-full">
+						<!-- head -->
+						<thead>
+							<tr>
+								<th class="text-primary">Amount</th>
+								<th class="text-primary">Task / Hideout</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Tasks-->
+							{#each item.TaskReqItem as reqItem}
+								<tr>
+									<td class={reqItem.foundInRaid ? 'text-error' : 'text-success'}
+										>{reqItem.count}</td
+									>
+									<td class="text-accent">{reqItem.task.name}</td>
+								</tr>
+							{/each}
+							<!-- Hideout stations-->
+							{#each item.HideoutReqItem as reqItem}
+								<tr>
+									<td class="text-success">{reqItem.count}</td>
+									<td class="text-accent"
+										>{reqItem.hideoutStation.Hideout.name + ' ' + reqItem.hideoutStation.level}</td
+									>
+								</tr>
+							{/each}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="flex flex-col p-4 w-full">
-		<!-- All crafting that rewards item -->
-		{#each item.CraftRewItem as craftRewItem, index}
-			{#if index !== 0}
-				<div class="divider" />
-			{/if}
-			<Crafting craft={craftRewItem.Craft} />
-		{/each}
-		<!-- All crafting that requires the item-->
-		{#each item.CraftReqItem as craftReqItem, index}
-			{#if item.CraftRewItem.length || index !== 0}
-				<div class="divider" />
-			{/if}
-			<Crafting craft={craftReqItem.Craft} />
-		{/each}
+{/if}
+
+<!-- Crafting cards showing all crafts-->
+{#if item.CraftReqItem.lenght || item.CraftRewItem.length}
+	<div class="pb-8">
+		<div class="card w-full flex-wrap justify-center bg-base-100 shadow-xl lg:card-side">
+			<div class="flex w-full bg-primary justify-center">
+				<h2 class="py-3 text-3xl text-secondary font-bold">Crafts</h2>
+			</div>
+			<div class="flex flex-col p-4 w-full">
+				<!-- All crafting that rewards item -->
+				{#each item.CraftRewItem as craftRewItem, index}
+					{#if index !== 0}
+						<div class="divider" />
+					{/if}
+					<Crafting craft={craftRewItem.Craft} />
+				{/each}
+				<!-- All crafting that requires the item-->
+				{#each item.CraftReqItem as craftReqItem, index}
+					{#if item.CraftRewItem.length || index !== 0}
+						<div class="divider" />
+					{/if}
+					<Crafting craft={craftReqItem.Craft} />
+				{/each}
+			</div>
+		</div>
 	</div>
-</div>
+{/if}
