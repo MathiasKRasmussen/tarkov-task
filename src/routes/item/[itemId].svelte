@@ -1,9 +1,8 @@
 <script lang="ts">
-	import CraftBarterItem from '$lib/components/item/craftBarterItem.svelte';
+	import Barter from '$lib/components/item/barter.svelte';
+
 	import Crafting from '$lib/components/item/crafting.svelte';
 	import FleaPrice from '$lib/components/item/fleaPrice.svelte';
-	import { getRequiredTaskItems } from '$lib/util/formatItems';
-	import { hideoutImage } from '$lib/util/hideout';
 	import {
 		bestTraderToSell,
 		convertCurrency,
@@ -11,8 +10,6 @@
 		fleaProfit,
 		getFleaCurrentPrice
 	} from '$lib/util/itemPrice';
-	import { iconWidth } from '$lib/util/items';
-	import { timeString } from '$lib/util/time';
 
 	import type { Item, Trader } from '@prisma/client';
 
@@ -96,6 +93,11 @@
 	setTraderToSell();
 	setProfit();
 </script>
+
+<svelte:head>
+	<title>{item.name}</title>
+	<meta name="description" content="Item page" />
+</svelte:head>
 
 <h1 class="py-2">{item.name}</h1>
 <div class="flex flex-row gap-14 justify-center pb-8">
@@ -206,6 +208,15 @@
 				<span class="flex justify-center text-accent">{item.shortName}</span>
 				<span class="flex justify-center text-accent text-sm">{item.width + 'x' + item.height}</span
 				>
+				<ul class="list-disc list-inside py-2">
+					{#each item.TaskRewardsItem as taskRewards}
+						<li class="text-accent text-xs">
+							<span class="text-success">{taskRewards.count}</span>
+							<span>from</span>
+							<a href={taskRewards.task.wiki} target="_blank">{taskRewards.task.name}</a>
+						</li>
+					{/each}
+				</ul>
 				<div class="card-actions justify-end">
 					<a
 						class="btn btn-outline btn-primary btn-sm"
@@ -224,7 +235,7 @@
 	<div class="pb-8">
 		<div class="card w-full flex-wrap justify-center bg-base-100 shadow-xl lg:card-side">
 			<div class="flex w-full bg-primary justify-center">
-				<h2 class="py-3 text-3xl text-secondary font-bold">Tasks / Hideout</h2>
+				<h2 class="py-3 text-3xl text-secondary font-bold">Required for Tasks / Hideout</h2>
 			</div>
 			<div class="flex flex-col p-0 w-full">
 				<div class="overflow-x-auto">
@@ -232,7 +243,7 @@
 						<!-- head -->
 						<thead>
 							<tr class="border border-b-[1px] border-primary border-x-0 border-y-0">
-								<th class="text-primary w-1/6  ">
+								<th class="text-primary w-1/12  ">
 									<div class="flex justify-center text-primary">Amount</div>
 								</th>
 								<th class="text-primary flex justify-center">Task / Hideout</th>
@@ -251,7 +262,7 @@
 									>
 									<td>
 										<div class="text-accent flex justify-center">
-											{reqItem.task.name}
+											<a href={reqItem.task.wiki} target="_blank">{reqItem.task.name}</a>
 										</div>
 									</td>
 								</tr>
@@ -277,8 +288,8 @@
 	</div>
 {/if}
 
-<!-- Crafting cards showing all crafts-->
-{#if item.CraftReqItem.lenght || item.CraftRewItem.length}
+<!-- Crafting card showing all crafts-->
+{#if item.CraftReqItem.length || item.CraftRewItem.length}
 	<div class="pb-8">
 		<div class="card w-full flex-wrap justify-center bg-base-100 shadow-xl lg:card-side">
 			<div class="flex w-full bg-primary justify-center">
@@ -298,6 +309,33 @@
 						<div class="divider" />
 					{/if}
 					<Crafting craft={craftReqItem.Craft} />
+				{/each}
+			</div>
+		</div>
+	</div>
+{/if}
+
+<!-- Barter card showing all barters-->
+{#if item.BarterReqItem.length || item.BarterRewItem.length}
+	<div class="pb-8">
+		<div class="card w-full flex-wrap justify-center bg-base-100 shadow-xl lg:card-side">
+			<div class="flex w-full bg-primary justify-center">
+				<h2 class="py-3 text-3xl text-secondary font-bold">Barter trades</h2>
+			</div>
+			<div class="flex flex-col p-4 w-full">
+				<!-- All barters that rewards item -->
+				{#each item.BarterRewItem as barterRewItem, index}
+					{#if index !== 0}
+						<div class="divider" />
+					{/if}
+					<Barter barter={barterRewItem.Barter} />
+				{/each}
+				<!-- All barters that requires the item-->
+				{#each item.BarterReqItem as barterReqItem, index}
+					{#if item.BarterRewItem.length || index !== 0}
+						<div class="divider" />
+					{/if}
+					<Barter barter={barterReqItem.Barter} />
 				{/each}
 			</div>
 		</div>

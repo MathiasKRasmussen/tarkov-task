@@ -38,7 +38,7 @@
 				const res = await fetch(`${$page.url.origin}/api/get/${$userName}`, { method: 'GET' });
 				let data = await res.json();
 				loadingUser = !data.success;
-				header += `: ${$userName}`;
+				header = `${$userName} - Tarkov Tasker`;
 				player = data.player;
 				traders = data.traders;
 				stations = data.stations;

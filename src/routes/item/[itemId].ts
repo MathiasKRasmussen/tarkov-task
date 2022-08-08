@@ -31,7 +31,6 @@ export async function get({ params }) {
     }
     `
     await request('https://api.tarkov.dev/graphql', query).then((data) => priceData = data.item)
-    console.log(item.CraftReqItem[0].Craft.CraftReqItem)
     return {
         body: {
             item,

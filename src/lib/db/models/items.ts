@@ -88,7 +88,17 @@ export async function getItem(id: string): Promise<Item> {
                     include: {
                         Barter: {
                             include: {
-                                trader: true
+                                trader: true,
+                                BarterReqItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                },
+                                BarterRewItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                }
                             }
                         }
                     }
@@ -97,7 +107,17 @@ export async function getItem(id: string): Promise<Item> {
                     include: {
                         Barter: {
                             include: {
-                                trader: true
+                                trader: true,
+                                BarterReqItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                },
+                                BarterRewItem: {
+                                    include: {
+                                        item: true
+                                    }
+                                }
                             }
                         }
                     }
