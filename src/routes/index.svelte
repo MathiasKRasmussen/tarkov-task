@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	import HeaderStats from '$lib/components/stats/headerStats.svelte';
 	import OverallStats from '$lib/components/stats/overallStats.svelte';
 	import TraderStats from '$lib/components/stats/traderStats.svelte';
@@ -27,8 +28,28 @@
 	let newTraderLevels: { trader: Trader; level: number }[] = [];
 	let saveLoad: boolean = false;
 	let playerUpdated: boolean = false;
+	let loginInput: string = '';
 
 	getProfile();
+
+	async function login(): Promise<boolean> {
+		loadingUser = true;
+		if (loginInput.indexOf(' ') >= 0) return false;
+		const res = await fetch(`${$page.url.origin}/api/post/login`, {
+			method: 'POST',
+			body: JSON.stringify({
+				loginInput
+			})
+		});
+		let data = await res.json();
+		console.log(data.success);
+		if (data.success) {
+			$userName = data.player.name;
+			await getProfile();
+		}
+		loadingUser = false;
+		return data.success;
+	}
 
 	// Gets all profile information
 	async function getProfile() {
@@ -135,6 +156,7 @@
 	<!-- If no user logged in -->
 {:else}
 	<h1 class="pb-4 font-bold">Welcome</h1>
+	<!-- Login to existing player -->
 	<div class="flex flex-col gap-8">
 		<div class="hero bg-base-200 rounded-3xl">
 			<div class="hero-content flex-col lg:flex-row-reverse w-full gap-32">
@@ -153,16 +175,20 @@
 								type="text"
 								placeholder="Name"
 								class="input input-bordered text-accent placeholder-accent placeholder-opacity-40"
+								bind:value={loginInput}
 							/>
 						</div>
 						<div class="form-control mt-6">
-							<button class="btn btn-info">Login</button>
+							<label for="login-modal" class="btn modal-button btn-info" on:click={login}
+								>Login</label
+							>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- Register new player -->
 		<div class="hero bg-base-200 rounded-3xl">
 			<div class="hero-content flex-col lg:flex-row w-full gap-32">
 				<div class="text-center lg:text-left pl-6">
@@ -183,23 +209,34 @@
 							/>
 						</div>
 						<div class="form-control mt-6">
-							<button class="btn btn-success">Register</button>
+							<label for="login-modal" class="btn modal-button btn-success">Register</label>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- Use test player -->
 		<div class="hero bg-base-200 rounded-3xl">
 			<div class="hero-content text-center">
 				<div class="max-w-xl p-4">
-					<h1 class="text-5xl font-bold">Try Tarkov Tasker</h1>
+					<h1 class="text-5xl font-bold">Try Tarkov Tasker!</h1>
 					<p class="py-6">If you don't want to create your own player you can use a test player</p>
 					<button class="btn btn-accent">Try now</button>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<input type="checkbox" id="login-modal" class="modal-toggle" />
+	<label for="login-modal" class="modal cursor-pointer">
+		<label class="modal-box relative" for="">
+			<h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
+			<p class="py-4">
+				You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+			</p>
+		</label>
+	</label>
 {/if}
 
 <!-- Modal for updating profile -->
