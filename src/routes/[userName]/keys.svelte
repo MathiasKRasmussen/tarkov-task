@@ -43,7 +43,7 @@
 </script>
 
 <svelte:head>
-	<title>Keys</title>
+	<title>Keys - Tarkov Tasker</title>
 	<meta name="description" content="Keys" />
 </svelte:head>
 

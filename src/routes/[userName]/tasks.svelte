@@ -84,7 +84,7 @@
 </script>
 
 <svelte:head>
-	<title>Tasks</title>
+	<title>Tasks - Tarkov Tasker</title>
 	<meta name="description" content="Tasks" />
 </svelte:head>
 

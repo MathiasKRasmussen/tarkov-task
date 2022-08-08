@@ -95,7 +95,7 @@
 </script>
 
 <svelte:head>
-	<title>{item.name}</title>
+	<title>{item.name} - Tarkov Tasker</title>
 	<meta name="description" content="Item page" />
 </svelte:head>
 

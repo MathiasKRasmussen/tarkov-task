@@ -76,13 +76,20 @@
 					<!-- Col 2: Item ShortName -->
 					<td>
 						<div class="flex justify-center text-primary">
-							<b>{key.item.shortName}</b>
+							<a sveltekit:prefetch href={`/item/${key.item.id}`} target="_blank" class="font-bold"
+								>{key.item.shortName}</a
+							>
 						</div>
 					</td>
 					<!-- Col 3: Item Name -->
 					<td>
 						<div class="flex justify-center text-primary">
-							<b>{key.item.name}</b>
+							<a
+								sveltekit:prefetch
+								href={`/item/${key.item.id}`}
+								target="_blank"
+								class="text-primary font-bold">{key.item.name}</a
+							>
 						</div>
 					</td>
 					<!-- Col 4: Key needed for task -->

@@ -62,7 +62,7 @@
 </script>
 
 <svelte:head>
-	<title>Hideout</title>
+	<title>Hideout - Tarkov Tasker</title>
 	<meta name="description" content="Hideout" />
 </svelte:head>
 
