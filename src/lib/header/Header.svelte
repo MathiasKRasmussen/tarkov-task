@@ -38,7 +38,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="navbar-end">
+			<div class="navbar-end pr-4">
 				<a class="text-primary font-bold" sveltekit:prefetch href={`/`} on:click={logout}>Logout</a>
 			</div>
 		{/if}
