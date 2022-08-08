@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
+	import ErrorAlert from '$lib/components/errorAlert.svelte';
 	import HeaderStats from '$lib/components/stats/headerStats.svelte';
 	import OverallStats from '$lib/components/stats/overallStats.svelte';
 	import TraderStats from '$lib/components/stats/traderStats.svelte';
@@ -29,26 +29,38 @@
 	let saveLoad: boolean = false;
 	let playerUpdated: boolean = false;
 	let loginInput: string = '';
+	let showError: boolean = false;
+	let errorMessage: string = '';
 
 	getProfile();
 
-	async function login(): Promise<boolean> {
+	// Login to player
+	async function login() {
 		loadingUser = true;
-		if (loginInput.indexOf(' ') >= 0) return false;
-		const res = await fetch(`${$page.url.origin}/api/post/login`, {
-			method: 'POST',
-			body: JSON.stringify({
-				loginInput
-			})
-		});
-		let data = await res.json();
-		console.log(data.success);
-		if (data.success) {
-			$userName = data.player.name;
-			await getProfile();
+		// If input has white space
+		if (loginInput.indexOf(' ') >= 0) {
+			showError = true;
+			errorMessage = 'Cannot have white space in your player name';
+		} else {
+			// Call login endpoint
+			const res = await fetch(`${$page.url.origin}/api/post/login`, {
+				method: 'POST',
+				body: JSON.stringify({
+					loginInput
+				})
+			});
+			// If login returns successful, save player name to localstorage
+			let data = await res.json();
+			if (data.success) {
+				$userName = data.player.name;
+				await getProfile();
+				// Else show error for not finding player
+			} else {
+				errorMessage = 'Player was not found';
+				showError = true;
+			}
 		}
 		loadingUser = false;
-		return data.success;
 	}
 
 	// Gets all profile information
@@ -72,13 +84,6 @@
 			}
 		}
 		loadingUser = false;
-	}
-
-	async function updateData() {
-		await fetch(`${$page.url.origin}/api/update/data`, {
-			method: 'POST',
-			body: JSON.stringify({})
-		});
 	}
 
 	// Update player info
@@ -124,7 +129,6 @@
 	</div>
 	<!-- If a user is logged in -->
 {:else if $userName}
-	<button class="btn btn-primary" on:click={updateData}>Button</button>
 	<div class="flex flex-col w-full justify-center gap-4">
 		<div class="flex flex-row justify-center items-center">
 			<h1 class="p-4 font-bold">Player Profile</h1>
@@ -160,10 +164,12 @@
 	<div class="flex flex-col gap-8">
 		<div class="hero bg-base-200 rounded-3xl">
 			<div class="hero-content flex-col lg:flex-row-reverse w-full gap-32">
+				<!-- Text -->
 				<div class="text-center lg:text-left">
 					<h1 class="text-5xl font-bold">Login now!</h1>
 					<p class="py-6">Already have a player? Login now!</p>
 				</div>
+				<!-- Input -->
 				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 					<div class="card-body">
 						<div class="form-control">
@@ -191,12 +197,14 @@
 		<!-- Register new player -->
 		<div class="hero bg-base-200 rounded-3xl">
 			<div class="hero-content flex-col lg:flex-row w-full gap-32">
+				<!-- Text -->
 				<div class="text-center lg:text-left pl-6">
 					<h1 class="text-5xl font-bold">Register!</h1>
 					<p class="py-6">Don't have a player yet? Register now!</p>
 				</div>
 				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 					<div class="card-body">
+						<!-- Input -->
 						<div class="form-control">
 							<label for="register" class="label">
 								<span class="label-text text-primary font-bold text-xl">Player name</span>
@@ -237,6 +245,9 @@
 			</p>
 		</label>
 	</label>
+	{#if showError}
+		<ErrorAlert message={errorMessage} />
+	{/if}
 {/if}
 
 <!-- Modal for updating profile -->

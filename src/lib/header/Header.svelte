@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { userName } from '../../stores/user';
 	const title: string = 'TARKOV TASKER';
+
+	function logout() {
+		$userName = '';
+	}
 </script>
 
 <header class="sticky top-0 z-50">
@@ -35,9 +39,7 @@
 				</ul>
 			</div>
 			<div class="navbar-end">
-				<a class="pr-4 text-primary font-bold text-xl" sveltekit:prefetch href={`/`}>
-					{$userName}
-				</a>
+				<a class="text-primary font-bold" sveltekit:prefetch href={`/`} on:click={logout}>Logout</a>
 			</div>
 		{/if}
 	</div>
