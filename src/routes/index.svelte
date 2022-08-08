@@ -134,7 +134,72 @@
 	</div>
 	<!-- If no user logged in -->
 {:else}
-	<h1>Create Player</h1>
+	<h1 class="pb-4 font-bold">Welcome</h1>
+	<div class="flex flex-col gap-8">
+		<div class="hero bg-base-200 rounded-3xl">
+			<div class="hero-content flex-col lg:flex-row-reverse w-full gap-32">
+				<div class="text-center lg:text-left">
+					<h1 class="text-5xl font-bold">Login now!</h1>
+					<p class="py-6">Already have a player? Login now!</p>
+				</div>
+				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+					<div class="card-body">
+						<div class="form-control">
+							<label class="label" for="login">
+								<span class="label-text text-primary font-bold text-xl">Player name</span>
+							</label>
+							<input
+								id="login"
+								type="text"
+								placeholder="Name"
+								class="input input-bordered text-accent placeholder-accent placeholder-opacity-40"
+							/>
+						</div>
+						<div class="form-control mt-6">
+							<button class="btn btn-info">Login</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero bg-base-200 rounded-3xl">
+			<div class="hero-content flex-col lg:flex-row w-full gap-32">
+				<div class="text-center lg:text-left pl-6">
+					<h1 class="text-5xl font-bold">Register!</h1>
+					<p class="py-6">Don't have a player yet? Register now!</p>
+				</div>
+				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+					<div class="card-body">
+						<div class="form-control">
+							<label for="register" class="label">
+								<span class="label-text text-primary font-bold text-xl">Player name</span>
+							</label>
+							<input
+								id="register"
+								type="text"
+								placeholder="Name"
+								class="input input-bordered text-accent placeholder-accent placeholder-opacity-40"
+							/>
+						</div>
+						<div class="form-control mt-6">
+							<button class="btn btn-success">Register</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero bg-base-200 rounded-3xl">
+			<div class="hero-content text-center">
+				<div class="max-w-xl p-4">
+					<h1 class="text-5xl font-bold">Try Tarkov Tasker</h1>
+					<p class="py-6">If you don't want to create your own player you can use a test player</p>
+					<button class="btn btn-accent">Try now</button>
+				</div>
+			</div>
+		</div>
+	</div>
 {/if}
 
 <!-- Modal for updating profile -->

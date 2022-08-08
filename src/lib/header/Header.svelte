@@ -35,13 +35,9 @@
 				</ul>
 			</div>
 			<div class="navbar-end">
-				<div class="rounded w-20">
-					<!-- TODO: Change to player faction-->
-					<img src={`/static/svg/${'USEC'}.svg`} alt={'hmm'} title={'hmm'} />
-				</div>
-				<p>
+				<a class="pr-4 text-primary font-bold text-xl" sveltekit:prefetch href={`/`}>
 					{$userName}
-				</p>
+				</a>
 			</div>
 		{/if}
 	</div>
