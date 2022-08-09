@@ -12,7 +12,13 @@
 	import Counter from '$lib/Counter.svelte';
 	import { createTempPlayerTrader, versionList } from '$lib/util/player';
 	import { getTraderRomanList } from '$lib/util/trader';
-	import type { HideoutStation, Player, Trader } from '@prisma/client';
+	import {
+		faction,
+		type faction,
+		type HideoutStation,
+		type Player,
+		type Trader
+	} from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
 	let header: string = 'Tarkov Tasker';
@@ -29,10 +35,25 @@
 	let saveLoad: boolean = false;
 	let playerUpdated: boolean = false;
 	let loginInput: string = '';
+	let registerInput: string = '';
 	let showError: boolean = false;
 	let errorMessage: string = '';
+	let playerFaction: faction = faction.USEC;
 
 	getProfile();
+
+	const onLoginKeyPress = (e) => {
+		if (e.charCode === 13) login();
+	};
+	const onRegisterKeyPress = (e) => {
+		if (e.charCode === 13) register();
+	};
+
+	// Change faction for registering
+	function changeFaction() {
+		if (playerFaction === faction.USEC) playerFaction = faction.BEAR;
+		else playerFaction = faction.USEC;
+	}
 
 	// Login to player
 	async function login() {
@@ -58,6 +79,35 @@
 			} else {
 				errorMessage = 'Player was not found';
 				showError = true;
+			}
+		}
+		loadingUser = false;
+	}
+
+	async function register() {
+		loadingUser = true;
+		// If input has white space
+		if (registerInput.indexOf(' ') >= 0) {
+			showError = true;
+			errorMessage = 'Cannot have white space in your player name';
+		} else {
+			const res = await fetch(`${$page.url.origin}/api/post/register`, {
+				method: 'POST',
+				body: JSON.stringify({
+					registerInput,
+					playerFaction,
+					newVersion
+				})
+			});
+			// If register returns successful, a new player is created and saved to localstorage
+			let data = await res.json();
+			if (data.success) {
+				$userName = data.player.name;
+				await getProfile();
+				// Else show error for player name existing
+			} else {
+				showError = true;
+				errorMessage = 'Player with this name already exists';
 			}
 		}
 		loadingUser = false;
@@ -182,6 +232,7 @@
 								placeholder="Name"
 								class="input input-bordered text-accent placeholder-accent placeholder-opacity-40"
 								bind:value={loginInput}
+								on:keypress={onLoginKeyPress}
 							/>
 						</div>
 						<div class="form-control mt-6">
@@ -204,20 +255,55 @@
 				</div>
 				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 					<div class="card-body">
-						<!-- Input -->
-						<div class="form-control">
-							<label for="register" class="label">
-								<span class="label-text text-primary font-bold text-xl">Player name</span>
-							</label>
-							<input
-								id="register"
-								type="text"
-								placeholder="Name"
-								class="input input-bordered text-accent placeholder-accent placeholder-opacity-40"
-							/>
+						<div class="flex flex-col gap-4">
+							<!-- Name -->
+							<div class="form-control">
+								<label for="register" class="label">
+									<span class="label-text text-primary font-bold text-xl">Player name</span>
+								</label>
+								<input
+									id="register"
+									type="text"
+									placeholder="Name"
+									class="input input-bordered text-accent placeholder-accent placeholder-opacity-40"
+									bind:value={registerInput}
+									on:keypress={onRegisterKeyPress}
+								/>
+							</div>
+							<!-- Game edition -->
+							<div class="flex justify-center">
+								<div class="flex flex-col w-3/4 justify-center items-center gap-2">
+									<h4 class="text-accent">Game edition</h4>
+									<span class="text-xs">{gameVersions[newVersion - 1].name}</span>
+									<input
+										type="range"
+										min="1"
+										max="4"
+										bind:value={newVersion}
+										step="1"
+										class="range range-primary range-sm"
+									/>
+								</div>
+							</div>
+							<div class="flex justify-center">
+								<div class="form-control flex flex-row gap-8">
+									<label class="label cursor-pointer flex flex-col gap-2">
+										<h4 class="text-accent">Faction</h4>
+										<span class="label-text">{playerFaction}</span>
+										<input
+											type="checkbox"
+											class="toggle toggle-primary"
+											on:change={changeFaction}
+											checked
+										/>
+									</label>
+								</div>
+							</div>
 						</div>
 						<div class="form-control mt-6">
-							<label for="login-modal" class="btn modal-button btn-success">Register</label>
+							<label for="login-modal" class="btn modal-button btn-success" on:click={register}
+								>Register</label
+							>
 						</div>
 					</div>
 				</div>
