@@ -33,12 +33,19 @@
 	let showError: boolean = false;
 	let errorMessage: string = '';
 	let playerFaction: faction = faction.USEC;
+	let loadingMessage: string = 'Just loading a bit';
 
 	getProfile();
 
+	function resetLoadingMessage() {
+		loadingMessage = 'Just loading a bit';
+	}
+
+	// Pressing enter when logging in
 	const onLoginKeyPress = (e) => {
 		if (e.charCode === 13) login();
 	};
+	// Pressing enter when registering in
 	const onRegisterKeyPress = (e) => {
 		if (e.charCode === 13) register();
 	};
@@ -49,6 +56,7 @@
 		else playerFaction = faction.USEC;
 	}
 
+	// Clicking the "Try now" button logs the user into a test player
 	function testUserLogin() {
 		loginInput = 'Player123456';
 		login();
@@ -56,6 +64,7 @@
 
 	// Login to player
 	async function login() {
+		loadingMessage = 'Logging in';
 		loadingUser = true;
 		// If input has white space
 		if (loginInput.indexOf(' ') >= 0) {
@@ -81,9 +90,11 @@
 			}
 		}
 		loadingUser = false;
+		resetLoadingMessage();
 	}
 
 	async function register() {
+		loadingMessage = 'Registering player (This will take a minute)';
 		loadingUser = true;
 		// If input has white space
 		if (registerInput.indexOf(' ') >= 0) {
@@ -110,11 +121,13 @@
 			}
 		}
 		loadingUser = false;
+		resetLoadingMessage();
 	}
 
 	// Gets all profile information
 	async function getProfile() {
 		await $userName;
+		loadingMessage = 'Retrieving player';
 		if ($userName) {
 			try {
 				const res = await fetch(`${$page.url.origin}/api/get/${$userName}`, { method: 'GET' });
@@ -174,7 +187,7 @@
 {#if loadingUser}
 	<div class="flex flex-col justify-center items-center pt-60">
 		<Circle2 size="120" colorOuter="#9A8866" colorCenter="#786849" colorInner="#CFA85F" unit="px" />
-		<p class="pt-8"><i>Just loading a bit</i></p>
+		<p class="pt-8"><i>{loadingMessage}</i></p>
 	</div>
 	<!-- If a user is logged in -->
 {:else if $userName}

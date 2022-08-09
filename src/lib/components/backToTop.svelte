@@ -26,7 +26,7 @@
 	on:click={goStart}
 	class:hidden
 >
-	<img src={`/static/svg/arrowUp.svg`} alt={`Update player`} title={`Update player`} />
+	<img src={`static/svg/arrowUp.svg`} alt={`Update player`} title={`Update player`} />
 </button>
 
 <style>
