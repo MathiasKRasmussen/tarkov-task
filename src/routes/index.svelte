@@ -12,7 +12,7 @@
 	import Counter from '$lib/Counter.svelte';
 	import { createTempPlayerTrader, versionList } from '$lib/util/player';
 	import { getTraderRomanList } from '$lib/util/trader';
-	import type { HideoutStation, Player, Trader } from '.prisma/client';
+	import type { HideoutStation, Player, Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
 	let header: string = 'Tarkov Tasker';

@@ -1,5 +1,5 @@
 import { prisma } from '$lib/db/prisma';
-import type { faction, Player, PlayerHasTasks, Task } from '@prisma/client';
+import type { Player, PlayerHasTasks, Task } from '@prisma/client';
 import { getFaction } from '../data/formatData';
 
 export async function getTasks(): Promise<Task[]> {
@@ -12,9 +12,9 @@ export async function getTasks(): Promise<Task[]> {
     return tasks
 }
 
-export async function getTasksByFaction(faction: faction): Promise<Task[]> {
+export async function getTasksByFaction(faction: string): Promise<Task[]> {
     let tasks: Task[] = []
-    const factions: faction[] = [getFaction('Any'), faction]
+    const factions: string[] = [getFaction('Any'), faction]
     try {
         tasks = await prisma.task.findMany({
             where: {

@@ -1,5 +1,5 @@
 import { prisma } from '$lib/db/prisma';
-import { faction, type Barter, type Craft, type Hideout, type HideoutStation, type Item, type ItemType, type Map, type Player, type Skill, type Task } from '@prisma/client';
+import type { Barter, Craft, Hideout, HideoutStation, Item, ItemType, Player, Skill, Task } from '@prisma/client';
 import { createBarters, createCraftItemsList, createCrafts, createHideouts, createItemIcons, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
 import { getPlayerTasks, getTasks } from '../models/tasks';
 
@@ -340,7 +340,7 @@ export async function addRemainingTasks(player: Player) {
     let result = []
     for (let task of tasks) {
         let isAdded = false
-        if (task.faction === faction.BEAR) {
+        if (task.faction === "BEAR") {
             isAdded = true
         }
         if (!isAdded) {

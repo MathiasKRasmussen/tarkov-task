@@ -1,4 +1,4 @@
-import { faction, type Trader } from "@prisma/client"
+import type { Trader } from "@prisma/client"
 
 export const maxLevel: number = 79;
 const version1: string = 'Standard Edition'
@@ -45,8 +45,8 @@ export function levelIcon(level: number) {
 }
 
 
-export function factionFullName(f: faction): string {
-    if (f === faction.USEC) {
+export function factionFullName(faction: string): string {
+    if (faction === "USEC") {
         return 'United Security'
     } else {
         return 'Battle Encounter Assault Regiment'

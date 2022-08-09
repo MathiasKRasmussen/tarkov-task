@@ -1,4 +1,4 @@
-import { faction, type Hideout, type HideoutStation, type Item, type Map, type Trader } from '@prisma/client';
+import type { Hideout, Item, Map, Trader } from '@prisma/client';
 
 import itemsData from './json/items.json';
 import tradersData from './json/traders.json';
@@ -56,12 +56,7 @@ export function createTraders(): Trader[] {
 }
 
 export function getFaction(name: string) {
-    switch (name) {
-        case 'USEC': return faction.USEC
-        case 'BEAR': return faction.BEAR
-        case 'ANY': return faction.Any
-    }
-    return faction.Any
+    return name
 }
 
 

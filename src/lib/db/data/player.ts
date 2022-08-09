@@ -1,10 +1,10 @@
 import { prisma } from '$lib/db/prisma';
-import type { faction, HideoutStation, Player, Task, Trader } from '@prisma/client';
+import type { HideoutStation, Player, Task, Trader } from '@prisma/client';
 import { getHideoutStations } from '../models/hideouts';
 import { getTasksByFaction } from '../models/tasks';
 import { createTraders, getStashIds } from './formatData';
 
-export async function createPlayer(name: string, version: number, level: number, faction: faction): Promise<Player> {
+export async function createPlayer(name: string, version: number, level: number, faction: string): Promise<Player> {
     const tasks: Task[] = await getTasksByFaction(faction)
     const stations: HideoutStation[] = await getHideoutStations()
     const stashIds: string[] = getStashIds(version)
