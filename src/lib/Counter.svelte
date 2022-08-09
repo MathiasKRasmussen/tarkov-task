@@ -13,12 +13,6 @@
 		// handle negative numbers
 		return ((n % m) + m) % m;
 	}
-
-	function countUp(): void {
-		if (count === maxLevel) {
-			count += 1;
-		}
-	}
 </script>
 
 <div class="counter">
