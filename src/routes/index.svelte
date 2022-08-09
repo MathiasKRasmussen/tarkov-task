@@ -12,13 +12,7 @@
 	import Counter from '$lib/Counter.svelte';
 	import { createTempPlayerTrader, versionList } from '$lib/util/player';
 	import { getTraderRomanList } from '$lib/util/trader';
-	import {
-		faction,
-		type faction,
-		type HideoutStation,
-		type Player,
-		type Trader
-	} from '@prisma/client';
+	import { faction, type HideoutStation, type Player, type Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
 	let header: string = 'Tarkov Tasker';
@@ -53,6 +47,11 @@
 	function changeFaction() {
 		if (playerFaction === faction.USEC) playerFaction = faction.BEAR;
 		else playerFaction = faction.USEC;
+	}
+
+	function testUserLogin() {
+		loginInput = 'Player123456';
+		login();
 	}
 
 	// Login to player
@@ -316,21 +315,11 @@
 				<div class="max-w-xl p-4">
 					<h1 class="text-5xl font-bold">Try Tarkov Tasker!</h1>
 					<p class="py-6">If you don't want to create your own player you can use a test player</p>
-					<button class="btn btn-accent">Try now</button>
+					<button class="btn btn-accent" on:click={testUserLogin}>Try now</button>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<input type="checkbox" id="login-modal" class="modal-toggle" />
-	<label for="login-modal" class="modal cursor-pointer">
-		<label class="modal-box relative" for="">
-			<h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-			<p class="py-4">
-				You've been selected for a chance to get one year of subscription to use Wikipedia for free!
-			</p>
-		</label>
-	</label>
 	{#if showError}
 		<ErrorAlert message={errorMessage} />
 	{/if}
