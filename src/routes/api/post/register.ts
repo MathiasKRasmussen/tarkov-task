@@ -1,5 +1,6 @@
-import { createPlayer, getPlayer, playerExists } from "$lib/db/data/player"
-import type { Player } from "@prisma/client"
+import { getFaction } from "$lib/db/data/formatData"
+import { createPlayer, getPlayer } from "$lib/db/data/player"
+import type { faction, Player } from "@prisma/client"
 
 export async function post({ request }) {
     let data = await request.json()
@@ -11,7 +12,8 @@ export async function post({ request }) {
             },
         }
     } else {
-        const player: Player = await createPlayer(data.registerInput, data.newVersion, 1, data.playerFaction)
+        let fac: faction = getFaction(data.playerFaction)
+        const player: Player = await createPlayer(data.registerInput, data.newVersion, 1, fac)
         return {
             body: {
                 player,

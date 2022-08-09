@@ -12,7 +12,7 @@
 	import Counter from '$lib/Counter.svelte';
 	import { createTempPlayerTrader, versionList } from '$lib/util/player';
 	import { getTraderRomanList } from '$lib/util/trader';
-	import { faction, type HideoutStation, type Player, type Trader } from '@prisma/client';
+	import type { HideoutStation, Player, Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
 	let header: string = 'Tarkov Tasker';
@@ -32,7 +32,7 @@
 	let registerInput: string = '';
 	let showError: boolean = false;
 	let errorMessage: string = '';
-	let playerFaction: faction = faction.USEC;
+	let playerFaction: string = 'USEC';
 	let loadingMessage: string = 'Just loading a bit';
 
 	getProfile();
@@ -52,8 +52,8 @@
 
 	// Change faction for registering
 	function changeFaction() {
-		if (playerFaction === faction.USEC) playerFaction = faction.BEAR;
-		else playerFaction = faction.USEC;
+		if (playerFaction === 'USEC') playerFaction = 'BEAR';
+		else playerFaction = 'USEC';
 	}
 
 	// Clicking the "Try now" button logs the user into a test player
