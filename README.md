@@ -18,14 +18,19 @@ The user can view all tasks in the game and mark them as completed. The tasks ar
 
 ## Hideout
 The user can track their hideout by marking, what stations have been build. The requirements for each station is also displayed.
-![enter image description here](https://media.discordapp.net/attachments/473943043117023244/1006926173797896242/unknown.png?width=720&height=605)
+
+![Hideout overview](https://media.discordapp.net/attachments/473943043117023244/1006926173797896242/unknown.png?width=720&height=605)
 
 ## Items
 The user can see all the items they still need to aquire for tasks and hideout stations. It is also possible to search for all items in the game.
+
 ![Items page](https://media.discordapp.net/attachments/473943043117023244/1006926801051861002/unknown.png?width=720&height=601)
 
 ### Item
 A user can also click on an item and view more information regarding it. Such as sell/buy prices from traders and the flea market. The page also shows which tasks/hideout stations the item is needed for. 
+
 ![Item page top](https://media.discordapp.net/attachments/473943043117023244/1006927068220620930/unknown.png?width=720&height=515)
+
 The item page also displays the crafts and barter trades the item is used for or rewarded from
+
 ![Item page showing crafts and barter trades](https://media.discordapp.net/attachments/473943043117023244/1006927747232309349/unknown.png?width=720&height=687)
