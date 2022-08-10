@@ -94,7 +94,7 @@
 <div class="flex flex-row gap-10 justify-center">
 	<div class="w-40 flex flex-col">
 		<!-- Side bar toast -->
-		<div class="toast toast-start toast-middle sticky top-40 z-10 ">
+		<div class="toast toast-start toast-middle sticky top-20 z-10 ">
 			<div class="alert alert-primary border border-primary sticky top-0 z-10 p-2 justify-center">
 				<div class="grid grid-cols-1 gap-8 place-items-center p-2">
 					{#each traders as trader}
