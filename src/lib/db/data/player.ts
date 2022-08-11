@@ -115,6 +115,7 @@ export async function updatePlayer(player: Player, newVersion: number, newLevel:
 }
 
 export async function getPlayer(name: string): Promise<Player> {
+    console.log('getPlayer Start: ', name)
     try {
         const player: Player = await prisma.player.findUnique({
             where: {
