@@ -12,7 +12,7 @@ A user can create a player and view information regarding their progress in Esca
 
 ![The Player profile](https://media.discordapp.net/attachments/473943043117023244/1006924680407568444/unknown.png?width=720&height=565)
 ## Tasks
-The user can view all tasks in the game and mark them as completed. The tasks are sorted by the eight different traders and all details about the task is available, such as objectives and rewards.
+The user can view all tasks in the game and mark them as completed. The tasks are sorted by the eight different traders and all details about the tasks are available, such as objectives and rewards.
 
 ![Overview of all tasks](https://media.discordapp.net/attachments/473943043117023244/1006925463949676625/unknown.png?width=720&height=605)
 
