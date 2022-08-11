@@ -11,8 +11,8 @@ model Player {
   id               String             @id @unique @default(cuid())
   name             String             @unique
   version          Int                @default(1)
-  faction          String             @default("USEC")
   level            Int                @default(0)
+  faction          String             @default("USEC")
   PlayerHasHideout PlayerHasHideout[]
   PlayerHasTasks   PlayerHasTasks[]
   PlayerHasTrader  PlayerHasTrader[]
@@ -134,9 +134,9 @@ model Task {
   experience       Int
   wiki             String
   minPlayerLevel   Int
-  faction          String             @default("Any")
   forKappa         Boolean
   traderId         String
+  faction          String             @default("Any")
   trader           Trader             @relation(fields: [traderId], references: [id])
   PlayerHasTasks   PlayerHasTasks[]
   TaskHasObjective TaskHasObjective[]
