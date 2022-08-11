@@ -122,6 +122,7 @@ export async function getPlayer(name: string): Promise<Player> {
                 name: name
             }
         })
+
         return player
     } catch (error) {
         console.log('getPlayer', error)
