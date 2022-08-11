@@ -6,7 +6,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "svelte-kit build --output public",
+		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"prepare": "svelte-kit sync",
@@ -20,7 +20,6 @@
 		"@fouita/tooltip": "^0.0.1",
 		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.71",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",
 		"prettier": "^2.6.2",
