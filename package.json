@@ -1,4 +1,7 @@
 {
+	"engines": {
+		"node": "16.15.1"
+	},
 	"name": "tarkov-task",
 	"version": "0.0.1",
 	"scripts": {

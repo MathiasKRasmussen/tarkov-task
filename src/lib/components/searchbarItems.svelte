@@ -32,6 +32,7 @@
 			required
 			bind:value={searchText}
 			on:input={() => searchForItems()}
+			on:click={() => (searchText = '')}
 		/>
 		<button
 			class="btn btn-square rounded-none rounded-r-lg btn-primary"

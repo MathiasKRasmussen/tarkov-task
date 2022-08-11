@@ -102,6 +102,7 @@
 					bind:value={searchText}
 					on:keypress={onKeyPress}
 					on:input={() => searchForItems(searchText)}
+					on:click={() => (searchText = '')}
 				/>
 				<!-- Search button -->
 				<button
