@@ -8,7 +8,7 @@ Tarkov Tasker uses data from the following projects:
 All data is stored on a PostgreSQL database using [supabase](https://app.supabase.com/) and is accessed using [Prisma](https://www.prisma.io/). The schema for the database can be found [here](https://github.com/MathiasKRasmussen/tarkov-task/blob/master/prisma/schema.prisma)
 
 ## Player
-A user can create a player and view information regarding their progress in the game.
+A user can create a player and view information regarding their progress in Escape from Tarkov.
 
 ![The Player profile](https://media.discordapp.net/attachments/473943043117023244/1006924680407568444/unknown.png?width=720&height=565)
 ## Tasks
