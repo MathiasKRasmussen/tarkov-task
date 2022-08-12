@@ -3,7 +3,7 @@ import { getStationItemsByPlayer } from "$lib/db/models/hideouts"
 import { getAllItems } from "$lib/db/models/items"
 import { getPlayerTasksItems } from "$lib/db/models/tasks"
 import { addHideoutItems, addRemainingItems, getRequiredTaskItems } from "$lib/util/formatItems"
-import type { Item, Player } from "@prisma/client"
+import type { Player } from ".prisma/client"
 
 export async function get({ params }) {
     const { userName } = params
