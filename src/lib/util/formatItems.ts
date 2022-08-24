@@ -46,7 +46,7 @@ export function getRequiredTaskItems(playerTasks: PlayerHasTasks[]): Item[] {
     return sortedItems
 }
 
-
+// Adding hideout items
 export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
     stations.forEach((station: PlayerHasHideout) => {
         station.hideoutStation.HideoutReqItem.forEach((reqItem) => {
@@ -67,23 +67,6 @@ export function addHideoutItems(items: Item[], stations: PlayerHasHideout[]) {
         })
     })
     items.sort(compareItemShortNames)
-}
-
-export function addRemainingItems(allItems: Item[], existingItems: Item[]) {
-    allItems.forEach((item) => {
-        let exists: boolean = false
-        existingItems.find((exItem) => {
-            if (exItem.id === item.id) {
-                exists = true
-            }
-        });
-        if (!exists) {
-            item.stationCount = 0
-            item.inRaidCount = 0
-            item.otherCount = 0
-            existingItems.push(item)
-        }
-    })
 }
 
 export function getTotalCount(item: Item): number {

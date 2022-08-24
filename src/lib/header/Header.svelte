@@ -14,6 +14,7 @@
 				>{title}</a
 			>
 		</div>
+		<!-- Middle- and end part of nav bar if logged in -->
 		{#if $userName}
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal p-0">

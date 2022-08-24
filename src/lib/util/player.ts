@@ -6,6 +6,7 @@ const version2: string = 'Left Behind Edition'
 const version3: string = 'Prepare for Escape Edition'
 const version4: string = 'Edge of Darkness Limited Edition'
 
+// Gets level icon by level
 export function levelIcon(level: number) {
     if (level < 5) {
         return 'https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/8/8c/Rank5.png'
@@ -44,7 +45,7 @@ export function levelIcon(level: number) {
     }
 }
 
-
+// Returns faction full name
 export function factionFullName(faction: string): string {
     if (faction === "USEC") {
         return 'United Security'
@@ -53,6 +54,7 @@ export function factionFullName(faction: string): string {
     }
 }
 
+// Gets faction logo svg
 export function factionSVG(faction: string): string {
     if (faction === "USEC") {
         return 'https://svgur.com/i/m53.svg'
@@ -75,6 +77,7 @@ export function versionList(): { value: number, name: string }[] {
     return [{ value: 1, name: version1 }, { value: 2, name: version2 }, { value: 3, name: version3 }, { value: 4, name: version4 }]
 }
 
+// Temporary player traders for updating levels
 export function createTempPlayerTrader(traders: Trader[]): { trader: Trader, level: number }[] {
     let playerTraders: { trader: Trader, level: number }[] = []
     traders.forEach((trader) => {

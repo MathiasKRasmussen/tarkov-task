@@ -1,6 +1,4 @@
 <script lang="ts">
-	import BackToTop from '../backToTop.svelte';
-
 	export let completed: number;
 	export let total: number;
 	export let header: string;

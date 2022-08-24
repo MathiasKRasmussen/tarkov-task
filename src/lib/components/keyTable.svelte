@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Item, ItemHasType } from '@prisma/client';
+	import type { ItemHasType } from '@prisma/client';
 
 	export let shortNameCol: string;
 	export let nameCol: string;

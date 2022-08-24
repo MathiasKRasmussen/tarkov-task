@@ -16,6 +16,7 @@
 	let completedEUR: number = 0;
 	let totalEUR: number = 0;
 
+	// Adds the money if item is a money item
 	function addMoney(item: Item, count: number, completed: boolean): void {
 		if (isRUB(item)) {
 			totalRUB += count;

@@ -2,7 +2,7 @@
 	import { hideoutImage } from '$lib/util/hideout';
 	import { timeString } from '$lib/util/time';
 
-	import type { Craft, CraftReqItem } from '@prisma/client';
+	import type { Craft } from '@prisma/client';
 	import CraftBarterItem from './craftBarterItem.svelte';
 
 	export let craft: Craft;

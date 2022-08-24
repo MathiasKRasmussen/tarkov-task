@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
-
 	export let message: string;
 </script>
 

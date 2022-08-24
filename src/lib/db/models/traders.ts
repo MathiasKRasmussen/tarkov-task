@@ -7,6 +7,7 @@ export async function getTraders(): Promise<Trader[]> {
     return traders
 }
 
+// Get a single trader by name
 export async function getTrader(name: string): Promise<Trader> {
     const trader: Trader = await prisma.trader.findFirst({
         where: {
@@ -16,7 +17,7 @@ export async function getTrader(name: string): Promise<Trader> {
     return trader
 }
 
-
+// Get all traders for a player
 export async function getPlayerTraders(player: Player): Promise<Trader[]> {
     let traders: Trader[] = await prisma.trader.findMany({
         include: {
@@ -33,6 +34,7 @@ export async function getPlayerTraders(player: Player): Promise<Trader[]> {
     return traders
 }
 
+// Get all traders for a player with their tasks
 export async function getPlayerTradersWithTasks(player: Player): Promise<Trader[]> {
     let traders: Trader[] = await prisma.trader.findMany({
         include: {

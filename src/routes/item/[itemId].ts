@@ -2,7 +2,8 @@ import { getItem } from '$lib/db/models/items'
 import { getTraders } from '$lib/db/models/traders'
 import type { Item, Trader } from '@prisma/client'
 import { request, gql } from 'graphql-request'
-export async function get({ params }) {
+// Get item data and get item pricing from GraphQL API
+export async function get({ params }: { params: any }) {
     const { itemId } = params
     const item: Item = await getItem(itemId)
     const traders: Trader[] = await getTraders()
