@@ -4,7 +4,7 @@
 	import SkillIcon from '$lib/components/skillIcon.svelte';
 	import TraderIcon from '$lib/components/traderIcon.svelte';
 	import { hideoutImage, isHideoutStationComplete } from '$lib/util/hideout';
-	import type { Hideout, HideoutStation, Player, PlayerHasHideout } from '@prisma/client';
+	import type { Hideout, HideoutStation, PlayerHasHideout } from '@prisma/client';
 
 	export let hideouts: Hideout[];
 	export let playerHasStations: PlayerHasHideout[];
@@ -14,6 +14,7 @@
 	let saveLoad: boolean = false;
 	let updatedPlayerStations: PlayerHasHideout[] = [];
 
+	// returns true if the station level has requirements
 	function stationHasReqs(station: HideoutStation): boolean {
 		return (
 			station.HideoutReqItem.length ||
@@ -42,6 +43,7 @@
 		updateCheckBoxes = !updateCheckBoxes;
 	}
 
+	// When save button is clicked the 'playerHideout' endpoint is called and db is updated
 	async function onSave(): Promise<void> {
 		saveLoad = true;
 		try {

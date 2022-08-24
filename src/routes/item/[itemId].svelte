@@ -7,8 +7,7 @@
 		bestTraderToSell,
 		convertCurrency,
 		currencySymbol,
-		fleaProfit,
-		getFleaCurrentPrice
+		fleaProfit
 	} from '$lib/util/itemPrice';
 
 	import type { Item, Trader } from '@prisma/client';
@@ -23,11 +22,11 @@
 		buyFor: { price: number; currency: string; vendor: { name: string } }[];
 	};
 
-	const fleaPrice: number = getFleaCurrentPrice(priceData.sellFor);
 	let bestOffer: { price: number; currency: string; vendor: { name: string } };
 	let bestSellTrader: Trader;
 	let profit: number = 0;
 
+	// Profit is flea market price - trader price
 	function setProfit() {
 		if (bestOffer) {
 			profit = fleaProfit(priceData.avg24hPrice, bestOffer.price, bestOffer.currency);
@@ -41,6 +40,7 @@
 		return true;
 	}
 
+	// Creates the string displaying the price in the different currencies
 	function traderPriceString(offer: {
 		price: number;
 		currency: string;
@@ -66,6 +66,7 @@
 		return offer.price.toLocaleString('en-US') + currencySymbol(offer.currency);
 	}
 
+	// Get the trader from the graphQL data
 	function getTrader(name: string): Trader {
 		let trader: Trader;
 		traders.forEach((t) => {
@@ -74,6 +75,7 @@
 		return trader;
 	}
 
+	// Returns true if item can be sold/bought on flea market
 	function canBeFlea(): boolean {
 		let canBeFlea: boolean = true;
 		item.ItemHasType.forEach((itemHasType) => {
@@ -82,6 +84,7 @@
 		return canBeFlea;
 	}
 
+	// Finds the best trader to sell to
 	function setTraderToSell() {
 		bestOffer = bestTraderToSell(priceData.sellFor);
 		if (bestOffer) {

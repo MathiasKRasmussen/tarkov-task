@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Item } from '@prisma/client';
 	import Tooltip from '@fouita/tooltip';
-	import { getRequiredTaskItems } from '$lib/util/formatItems';
 	import { iconWidth } from '$lib/util/items';
 	let currentId: string = '';
 

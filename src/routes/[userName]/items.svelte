@@ -9,7 +9,6 @@
 	const inRaidCol: string = 'In Raid';
 	const otherCol: string = 'Other Task';
 	const hideoutCol: string = 'Hideout';
-	const wikiCol: string = 'Wiki';
 	let saveLoad = false;
 
 	const header: string = 'Items';
@@ -20,6 +19,7 @@
 	let searchItems: Item[] = [];
 	let searchClicked: boolean = false;
 
+	// Searches the items needed for tasks/hideout
 	function searchForItems(term: string): void {
 		searchItems.length = 0;
 		items.find((item) => {

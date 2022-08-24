@@ -1,7 +1,8 @@
-import { updatePlayer } from "$lib/db/data/player"
+import { updatePlayer } from "$lib/db/models/player"
 import type { Player } from "@prisma/client"
 
-export async function post({ request }) {
+// Post endpoint for updating a player info
+export async function post({ request }: { request: any }) {
     let data = await request.json()
     const player: Player = await updatePlayer(data.player, data.newVersion, data.newLevel, data.newTraderLevels)
     return {

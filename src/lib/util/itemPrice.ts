@@ -1,6 +1,7 @@
 export const euroRUBValue: number = 127
 export const usdRUBValue: number = 114
 
+// Gets the symbol for each currency
 export function currencySymbol(currency: string): string {
     switch (currency) {
         case 'RUB': return '₽'
@@ -38,6 +39,7 @@ export function getFleaCurrentPrice(sellfor: { price: number, currency: string, 
     return 0
 }
 
+// Returns the profit (fleaPrice - traderPrice) also taking currency into account
 export function fleaProfit(fleaPrice: number, traderPrice: number, currency: string): number {
     if (currency === 'RUB') {
         return fleaPrice - traderPrice

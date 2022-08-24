@@ -64,6 +64,7 @@
 		updateCheckBoxes = !updateCheckBoxes;
 	}
 
+	// When saving the 'playerTasks' endpoint is called and updates the db
 	async function onSave(): Promise<void> {
 		saveLoad = true;
 		try {

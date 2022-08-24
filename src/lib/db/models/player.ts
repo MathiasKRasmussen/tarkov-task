@@ -1,9 +1,10 @@
 import { prisma } from '$lib/db/prisma';
 import type { HideoutStation, Player, Task, Trader } from '@prisma/client';
-import { getHideoutStations } from '../models/hideouts';
-import { getTasksByFaction } from '../models/tasks';
-import { createTraders, getStashIds } from './formatData';
+import { getHideoutStations } from './hideouts';
+import { getTasksByFaction } from './tasks';
+import { createTraders, getStashIds } from '../data/formatData';
 
+// Creating a new player
 export async function createPlayer(name: string, version: number, level: number, faction: string): Promise<Player> {
     const tasks: Task[] = await getTasksByFaction(faction)
     const stations: HideoutStation[] = await getHideoutStations()
@@ -76,6 +77,7 @@ export async function createPlayer(name: string, version: number, level: number,
     }
 }
 
+// Updating a player
 export async function updatePlayer(player: Player, newVersion: number, newLevel: number, newTraderLevels: { trader: Trader; level: number }[]): Promise<Player> {
     try {
         // Update player level and version
@@ -114,6 +116,7 @@ export async function updatePlayer(player: Player, newVersion: number, newLevel:
     }
 }
 
+// Get a player
 export async function getPlayer(name: string): Promise<Player> {
     try {
         const player: Player = await prisma.player.findUnique({

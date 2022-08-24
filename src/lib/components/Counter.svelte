@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
-	import { maxLevel as max } from './util/player';
+	import { maxLevel as max } from '../util/player';
 	export let count: number;
 	const minLevel: number = 0;
 	const maxLevel: number = max;
@@ -10,7 +10,7 @@
 	$: offset = modulo($displayed_count, 1);
 
 	function modulo(n: number, m: number) {
-		// handle negative numbers
+		// Handle negative numbers
 		return ((n % m) + m) % m;
 	}
 </script>

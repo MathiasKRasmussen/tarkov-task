@@ -11,7 +11,7 @@ export async function getTasks(): Promise<Task[]> {
     }
     return tasks
 }
-
+// Get all tasks by faction
 export async function getTasksByFaction(faction: string): Promise<Task[]> {
     let tasks: Task[] = []
     const factions: string[] = [getFaction('Any'), faction]
@@ -29,6 +29,7 @@ export async function getTasksByFaction(faction: string): Promise<Task[]> {
     return tasks
 }
 
+// Get all tasks for a player with their required items
 export async function getPlayerTasksItems(player: Player): Promise<PlayerHasTasks[]> {
     try {
         const playerTasks: PlayerHasTasks[] = await prisma.playerHasTasks.findMany({
@@ -58,6 +59,7 @@ export async function getPlayerTasksItems(player: Player): Promise<PlayerHasTask
     }
 }
 
+// Get all tasks for a player with all info
 export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> {
     try {
         const playerTasks: PlayerHasTasks[] = await prisma.playerHasTasks.findMany({
@@ -105,6 +107,7 @@ export async function getPlayerTasks(player: Player): Promise<PlayerHasTasks[]> 
     }
 }
 
+// Updates a player's tasks (completed)
 export async function updatePlayerTasks(playerTasks: PlayerHasTasks[]): Promise<boolean> {
     let results: PlayerHasTasks[] = []
     try {

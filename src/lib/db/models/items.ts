@@ -1,6 +1,7 @@
 import { prisma } from '$lib/db/prisma';
 import type { Item, ItemHasType, Player } from '@prisma/client';
 
+// Gets all items
 export async function getAllItems(): Promise<Item[]> {
     let result: Item[] = []
     try {
@@ -11,6 +12,7 @@ export async function getAllItems(): Promise<Item[]> {
     return result
 }
 
+// Get a single item with all relations
 export async function getItem(id: string): Promise<Item> {
     try {
         const item = await prisma.item.findFirst({
@@ -140,6 +142,7 @@ export async function getItem(id: string): Promise<Item> {
     }
 }
 
+// Searching for items with input string
 export async function searchItems(input: string): Promise<Item[]> {
     let result: Item[] = []
     try {
@@ -153,7 +156,7 @@ export async function searchItems(input: string): Promise<Item[]> {
                         },
                     },
                     {
-                        name: {
+                        shortName: {
                             contains: input,
                             mode: 'insensitive',
                         },
@@ -167,6 +170,7 @@ export async function searchItems(input: string): Promise<Item[]> {
     return result
 }
 
+// Gets all keys and if the player needs them for a tasks
 export async function getKeys(player: Player): Promise<ItemHasType[]> {
     try {
         const result: ItemHasType[] = await prisma.itemHasType.findMany({

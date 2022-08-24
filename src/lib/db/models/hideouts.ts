@@ -1,6 +1,7 @@
 import { prisma } from '$lib/db/prisma';
 import type { Hideout, HideoutStation, Player, PlayerHasHideout } from '@prisma/client';
 
+// Gets all hideout stations 
 export async function getHideoutStations(): Promise<HideoutStation[]> {
     let stations: HideoutStation[] = []
     try {
@@ -15,6 +16,7 @@ export async function getHideoutStations(): Promise<HideoutStation[]> {
     return stations
 }
 
+// Get all hideouts
 export async function getHideouts(): Promise<Hideout[]> {
     let hideouts: Hideout[] = []
     try {
@@ -29,6 +31,7 @@ export async function getHideouts(): Promise<Hideout[]> {
     return hideouts
 }
 
+// Get all required items for hideout stations
 export async function getStationItemsByPlayer(player: Player): Promise<PlayerHasHideout[]> {
     let stations: PlayerHasHideout[] = []
     try {
@@ -58,6 +61,7 @@ export async function getStationItemsByPlayer(player: Player): Promise<PlayerHas
     return stations
 }
 
+// Get all hideout stations for a player
 export async function getStationsByPlayer(player: Player): Promise<PlayerHasHideout[]> {
     let stations: PlayerHasHideout[] = []
     try {
@@ -116,7 +120,7 @@ export async function getStationsByPlayer(player: Player): Promise<PlayerHasHide
     return stations
 }
 
-
+// Updates a player's hideout stations
 export async function updatePlayerStations(playerHideouts: PlayerHasHideout[]): Promise<boolean> {
     let results: PlayerHasHideout[] = []
     try {
@@ -138,6 +142,7 @@ export async function updatePlayerStations(playerHideouts: PlayerHasHideout[]): 
 }
 
 
+// Gets player's hideout stations
 export async function getPlayerStations(player: Player): Promise<HideoutStation[]> {
     try {
         const stations: HideoutStation[] = await prisma.hideoutStation.findMany({

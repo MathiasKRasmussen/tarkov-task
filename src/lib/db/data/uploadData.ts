@@ -1,7 +1,11 @@
+//////////////////////////////////////////////////////////////
+//////////////////////// FOR DEV ONLY ////////////////////////
+//////////////////////////////////////////////////////////////
+
 import { prisma } from '$lib/db/prisma';
 import type { Barter, Craft, Hideout, HideoutStation, Item, ItemType, Player, Skill, Task } from '@prisma/client';
 import { createBarters, createCraftItemsList, createCrafts, createHideouts, createItemIcons, createItems, createMaps, createSkillList, createTraders, createTypeList, formatTaskData, getFaction } from "$lib/db/data/formatData"
-import { getPlayerTasks, getTasks } from '../models/tasks';
+import { getTasks } from '../models/tasks';
 
 export async function updateTasks() {
     let resultTasks = []

@@ -9,12 +9,13 @@
 	import OverallStats from '$lib/components/stats/overallStats.svelte';
 	import TraderStats from '$lib/components/stats/traderStats.svelte';
 	import TraderIcon from '$lib/components/traderIcon.svelte';
-	import Counter from '$lib/Counter.svelte';
+	import Counter from '$lib/components/Counter.svelte';
 	import { createTempPlayerTrader, versionList } from '$lib/util/player';
 	import { getTraderRomanList } from '$lib/util/trader';
 	import type { HideoutStation, Player, Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
+
 	let header: string = 'Tarkov Tasker';
 	let loadingUser: boolean = true;
 	let player: Player;
@@ -93,6 +94,7 @@
 		resetLoadingMessage();
 	}
 
+	// On clicking register
 	async function register() {
 		loadingMessage = 'Registering player (This will take a minute)';
 		loadingUser = true;
