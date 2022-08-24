@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { factionFullName, levelIcon, versionName } from '$lib/util/player';
+	import { factionFullName, factionSVG, levelIcon, versionName } from '$lib/util/player';
 	import type { Player } from '@prisma/client';
 
 	export let player: Player;
@@ -34,7 +34,7 @@
 		<div class="stat-figure avatar flex flex-row">
 			<div class="rounded w-20 cursor-help ">
 				<img
-					src={`/static/svg/${player.faction}.svg`}
+					src={factionSVG(player.faction)}
 					alt={`${player.name} is ${player.faction}`}
 					title={`${player.name} is ${player.faction}`}
 				/>

@@ -200,7 +200,7 @@
 				class="btn btn-ghost modal-button modal-open w-16"
 				on:click={() => (playerUpdated = false)}
 			>
-				<img src={`/static/svg/cogwheel.svg`} alt={`Update player`} title={`Update player`} />
+				<img src={`https://svgshare.com/i/m3U.svg`} alt={`Update player`} title={`Update player`} />
 			</label>
 		</div>
 

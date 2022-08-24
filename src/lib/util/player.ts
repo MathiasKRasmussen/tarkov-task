@@ -53,6 +53,14 @@ export function factionFullName(faction: string): string {
     }
 }
 
+export function factionSVG(faction: string): string {
+    if (faction === "USEC") {
+        return 'https://svgur.com/i/m53.svg'
+    } else {
+        return 'https://svgur.com/i/m4u.svg'
+    }
+}
+
 export function versionName(value: number): string {
     switch (value) {
         case 1: return version1

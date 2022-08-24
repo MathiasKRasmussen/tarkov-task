@@ -25,7 +25,7 @@
 		<!-- Arrow -->
 		<div class="flex flex-col gap-2 items-center">
 			<div class="w-12">
-				<img src={`/static/svg/rightArrow.svg`} alt="{`Arrow that points to reward item`}}" />
+				<img src={`https://svgur.com/i/m3T.svg`} alt="{`Arrow that points to reward item`}}" />
 			</div>
 		</div>
 
