@@ -1,5 +1,5 @@
 # Tarkov Tasker (Escape from Tarkov)
-This is the repository for [Tarkov Tasker](https://vercel.com/mathiaskrasmussen/tarkov-task), which is a web applications that allows players of the game, [*Escape from Tarkov*](https://www.escapefromtarkov.com/), to track their tasks and hideout and view other game information.
+This is the repository for [Tarkov Tasker](https://tarkov-tasker.vercel.app/), which is a web applications that allows players of the game, [*Escape from Tarkov*](https://www.escapefromtarkov.com/), to track their tasks and hideout and view other game information.
 
 Tarkov Tasker uses data from the following projects:
  - [Tarkov API](https://github.com/the-hideout/tarkov-api)
