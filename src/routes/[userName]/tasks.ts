@@ -11,11 +11,13 @@ export async function get({ params }: { params: any }) {
     const playerHasTasks = await getPlayerTasks(player)
     playerHasTasks.sort(compareTaskNames)
     const traders: Trader[] = await getPlayerTraders(player)
+    const urlName: string = userName
     return {
         body: {
             traders,
             playerHasTasks,
             player,
+            urlName,
         },
     }
 }

@@ -12,9 +12,11 @@ export async function get({ params }: { params: any }) {
     const items = getRequiredTaskItems(playerTasks)
     const playerHasStations = await getStationItemsByPlayer(player)
     addHideoutItems(items, playerHasStations)
+    const urlName: string = userName
     return {
         body: {
             items,
+            urlName
         },
     }
 }

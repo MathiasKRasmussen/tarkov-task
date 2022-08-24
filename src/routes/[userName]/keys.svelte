@@ -1,8 +1,11 @@
 <script lang="ts">
 	import KeyTable from '$lib/components/keyTable.svelte';
+	import NoAccess from '$lib/components/noAccess.svelte';
 	import SearchbarItems from '$lib/components/searchbarItems.svelte';
 	import type { ItemHasType } from '@prisma/client';
+	import { userName } from '../../stores/user';
 
+	export let urlName: string = '';
 	export let keys: ItemHasType[];
 	const header: string = 'Keys';
 	const shortNameCol: string = 'Short Name';
@@ -33,22 +36,26 @@
 </svelte:head>
 
 <div>
-	<h1 class="p-4 font-bold">{header}</h1>
-
-	<SearchbarItems bind:searchText {searchForItems} />
-
-	<div class="divider" />
-
-	{#if !searchText.replace(/\s/g, '').length}
-		<!-- All keys -->
-		<KeyTable {shortNameCol} {nameCol} {taskCol} {handinCol} {keys} />
-	{:else if searchKeys.length}
-		<!-- Filtered keys by searching -->
-		<KeyTable {shortNameCol} {nameCol} {taskCol} {handinCol} keys={searchKeys} />
-		<!-- IF no keys could be found -->
+	{#if urlName !== $userName}
+		<NoAccess />
 	{:else}
-		<div class="flex flex-col justify-center items-center">
-			<i class="pl-4 pb-2 text-primary text-xl">Could not find that key</i>
-		</div>
+		<h1 class="p-4 font-bold">{header}</h1>
+
+		<SearchbarItems bind:searchText {searchForItems} />
+
+		<div class="divider" />
+
+		{#if !searchText.replace(/\s/g, '').length}
+			<!-- All keys -->
+			<KeyTable {shortNameCol} {nameCol} {taskCol} {handinCol} {keys} />
+		{:else if searchKeys.length}
+			<!-- Filtered keys by searching -->
+			<KeyTable {shortNameCol} {nameCol} {taskCol} {handinCol} keys={searchKeys} />
+			<!-- IF no keys could be found -->
+		{:else}
+			<div class="flex flex-col justify-center items-center">
+				<i class="pl-4 pb-2 text-primary text-xl">Could not find that key</i>
+			</div>
+		{/if}
 	{/if}
 </div>

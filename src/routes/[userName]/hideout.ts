@@ -8,10 +8,12 @@ export async function get({ params }: { params: any }) {
     const player: Player = await getPlayer(userName)
     const playerHasStations: PlayerHasHideout[] = await getStationsByPlayer(player)
     const hideouts: Hideout[] = await getHideouts()
+    const urlName: string = userName
     return {
         body: {
             hideouts,
             playerHasStations,
+            urlName
         },
     }
 }
