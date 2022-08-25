@@ -30,11 +30,13 @@
 		<!-- Displays Task progress -->
 		<div class="stat place-items-center">
 			<h4 class="text-primary font-bold text-2xl pb-4">{trader.name}</h4>
-			<TraderIcon
-				{trader}
-				size={36}
-				level={trader.PlayerHasTrader.length ? trader.PlayerHasTrader[0].level : 1}
-			/>
+			<div class="w-5/6 flex justify-center">
+				<TraderIcon
+					{trader}
+					size={28}
+					level={trader.PlayerHasTrader.length ? trader.PlayerHasTrader[0].level : 1}
+				/>
+			</div>
 		</div>
 
 		<!-- Displays Task progress -->

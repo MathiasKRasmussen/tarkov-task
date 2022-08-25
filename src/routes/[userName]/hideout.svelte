@@ -152,7 +152,12 @@
 																	</div>
 																	<div class="flex flex-row gap-1">
 																		<p class="flex text-accent text-sm">{reqItem.count}</p>
-																		<a class="text-sm" href={reqItem.item.wiki} target="_blank">
+																		<a
+																			class="text-sm"
+																			sveltekit:prefetch
+																			href={`/item/${reqItem.item.id}`}
+																			target="_blank"
+																		>
 																			{reqItem.item.name}
 																		</a>
 																	</div>
