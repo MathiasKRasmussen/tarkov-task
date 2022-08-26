@@ -9,7 +9,6 @@
 		currencySymbol,
 		fleaProfit
 	} from '$lib/util/itemPrice';
-
 	import type { Item, Trader } from '@prisma/client';
 
 	export let item: Item;
@@ -24,6 +23,7 @@
 
 	let bestOffer: { price: number; currency: string; vendor: { name: string } };
 	let bestSellTrader: Trader;
+	let bestSellTraderPrice: number = 0;
 	let profit: number = 0;
 
 	// Profit is flea market price - trader price
@@ -78,6 +78,7 @@
 	// Returns true if item can be sold/bought on flea market
 	function canBeFlea(): boolean {
 		let canBeFlea: boolean = true;
+		if (!priceData.avg24hPrice) return false;
 		item.ItemHasType.forEach((itemHasType) => {
 			if (itemHasType.type.name === 'noFlea') canBeFlea = false;
 		});
@@ -89,7 +90,10 @@
 		bestOffer = bestTraderToSell(priceData.sellFor);
 		if (bestOffer) {
 			traders.forEach((trader) => {
-				if (trader.name === bestOffer.vendor.name) bestSellTrader = trader;
+				if (trader.name === bestOffer.vendor.name) {
+					bestSellTrader = trader;
+					bestSellTraderPrice = bestOffer.price;
+				}
 			});
 		}
 	}
@@ -182,7 +186,11 @@
 				/>
 				<!-- Value per inventory slot when selling on market-->
 				<FleaPrice
-					price={Math.round(priceData.avg24hPrice / (item.width * item.height))}
+					price={Math.round(
+						priceData.avg24hPrice
+							? priceData.avg24hPrice
+							: bestSellTraderPrice / (item.width * item.height)
+					)}
 					header={'Price per slot'}
 					priceColor={'text-success'}
 				/>
