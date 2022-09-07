@@ -43,7 +43,8 @@
 			const res = await fetch(`${$page.url.origin}/api/get/searchItems`, {
 				method: 'POST',
 				body: JSON.stringify({
-					searchText
+					searchText,
+					$userName
 				})
 			});
 			let progressData = await res.json();
@@ -56,7 +57,7 @@
 
 	// On enter click for search input
 	const onKeyPress = (e) => {
-		if (e.charCode === 13 && searchText.replace(/\s/g, '').length > 2) databaseSearch();
+		if (e.charCode === 13 && searchText.replace(/\s/g, '').length > 1) databaseSearch();
 	};
 </script>
 

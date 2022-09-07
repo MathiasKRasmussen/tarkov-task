@@ -1,4 +1,4 @@
-import type { Item, PlayerHasHideout, PlayerHasTasks, TaskReqItem } from "@prisma/client";
+import type { HideoutReqItem, Item, PlayerHasHideout, PlayerHasTasks, TaskReqItem } from "@prisma/client";
 
 
 function convertPlayerTaskItemsToItem(playerTasks: PlayerHasTasks[]): TaskReqItem[] {
@@ -8,6 +8,33 @@ function convertPlayerTaskItemsToItem(playerTasks: PlayerHasTasks[]): TaskReqIte
             items.push(taskItem)
         }
     }
+    return items
+}
+
+export function getRequiredTaskItemsSearch(items: Item[]): Item[] {
+    items.forEach((item: Item) => {
+        item.inRaidCount = 0
+        item.otherCount = 0
+        item.stationCount = 0
+        // Add count for tasks
+        item.TaskReqItem.forEach((taskReqItem: TaskReqItem) => {
+            if (!taskReqItem.task.PlayerHasTasks[0]?.completed) {
+                if (taskReqItem.foundInRaid) {
+                    item.inRaidCount += taskReqItem.count
+                } else {
+                    item.otherCount += taskReqItem.count
+                }
+            }
+        })
+
+        // Add count for hideout stations
+        item.HideoutReqItem.forEach((hideoutReqItem: HideoutReqItem) => {
+            if (!hideoutReqItem.hideoutStation.PlayerHasHideout[0]?.completed) {
+                item.stationCount += hideoutReqItem.count
+            }
+        })
+
+    })
     return items
 }
 

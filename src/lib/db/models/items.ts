@@ -143,7 +143,7 @@ export async function getItem(id: string): Promise<Item> {
 }
 
 // Searching for items with input string
-export async function searchItems(input: string): Promise<Item[]> {
+export async function searchItems(input: string, playerName: string): Promise<Item[]> {
     let result: Item[] = []
     try {
         result = await prisma.item.findMany({
@@ -162,6 +162,38 @@ export async function searchItems(input: string): Promise<Item[]> {
                         },
                     },
                 ],
+            },
+            include: {
+                TaskReqItem: {
+                    include: {
+                        task: {
+                            include: {
+                                PlayerHasTasks: {
+                                    where: {
+                                        player: {
+                                            name: playerName
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                HideoutReqItem: {
+                    include: {
+                        hideoutStation: {
+                            include: {
+                                PlayerHasHideout: {
+                                    where: {
+                                        player: {
+                                            name: playerName
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         })
     } catch (error) {
