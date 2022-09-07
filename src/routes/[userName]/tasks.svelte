@@ -100,19 +100,14 @@
 		<div class="flex flex-row gap-10 justify-center">
 			<div class="w-40 flex flex-col">
 				<!-- Side bar toast -->
-				<div class="toast toast-start toast-middle sticky top-20 z-10 ">
+				<div class="toast toast-start toast-middle sticky top-20 z-10">
 					<div
 						class="alert alert-primary border border-primary sticky top-0 z-10 p-2 justify-center"
 					>
 						<div class="grid grid-cols-1 gap-8 place-items-center p-2">
 							{#each traders as trader}
-								<div class="gap-4 flex flex-col items-center border border-primary">
-									<TraderIcon
-										{trader}
-										level={getTraderLevel(trader)}
-										size={16}
-										href={`#${trader.name}`}
-									/>
+								<div class="flex flex-col items-center border border-primary">
+									<TraderIcon {trader} level={getTraderLevel(trader)} href={`#${trader.name}`} />
 								</div>
 							{/each}
 						</div>
