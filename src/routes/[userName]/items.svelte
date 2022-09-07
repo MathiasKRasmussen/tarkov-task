@@ -21,6 +21,7 @@
 	let searchText: string = '';
 	let searchItems: Item[] = [];
 	let searchClicked: boolean = false;
+	const minSearchLength: number = 2;
 
 	// Searches the items needed for tasks/hideout
 	function searchForItems(term: string): void {
@@ -57,7 +58,8 @@
 
 	// On enter click for search input
 	const onKeyPress = (e) => {
-		if (e.charCode === 13 && searchText.replace(/\s/g, '').length > 1) databaseSearch();
+		if (e.charCode === 13 && searchText.replace(/\s/g, '').length >= minSearchLength)
+			databaseSearch();
 	};
 </script>
 
@@ -114,7 +116,7 @@
 					<!-- Search button -->
 					<button
 						class="btn btn-square rounded-none rounded-r-lg btn-primary {saveLoad ? 'loading' : ''}"
-						disabled={searchText.replace(/\s/g, '').length < 3}
+						disabled={searchText.replace(/\s/g, '').length < minSearchLength}
 						on:click={databaseSearch}
 						title="Clear input"
 					>
@@ -155,10 +157,10 @@
 			{/if}
 
 			<!-- Search cant be white space -->
-			{#if !searchText.replace(/\s/g, '').length}
+			{#if !searchText.replace(/\s/g, '').length && !saveLoad}
 				<!-- Main Table -->
 				<ItemTable {shortNameCol} {nameCol} {inRaidCol} {otherCol} {hideoutCol} {items} />
-			{:else if searchItems.length}
+			{:else if searchItems.length && !saveLoad}
 				<!-- Search Table -->
 				<ItemTable
 					{shortNameCol}
