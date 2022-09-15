@@ -6,7 +6,7 @@
 	import BackToTop from '$lib/components/backToTop.svelte';
 </script>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen bg-gradient-to-b from-[#5e4b2315] to-[#1d170b75]">
 	<Header />
 
 	<main>
@@ -31,7 +31,9 @@
 
 	<!-- Dont show footer while navigating -->
 	{#if !$navigating}
-		<footer class="footer footer-center p-2 bg-base-300 text-base-content">
+		<footer
+			class="footer footer-center p-2 bg-gradient-to-b from-base-200 to-base-300 text-base-content"
+		>
 			<div class="flex flex-col gap-4">
 				<p><i>Made with wholesome memes</i></p>
 				<a

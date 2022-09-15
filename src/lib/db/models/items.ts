@@ -13,7 +13,7 @@ export async function getAllItems(): Promise<Item[]> {
 }
 
 // Get a single item with all relations
-export async function getItem(id: string): Promise<Item> {
+export async function getItem(id: string, userName: string): Promise<Item> {
     try {
         const item = await prisma.item.findFirst({
             where: {
@@ -22,12 +22,32 @@ export async function getItem(id: string): Promise<Item> {
             include: {
                 TaskReqItem: {
                     include: {
-                        task: true
+                        task: {
+                            include: {
+                                PlayerHasTasks: {
+                                    where: {
+                                        player: {
+                                            name: userName
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 TaskRewardsItem: {
                     include: {
-                        task: true
+                        task: {
+                            include: {
+                                PlayerHasTasks: {
+                                    where: {
+                                        player: {
+                                            name: userName
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 TaskReqKey: {
@@ -46,7 +66,14 @@ export async function getItem(id: string): Promise<Item> {
                             include: {
                                 HideoutStation: {
                                     include: {
-                                        Hideout: true
+                                        Hideout: true,
+                                        PlayerHasHideout: {
+                                            where: {
+                                                player: {
+                                                    name: userName
+                                                }
+                                            }
+                                        }
                                     }
                                 },
                                 CraftReqItem: {
@@ -69,7 +96,14 @@ export async function getItem(id: string): Promise<Item> {
                             include: {
                                 HideoutStation: {
                                     include: {
-                                        Hideout: true
+                                        Hideout: true,
+                                        PlayerHasHideout: {
+                                            where: {
+                                                player: {
+                                                    name: userName
+                                                }
+                                            }
+                                        }
                                     }
                                 },
                                 CraftReqItem: {
@@ -90,7 +124,17 @@ export async function getItem(id: string): Promise<Item> {
                     include: {
                         Barter: {
                             include: {
-                                trader: true,
+                                trader: {
+                                    include: {
+                                        PlayerHasTrader: {
+                                            where: {
+                                                player: {
+                                                    name: userName
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
                                 BarterReqItem: {
                                     include: {
                                         item: true
@@ -109,7 +153,17 @@ export async function getItem(id: string): Promise<Item> {
                     include: {
                         Barter: {
                             include: {
-                                trader: true,
+                                trader: {
+                                    include: {
+                                        PlayerHasTrader: {
+                                            where: {
+                                                player: {
+                                                    name: userName
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
                                 BarterReqItem: {
                                     include: {
                                         item: true
@@ -128,7 +182,14 @@ export async function getItem(id: string): Promise<Item> {
                     include: {
                         hideoutStation: {
                             include: {
-                                Hideout: true
+                                Hideout: true,
+                                PlayerHasHideout: {
+                                    where: {
+                                        player: {
+                                            name: userName
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

@@ -223,10 +223,20 @@
 	</div>
 	<!-- If no user logged in -->
 {:else}
-	<h1 class="pb-4 font-bold">Welcome</h1>
-	<!-- Login to existing player -->
-	<div class="flex flex-col gap-8">
-		<div class="hero bg-base-200 rounded-3xl">
+	<div class="flex flex-col pt-6 gap-8">
+		<!-- Use test player -->
+		<div class="hero bg-gradient-to-b from-base-100 to-base-300 rounded-3xl">
+			<div class="hero-content text-center">
+				<div class="max-w-xl p-4">
+					<h1 class="text-5xl font-bold">Try Tarkov Tasker!</h1>
+					<p class="py-6">If you don't want to create your own player you can use a test player</p>
+					<button class="btn btn-accent" on:click={testUserLogin}>Try now</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Login to existing player -->
+		<div class="hero bg-gradient-to-b from-base-100 to-base-300 rounded-3xl">
 			<div class="hero-content flex-col lg:flex-row-reverse w-full gap-32">
 				<!-- Text -->
 				<div class="text-center lg:text-left">
@@ -234,7 +244,9 @@
 					<p class="py-6">Already have a player? Login now!</p>
 				</div>
 				<!-- Input -->
-				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+				<div
+					class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-base-100 to-base-200"
+				>
 					<div class="card-body">
 						<div class="form-control">
 							<label class="label" for="login">
@@ -260,14 +272,16 @@
 		</div>
 
 		<!-- Register new player -->
-		<div class="hero bg-base-200 rounded-3xl">
+		<div class="hero bg-gradient-to-b from-base-100 to-base-300 rounded-3xl">
 			<div class="hero-content flex-col lg:flex-row w-full gap-32">
 				<!-- Text -->
 				<div class="text-center lg:text-left pl-6">
 					<h1 class="text-5xl font-bold">Register!</h1>
 					<p class="py-6">Don't have a player yet? Register now!</p>
 				</div>
-				<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+				<div
+					class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-base-100 to-base-200"
+				>
 					<div class="card-body">
 						<div class="flex flex-col gap-4">
 							<!-- Name -->
@@ -323,17 +337,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Use test player -->
-		<div class="hero bg-base-200 rounded-3xl">
-			<div class="hero-content text-center">
-				<div class="max-w-xl p-4">
-					<h1 class="text-5xl font-bold">Try Tarkov Tasker!</h1>
-					<p class="py-6">If you don't want to create your own player you can use a test player</p>
-					<button class="btn btn-accent" on:click={testUserLogin}>Try now</button>
-				</div>
-			</div>
-		</div>
 	</div>
 	{#if showError}
 		<ErrorAlert message={errorMessage} />
@@ -343,8 +346,10 @@
 <!-- Modal for updating profile -->
 {#if createModal}
 	<input type="checkbox" id="player-setting-modal" class="modal-toggle" />
-	<div class="modal flex flex-col">
-		<div class="modal-box flex flex-col w-5/6 max-w-5xl items-center p-8">
+	<div class="modal flex flex-col ">
+		<div
+			class="modal-box flex flex-col w-5/6 max-w-5xl items-center p-8 bg-gradient-to-b from-base-100 to-base-300"
+		>
 			<!-- When user saved show close button -->
 			{#if playerUpdated}
 				<h3 class="font-bold text-2xl text-primary">Player Updated</h3>

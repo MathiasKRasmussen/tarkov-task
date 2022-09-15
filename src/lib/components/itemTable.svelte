@@ -2,6 +2,8 @@
 	import type { Item } from '@prisma/client';
 	import Tooltip from '@fouita/tooltip';
 	import { iconWidth } from '$lib/util/items';
+	import { userName } from '../../stores/user';
+
 	let currentId: string = '';
 
 	export let shortNameCol: string;
@@ -38,7 +40,7 @@
 	<table class="table table-zebra table-compact w-full">
 		<!-- Table Head  -->
 		<thead>
-			<tr class="bg-primary">
+			<tr class="bg-gradient-to-b from-primary to-[#776849]">
 				<!-- Col 1: Image -->
 				<th class="bg-opacity-0" />
 				<!-- Col 2: Short Name -->
@@ -89,7 +91,7 @@
 									</div>
 								</Tooltip>
 								<!-- Small icon -->
-								<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
+								<a sveltekit:prefetch href={`/${$userName}/item/${taskItem.id}`}>
 									<img src={taskItem.nameIcon} alt={taskItem.name} />
 								</a>
 							</div>
@@ -98,7 +100,7 @@
 					<!-- Col 2: Item ShortName -->
 					<td>
 						<div class="flex justify-center text-primary">
-							<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
+							<a sveltekit:prefetch href={`/${$userName}/item/${taskItem.id}`}>
 								<b>{taskItem.shortName}</b>
 							</a>
 						</div>
@@ -106,7 +108,7 @@
 					<!-- Col 3: Item Name -->
 					<td>
 						<div class="flex justify-center text-primary" title={taskItem.name}>
-							<a sveltekit:prefetch href={`/item/${taskItem.id}`} target="_blank">
+							<a sveltekit:prefetch href={`/${$userName}/item/${taskItem.id}`}>
 								<b class="text-primary"
 									>{taskItem.name.length > maxNameLength
 										? taskItem.name.substring(0, maxNameLength) + '..'

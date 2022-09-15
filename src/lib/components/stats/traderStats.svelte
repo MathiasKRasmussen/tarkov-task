@@ -26,7 +26,7 @@
 </script>
 
 <div class="flex flex-col items-center">
-	<div class="stats stats-vertical shadow">
+	<div class="stats stats-vertical shadow bg-gradient-to-b from-base-100 to-base-300">
 		<!-- Displays Task progress -->
 		<div class="stat place-items-center">
 			<h4 class="text-primary font-bold text-2xl pb-4">{trader.name}</h4>

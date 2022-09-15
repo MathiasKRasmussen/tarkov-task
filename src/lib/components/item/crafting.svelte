@@ -6,13 +6,17 @@
 	import CraftBarterItem from './craftBarterItem.svelte';
 
 	export let craft: Craft;
+	const playerHasStation: boolean = craft.HideoutStation.PlayerHasHideout[0]?.completed;
 </script>
 
 <div class="flex flex-row items-center">
 	<!-- Hideout info -->
-	<div class="flex flex-col items-center gap-2 w-1/6">
+	<div
+		class="flex flex-col items-center gap-2 w-1/6"
+		title={playerHasStation ? 'You have this station build' : "You haven't build this station yet"}
+	>
 		<!-- Hideout name and level -->
-		<span class="text-primary"
+		<span class={playerHasStation ? 'text-success' : 'text-error'}
 			>{`${craft.HideoutStation.Hideout.name} ${craft.HideoutStation.level}`}</span
 		>
 		<!-- Hideout image -->
@@ -20,7 +24,6 @@
 			class="w-12"
 			src={hideoutImage(craft.HideoutStation.Hideout.name)}
 			alt={craft.HideoutStation.Hideout.name}
-			title={craft.HideoutStation.Hideout.name}
 		/>
 	</div>
 	<div class="divider divider-horizontal" />

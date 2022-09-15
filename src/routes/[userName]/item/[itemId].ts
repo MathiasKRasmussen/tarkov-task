@@ -4,9 +4,10 @@ import type { Item, Trader } from '@prisma/client'
 import { request, gql } from 'graphql-request'
 // Get item data and get item pricing from GraphQL API
 export async function get({ params }: { params: any }) {
-    const { itemId } = params
-    const item: Item = await getItem(itemId)
+    const { itemId, userName } = params
+    const item: Item = await getItem(itemId, userName)
     const traders: Trader[] = await getTraders()
+    const urlName: string = userName
     let priceData;
     const query = gql` 
     {
@@ -36,7 +37,8 @@ export async function get({ params }: { params: any }) {
         body: {
             item,
             priceData,
-            traders
+            traders,
+            urlName
         },
     }
 }
