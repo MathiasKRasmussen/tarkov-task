@@ -74,7 +74,7 @@
 </script>
 
 <div class="flex flex-col w-full gap-2">
-	<div class="stats shadow">
+	<div class="stats shadow bg-gradient-to-b from-base-100 to-base-300">
 		<!-- Tasks completion -->
 		<ProgressStat
 			completed={completedTasks}
@@ -113,7 +113,7 @@
 	</div>
 
 	<!-- Money row -->
-	<div class="stats shadow">
+	<div class="stats shadow bg-gradient-to-b from-base-100 to-base-300">
 		<!-- RUB -->
 		<ProgressStat
 			completed={completedRUB}

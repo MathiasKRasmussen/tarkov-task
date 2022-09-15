@@ -85,7 +85,9 @@
 							: ''}"
 					>
 						<!-- Card header: Hideout Icon and name -->
-						<div class="bg-primary flex flex-row items-center pt-3 p-4">
+						<div
+							class="bg-gradient-to-b from-primary to-[#776849] flex flex-row items-center pt-3 p-4"
+						>
 							<!-- Hideout image -->
 							<div class="avatar flex">
 								<div class="rounded w-14">
@@ -139,8 +141,7 @@
 																		<div class="rounded-xl w-8 h-8">
 																			<a
 																				sveltekit:prefetch
-																				href={`/item/${reqItem.item.id}`}
-																				target="_blank"
+																				href={`/${$userName}/item/${reqItem.item.id}`}
 																			>
 																				<img
 																					src={reqItem.item.image}
@@ -155,8 +156,7 @@
 																		<a
 																			class="text-sm"
 																			sveltekit:prefetch
-																			href={`/item/${reqItem.item.id}`}
-																			target="_blank"
+																			href={`/${$userName}/item/${reqItem.item.id}`}
 																		>
 																			{reqItem.item.name}
 																		</a>

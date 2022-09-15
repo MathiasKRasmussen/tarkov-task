@@ -5,7 +5,7 @@
 	export let player: Player;
 </script>
 
-<div class="stats shadow flex">
+<div class="stats shadow flex bg-gradient-to-b from-base-100 to-base-300">
 	<!-- Level cell -->
 	<div class="stat w-1/6">
 		<div class="avatar flex flex-row stat-figure">

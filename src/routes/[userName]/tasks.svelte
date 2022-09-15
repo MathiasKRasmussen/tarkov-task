@@ -95,16 +95,18 @@
 	{#if urlName !== $userName}
 		<NoAccess />
 	{:else}
-		<!-- Quick link to traders -->
 		<h1 class="pt-2 pb-4 font-bold" id={traders[0].name}>{header}</h1>
-		<div class="flex flex-row gap-10 justify-center">
-			<div class="w-40 flex flex-col">
+		<!-- Quick link to traders -->
+		<div class="flex flex-row gap-10 justify-center ">
+			<div class="w-40 flex flex-col ">
 				<!-- Side bar toast -->
 				<div class="toast toast-start toast-middle sticky top-20 z-10">
 					<div
-						class="alert alert-primary border border-primary sticky top-0 z-10 p-2 justify-center"
+						class="alert alert-primary border border-primary sticky top-0 z-10 p-2 justify-center "
 					>
-						<div class="grid grid-cols-1 gap-8 place-items-center p-2">
+						<div
+							class="grid grid-cols-1 gap-8 place-items-center p-2 bg-gradient-to-b from-base-100 to-base-300"
+						>
 							{#each traders as trader}
 								<div class="flex flex-col items-center border border-primary">
 									<TraderIcon {trader} level={getTraderLevel(trader)} href={`#${trader.name}`} />
@@ -123,7 +125,9 @@
 						<div class="overflow-x-auto">
 							<div class="card shadow-xl">
 								<!-- Card header: Trader Icon -->
-								<div class="bg-primary flex flex-row items-center pt-3 p-4">
+								<div
+									class="bg-gradient-to-b from-primary to-[#776849] flex flex-row items-center pt-3 p-4"
+								>
 									<!-- Avatar of trader with level indicator-->
 									<TraderIcon {trader} level={getTraderLevel(trader)} />
 									<!-- Trader name-->
@@ -216,10 +220,8 @@
 															{#each traderTask.task.TaskReqKey as reqKey}
 																<li class="text-accent">
 																	1x
-																	<a
-																		sveltekit:prefetch
-																		href={`/item/${reqKey.key.id}`}
-																		target="_blank">{reqKey.key.name}</a
+																	<a sveltekit:prefetch href={`/${$userName}/item/${reqKey.key.id}`}
+																		>{reqKey.key.name}</a
 																	>
 																</li>{/each}
 														</ul>
@@ -236,8 +238,8 @@
 																			reqItem.count +
 																			' '}<a
 																			sveltekit:prefetch
-																			href={`/item/${reqItem.item.id}`}
-																			target="_blank">{reqItem.item.name}</a
+																			href={`/${$userName}/item/${reqItem.item.id}`}
+																			>{reqItem.item.name}</a
 																		>
 																		{#if reqItem.foundInRaid}
 																			<p class="flex text-error">
@@ -257,8 +259,8 @@
 																<li class="text-accent">
 																	{rewItem.count + 'x '}<a
 																		sveltekit:prefetch
-																		href={`/item/${rewItem.item.id}`}
-																		target="_blank">{rewItem.item.name}</a
+																		href={`/${$userName}/item/${rewItem.item.id}`}
+																		>{rewItem.item.name}</a
 																	>
 																</li>
 															{/each}

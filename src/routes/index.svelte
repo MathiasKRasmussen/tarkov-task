@@ -343,8 +343,10 @@
 <!-- Modal for updating profile -->
 {#if createModal}
 	<input type="checkbox" id="player-setting-modal" class="modal-toggle" />
-	<div class="modal flex flex-col">
-		<div class="modal-box flex flex-col w-5/6 max-w-5xl items-center p-8">
+	<div class="modal flex flex-col ">
+		<div
+			class="modal-box flex flex-col w-5/6 max-w-5xl items-center p-8 bg-gradient-to-b from-base-100 to-base-300"
+		>
 			<!-- When user saved show close button -->
 			{#if playerUpdated}
 				<h3 class="font-bold text-2xl text-primary">Player Updated</h3>

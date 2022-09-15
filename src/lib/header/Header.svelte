@@ -8,7 +8,9 @@
 </script>
 
 <header class="sticky top-0 z-50">
-	<div class="navbar bg-secondary border-b-[1px] border-primary">
+	<div
+		class="navbar bg-gradient-to-r from-secondary via-[#271e31] to-secondary border-b-[1px] border-primary"
+	>
 		<div class="navbar-start">
 			<a class="btn btn-ghost text-primary text-2xl font-bold" sveltekit:prefetch href={`/`}
 				>{title}</a

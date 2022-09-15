@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ItemHasType } from '@prisma/client';
+	import { userName } from '../../stores/user';
 
 	export let shortNameCol: string;
 	export let nameCol: string;
@@ -37,7 +38,7 @@
 	<table class="table table-zebra table-compact w-full">
 		<!-- Table Head  -->
 		<thead>
-			<tr class="bg-primary">
+			<tr class="bg-gradient-to-b from-primary to-[#776849]">
 				<!-- Col 1: Image -->
 				<th class="bg-opacity-0" />
 				<!-- Col 2: Short Name -->
@@ -67,7 +68,7 @@
 					<td
 						><div class="avatar flex justify-center">
 							<div class="rounded w-12">
-								<a sveltekit:prefetch href={`/item/${key.item.id}`} target="_blank">
+								<a sveltekit:prefetch href={`/${$userName}/item/${key.item.id}`}>
 									<img src={key.item.image} alt={key.item.name} title={key.item.name} />
 								</a>
 							</div>
@@ -76,7 +77,7 @@
 					<!-- Col 2: Item ShortName -->
 					<td>
 						<div class="flex justify-center text-primary">
-							<a sveltekit:prefetch href={`/item/${key.item.id}`} target="_blank" class="font-bold"
+							<a sveltekit:prefetch href={`/${$userName}/item/${key.item.id}`} class="font-bold"
 								>{key.item.shortName}</a
 							>
 						</div>
@@ -86,8 +87,7 @@
 						<div class="flex justify-center text-primary">
 							<a
 								sveltekit:prefetch
-								href={`/item/${key.item.id}`}
-								target="_blank"
+								href={`/${$userName}/item/${key.item.id}`}
 								class="text-primary font-bold">{key.item.name}</a
 							>
 						</div>
