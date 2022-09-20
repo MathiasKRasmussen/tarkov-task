@@ -15,6 +15,8 @@
 	import type { HideoutStation, Player, Trader } from '@prisma/client';
 	import Circle2 from 'svelte-loading-spinners/dist/ts/Circle2.svelte';
 	import { userName } from '../stores/user';
+	import { formatHMS, realTimeToTarkovTime } from '$lib/util/time';
+	import Timer from '$lib/components/timer.svelte';
 
 	let header: string = 'Tarkov Tasker';
 	let loadingUser: boolean = true;
@@ -178,6 +180,14 @@
 		newLevel = player.level;
 		newTraderLevels = createTempPlayerTrader(traders);
 	}
+
+	// Handling current tarkov time
+	let leftTime = formatHMS(realTimeToTarkovTime(new Date(), true));
+	let rightTime = formatHMS(realTimeToTarkovTime(new Date(), false));
+	const handleTick = () => {
+		leftTime = formatHMS(realTimeToTarkovTime(new Date(), true));
+		rightTime = formatHMS(realTimeToTarkovTime(new Date(), false));
+	};
 </script>
 
 <svelte:head>
@@ -193,17 +203,27 @@
 	</div>
 	<!-- If a user is logged in -->
 {:else if $userName}
-	<div class="flex flex-col w-full justify-center gap-4">
-		<div class="flex flex-row justify-center items-center">
-			<h1 class="p-4 font-bold">Player Profile</h1>
-			<!-- Update profile button -->
-			<label
-				for="player-setting-modal"
-				class="btn btn-ghost modal-button modal-open w-16"
-				on:click={() => (playerUpdated = false)}
-			>
-				<img src={`https://svgshare.com/i/m3U.svg`} alt={`Update player`} title={`Update player`} />
-			</label>
+	<div class="flex flex-col w-full gap-4">
+		<div class="flex flex-row items-center justify-center gap-40">
+			<!-- Left time -->
+			<Timer callback={handleTick} value={leftTime} />
+			<div class="flex flex-row items-center">
+				<h1 class="p-4 font-bold">Player Profile</h1>
+				<!-- Update profile button -->
+				<label
+					for="player-setting-modal"
+					class="btn btn-ghost modal-button modal-open w-16"
+					on:click={() => (playerUpdated = false)}
+				>
+					<img
+						src={`https://svgshare.com/i/m3U.svg`}
+						alt={`Update player`}
+						title={`Update player`}
+					/>
+				</label>
+			</div>
+			<!-- Right time -->
+			<Timer callback={handleTick} value={rightTime} />
 		</div>
 
 		<!-- Header player info -->
