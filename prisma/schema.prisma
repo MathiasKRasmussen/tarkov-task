@@ -54,7 +54,6 @@ model Item {
   height          Int?
   wiki            String?
   image           String?
-  craftAble       Boolean           @default(false)
   icon            String?
   nameIcon        String?
   BarterReqItem   BarterReqItem[]

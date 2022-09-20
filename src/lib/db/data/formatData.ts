@@ -11,7 +11,6 @@ import typesData from './json/types.json'
 import hideoutData from './json/hideoutStations.json'
 import taskData from './json/tasks.json'
 import taskItemsData from './json/taskItems.json'
-import craftsData from './json/craftsItems.json'
 import iconData from './json/itemIcons.json'
 import crafts from './json/crafts.json'
 import barters from './json/barters.json'
@@ -135,14 +134,4 @@ export function createSkillList(): string[] {
         })
     })
     return skills
-}
-
-export function createCraftItemsList(): { id: string, name: string }[] {
-    let items: { id: string, name: string }[] = []
-    craftsData.forEach((cd) => {
-        cd.rewardItems.forEach((rewItem) => {
-            items.push(rewItem.item)
-        })
-    })
-    return items
 }

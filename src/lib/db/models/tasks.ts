@@ -46,8 +46,12 @@ export async function getPlayerTasksItems(player: Player): Promise<PlayerHasTask
                             select: {
                                 foundInRaid: true,
                                 count: true,
-                                item: true,
-                            },
+                                item: {
+                                    include: {
+                                        CraftRewItem: true,
+                                    }
+                                }
+                            }
                         },
                     },
                 },

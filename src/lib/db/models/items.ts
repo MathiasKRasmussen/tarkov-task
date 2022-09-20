@@ -225,6 +225,7 @@ export async function searchItems(input: string, playerName: string): Promise<It
                 ],
             },
             include: {
+                CraftRewItem: true,
                 TaskReqItem: {
                     include: {
                         task: {

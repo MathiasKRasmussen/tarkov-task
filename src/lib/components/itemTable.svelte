@@ -121,9 +121,12 @@
 					<td>
 						<div
 							class="flex justify-center text-error"
-							title={taskItem.craftAble ? 'Can be crafted' : ''}
+							title={taskItem.CraftRewItem?.length ? 'Can be crafted' : ''}
 						>
-							<b>{taskItem.inRaidCount ? taskItem.inRaidCount : 0}{taskItem.craftAble ? '*' : ''}</b
+							<b
+								>{taskItem.inRaidCount ? taskItem.inRaidCount : 0}{taskItem.CraftRewItem?.length
+									? '*'
+									: ''}</b
 							>
 						</div>
 					</td>
