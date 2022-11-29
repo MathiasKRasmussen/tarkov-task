@@ -1,6 +1,6 @@
 {
 	"engines": {
-		"node": "16.x"
+		"node": "18.x"
 	},
 	"name": "tarkov-task",
 	"version": "0.0.1",
@@ -26,7 +26,7 @@
 		"@types/cookie": "^0.5.1",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
-		"prisma": "^4.3.1",
+		"prisma": "^4.7.0",
 		"svelte": "^3.46.0",
 		"svelte-check": "^2.7.1",
 		"svelte-loading-spinners": "^0.1.7",
@@ -39,7 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
-		"@prisma/client": "^4.3.1",
+		"@prisma/client": "^4.7.0",
 		"@supabase/supabase-js": "^1.35.4",
 		"cookie": "^0.4.1",
 		"daisyui": "^2.17.0",
